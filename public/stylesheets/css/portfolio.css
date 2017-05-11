@@ -9,12 +9,14 @@
   justify-content: center; }
   #landing #name {
     font-family: 'Playfair Display', sans-serif;
-    font-size: 4em; }
+    font-size: 4em;
+    padding-left: 20px; }
   #landing #byline {
     font-family: 'Oswald', sans-serif;
     text-transform: uppercase;
     letter-spacing: 1px;
-    font-size: 16px; }
+    font-size: 16px;
+    padding-left: 200px; }
   #landing #nav-footer {
     position: absolute;
     bottom: 25px;
@@ -25,3 +27,20 @@
     #landing #nav-footer ul li {
       display: inline-flex;
       padding: 0 10px; }
+
+#about {
+  height: 100vh;
+  width: 100%;
+  border: 2px solid blue;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+  #about .chapter-title {
+    background-color: #ccc;
+    border: 2px solid blue; }
+  #about .fullpage-section {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center; }

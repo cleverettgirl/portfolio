@@ -14,12 +14,14 @@
   #name{
     font-family: 'Playfair Display', sans-serif;
     font-size:4em;
+    padding-left:20px;
   }
   #byline{
     font-family: 'Oswald', sans-serif;
     text-transform: uppercase;
     letter-spacing: 1px;
     font-size:16px;
+    padding-left:200px;
   }
 
   #nav-footer{
@@ -42,3 +44,43 @@
     }
   }
 }
+
+#about{
+  height:100vh;
+  width:100%;
+  border:2px solid blue;
+  display:flex;
+  align-items:center;
+  justify-content: center;
+  .chapter-title{
+    background-color: #ccc;
+    border: 2px solid blue;
+  }
+  .fullpage-section{
+    height:100vh;
+    width:100%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+  }
+}
+
+// #work{
+//   height:100vh;
+//   width:100%;
+//   border:2px solid black;
+//   display:flex;
+//   align-items:center;
+//   justify-content: center;
+//   .chapter-title{
+//     background-color:yellow;
+//     border:2px solid black;
+//   }
+//   .fullpage-section{
+//     height:100vh;
+//     width:100%;
+//     display:flex;
+//     align-items:center;
+//     justify-content:center;
+//   }
+// }
