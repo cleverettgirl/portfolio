@@ -1,6 +1,12 @@
 *{
   box-sizing: border-box;
 }
+#title-font{
+  font-family: 'Playfair Display', sans-serif;
+}
+#sans{
+  font-family: 'Oswald', sans-serif;
+}
 
 #landing{
   height:100vh;
@@ -46,15 +52,14 @@
 }
 
 #about{
+  @extend #title-font, #sans;
   height:100vh;
   width:100%;
-  border:2px solid blue;
   display:flex;
   align-items:center;
   justify-content: center;
   .chapter-title{
     background-color: #ccc;
-    border: 2px solid blue;
   }
   .fullpage-section{
     height:100vh;
@@ -63,24 +68,16 @@
     align-items:center;
     justify-content:center;
   }
+  #me{
+    position: relative;
+    img{
+      width:150px;
+      height:150px;
+      z-index:10;
+      position: absolute;
+      top: 50px;
+      left: 45%;
+      border-radius:75px;
+    }
+  }
 }
-
-// #work{
-//   height:100vh;
-//   width:100%;
-//   border:2px solid black;
-//   display:flex;
-//   align-items:center;
-//   justify-content: center;
-//   .chapter-title{
-//     background-color:yellow;
-//     border:2px solid black;
-//   }
-//   .fullpage-section{
-//     height:100vh;
-//     width:100%;
-//     display:flex;
-//     align-items:center;
-//     justify-content:center;
-//   }
-// }

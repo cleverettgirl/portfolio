@@ -1,6 +1,12 @@
 * {
   box-sizing: border-box; }
 
+#title-font, #about {
+  font-family: 'Playfair Display', sans-serif; }
+
+#sans, #about {
+  font-family: 'Oswald', sans-serif; }
+
 #landing {
   height: 100vh;
   border: 2px solid red;
@@ -31,16 +37,24 @@
 #about {
   height: 100vh;
   width: 100%;
-  border: 2px solid blue;
   display: flex;
   align-items: center;
   justify-content: center; }
   #about .chapter-title {
-    background-color: #ccc;
-    border: 2px solid blue; }
+    background-color: #ccc; }
   #about .fullpage-section {
     height: 100vh;
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: center; }
+  #about #me {
+    position: relative; }
+    #about #me img {
+      width: 150px;
+      height: 150px;
+      z-index: 10;
+      position: absolute;
+      top: 50px;
+      left: 45%;
+      border-radius: 75px; }
