@@ -1,45 +1,44 @@
-@import "normalize";
-@import "variables";
-@import "grid";
-@import "media-queries";
-
 *{
   box-sizing: border-box;
 }
 
-h1, h2, h3, h4, h5, h6, p {
-    margin-top: 0;
-}
+#landing{
+  height:100vh;
+  border:2px solid red;
+  display:flex;
+  // flex-direction:column;
+  // flex-wrap:wrap;
+  align-items:center;
+  justify-content: center;
 
-@media(min-width:1px){
+  #name{
+    font-family: 'Playfair Display', sans-serif;
+    font-size:4em;
+  }
+  #byline{
+    font-family: 'Oswald', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size:16px;
+  }
 
-  .fullpage-section{
-    height: 100vh;
-    display:flex;
-    align-items: center;
-    color:#ccc;
+  #nav-footer{
+    position:absolute;
+    bottom:25px;
     justify-content:center;
-  }
-
-  #landing{
-    background-color: #292929;
-  }
-
-  #about{
-    .chapter-title{
-      background-color: tomato;
-    }
-    color:white;
-  }
-
-  #contact{
-    .chapter-title{
-      background-color: #292929;
+    text-align: center;
+    ul{
+      a{
+        &:nth-child(1n+2){
+          &::before{
+            content:'/'
+          }
+        }
+      }
+      li{
+        display:inline-flex;
+        padding: 0 10px;
+      }
     }
   }
-
-  img{
-    width:100%;
-  }
-
 }
