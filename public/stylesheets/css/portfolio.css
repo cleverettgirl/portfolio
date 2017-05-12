@@ -4,9 +4,6 @@
 #title-font, #about {
   font-family: 'Playfair Display', sans-serif; }
 
-#sans, #about {
-  font-family: 'Oswald', sans-serif; }
-
 #landing {
   height: 100vh;
   border: 2px solid red;
@@ -39,7 +36,8 @@
   width: 100%;
   display: flex;
   align-items: center;
-  justify-content: center; }
+  justify-content: center;
+  border: 2px solid blue; }
   #about .chapter-title {
     background-color: #ccc; }
   #about .fullpage-section {
@@ -48,6 +46,12 @@
     display: flex;
     align-items: center;
     justify-content: center; }
+    #about .fullpage-section #row-height {
+      height: calc(100% - 100px);
+      overflow: auto; }
+    #about .fullpage-section #sans {
+      height: 100%;
+      padding: 100px; }
   #about #me {
     position: relative; }
     #about #me img {

@@ -8,7 +8,7 @@ $(function(){
     var $target = $(this.getAttribute('href'));
     // console.log("***** ", target)
     if( $target.length ) {
-        event.preventDefault();
+        // event.preventDefault();
         $('html, body').stop().animate({
           // .stop() -> stops any current animation on 'html' and 'body'
             scrollTop: $target.offset().top
@@ -20,14 +20,16 @@ $(function(){
   });
 
   // when we get to about, want to disable scrolling, until the chapter-content goes all the way to the bottom. then resume scrolling.
+  var stopScroll = function(){
+    $(window).scroll(function(){
+      if($(this).scrollTop() >= distance){
+        console.log(distance);
+        console.log("HOORAY")
+        disableScroll();
+      }
+    })
+  }
 
-  $(window).scroll(function(){
-    if($(this).scrollTop() === distance){
-      console.log("HOORAY")
-      disableScroll();
-    }
-
-  })
 
 })
 

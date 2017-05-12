@@ -1,12 +1,17 @@
 *{
   box-sizing: border-box;
 }
+
 #title-font{
   font-family: 'Playfair Display', sans-serif;
 }
-#sans{
-  font-family: 'Oswald', sans-serif;
-}
+// #sans{
+//   font-family: 'Oswald', sans-serif;
+//   width:100%;
+//     height:100%;
+//     height: calc(100% - 100px);
+//     overflow:auto;
+// }
 
 #landing{
   height:100vh;
@@ -52,12 +57,13 @@
 }
 
 #about{
-  @extend #title-font, #sans;
+  @extend #title-font;
   height:100vh;
   width:100%;
   display:flex;
   align-items:center;
   justify-content: center;
+  border:2px solid blue;
   .chapter-title{
     background-color: #ccc;
   }
@@ -67,6 +73,17 @@
     display:flex;
     align-items:center;
     justify-content:center;
+    // padding:100px;
+    // overflow:scroll;
+    #row-height{
+      height:calc(100% - 100px);
+      overflow:auto;
+    }
+    #sans{
+      height:100%;
+      // overflow:auto;
+      padding:100px;
+    }
   }
   #me{
     position: relative;
