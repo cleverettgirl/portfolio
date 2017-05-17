@@ -22,3 +22,30 @@
 }());
 
 // Place any jQuery/helper plugins in here.
+(function(){
+    var controller = new ScrollMagic.Controller();
+
+
+    var aboutScene = new ScrollMagic.Scene({
+      triggerElement: '#about',
+      triggerHook: 'onLeave',
+      duration: $(window).height(),
+      offset: $("#about").scrollTop()
+    })
+    .setPin('.about.chapter-title')
+    .addIndicators()
+    .addTo(controller);
+
+    var workScene = new ScrollMagic.Scene({
+      triggerElement: '#work',
+      triggerHook: 'onLeave',
+      duration: $('.chapter-content').height(),
+      offset: $('#work').scrollTop()
+    })
+    .setPin('.work.chapter-title')
+    .addIndicators()
+    .addTo(controller);
+
+    console.log(controller)
+
+})();

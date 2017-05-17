@@ -1,12 +1,11 @@
 * {
   box-sizing: border-box; }
 
-#title-font, #about {
+#title-font {
   font-family: 'Playfair Display', sans-serif; }
 
 #landing {
   height: 100vh;
-  border: 2px solid red;
   display: flex;
   align-items: center;
   justify-content: center; }
@@ -32,33 +31,61 @@
       padding: 0 10px; }
 
 #about {
-  height: 100vh;
-  width: 100%;
+  background-color: #ccc;
   display: flex;
-  align-items: center;
-  justify-content: center;
-  border: 2px solid blue; }
-  #about .chapter-title {
-    background-color: #ccc; }
-  #about .fullpage-section {
-    height: 100vh;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center; }
-    #about .fullpage-section #row-height {
-      height: calc(100% - 100px);
-      overflow: auto; }
-    #about .fullpage-section #sans {
-      height: 100%;
+  align-items: center; }
+  #about .chapter-content {
+    background-color: white;
+    float: right;
+    z-index: 10; }
+    #about .chapter-content text {
       padding: 100px; }
-  #about #me {
-    position: relative; }
-    #about #me img {
+  #about .chapter-title {
+    display: flex;
+    align-items: center; }
+    #about .chapter-title h1.title-font {
+      height: 100%;
+      width: 100%;
+      position: absolute;
+      text-align: center;
+      font-family: 'Playfair Display', sans-serif; }
+    #about .chapter-title img {
+      width: 150px;
+      height: 150px;
+      z-index: 100000;
+      position: absolute;
+      top: 50px;
+      left: 90%;
+      border-radius: 75px; }
+
+.scrollmagic-pin-spacer {
+  display: inline-block !important;
+  float: left !important; }
+
+#work {
+  background-color: white;
+  display: flex;
+  align-items: center; }
+  #work .chapter-content {
+    background-color: white;
+    float: right;
+    z-index: 10; }
+    #work .chapter-content text {
+      padding: 100px; }
+  #work .chapter-title {
+    display: flex;
+    align-items: center; }
+    #work .chapter-title .title-font {
+      height: 100%;
+      width: 100%;
+      position: absolute;
+      text-align: center;
+      font-family: 'Playfair Display', sans-serif; }
+    #work .chapter-title img {
       width: 150px;
       height: 150px;
       z-index: 10;
       position: absolute;
       top: 50px;
-      left: 45%;
+      left: 90%;
       border-radius: 75px; }

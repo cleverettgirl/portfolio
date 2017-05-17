@@ -5,17 +5,10 @@
 #title-font{
   font-family: 'Playfair Display', sans-serif;
 }
-// #sans{
-//   font-family: 'Oswald', sans-serif;
-//   width:100%;
-//     height:100%;
-//     height: calc(100% - 100px);
-//     overflow:auto;
-// }
 
 #landing{
   height:100vh;
-  border:2px solid red;
+  // border:2px solid red;
   display:flex;
   // flex-direction:column;
   // flex-wrap:wrap;
@@ -57,44 +50,76 @@
 }
 
 #about{
-  @extend #title-font;
-  height:100vh;
-  width:100%;
-  display:flex;
-  align-items:center;
-  justify-content: center;
-  border:2px solid blue;
-  .chapter-title{
-    background-color: #ccc;
-  }
-  .fullpage-section{
-    height:100vh;
-    width:100%;
+    background-color:#ccc;
     display:flex;
     align-items:center;
-    justify-content:center;
-    // padding:100px;
-    // overflow:scroll;
-    #row-height{
-      height:calc(100% - 100px);
-      overflow:auto;
-    }
-    #sans{
-      height:100%;
-      // overflow:auto;
-      padding:100px;
-    }
-  }
-  #me{
-    position: relative;
-    img{
-      width:150px;
-      height:150px;
+  .chapter-content{
+      background-color:white;
+      float:right;
       z-index:10;
-      position: absolute;
-      top: 50px;
-      left: 45%;
-      border-radius:75px;
+      text{
+        padding:100px;
+      }
+  }
+  .chapter-title{
+    // height:100%;
+    display:flex;
+    align-items:center;
+    h1.title-font{
+      height:100%;
+      width:100%;
+      position:absolute;
+      // padding-top:100%; // makes the links in landingPage for some reason..
+      text-align:center;
+      font-family: 'Playfair Display', sans-serif;
     }
+      img{
+        width:150px;
+        height:150px;
+        z-index:100000;
+        position: absolute;
+        top: 50px;
+        left: 90%;
+        border-radius:75px;
+      }
+  }
+}
+
+.scrollmagic-pin-spacer{
+  display:inline-block !important;
+  float:left !important;
+}
+
+#work{
+    background-color:white;
+    display:flex;
+    align-items:center;
+  .chapter-content{
+      background-color:white;
+      float:right;
+      z-index:10;
+      text{
+        padding:100px;
+      }
+  }
+  .chapter-title{
+    display:flex;
+    align-items:center;
+    .title-font{
+      height:100%;
+      width:100%;
+      position:absolute;
+      text-align:center;
+      font-family: 'Playfair Display', sans-serif;
+    }
+      img{
+        width:150px;
+        height:150px;
+        z-index:10;
+        position: absolute;
+        top: 50px;
+        left: 90%;
+        border-radius:75px;
+      }
   }
 }
