@@ -36,9 +36,8 @@
   align-items: center; }
   #about .chapter-content {
     background-color: white;
-    float: right;
-    z-index: 10; }
-    #about .chapter-content text {
+    float: right; }
+    #about .chapter-content .text {
       padding: 100px; }
   #about .chapter-title {
     display: flex;

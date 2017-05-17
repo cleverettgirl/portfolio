@@ -24,7 +24,7 @@
 // Place any jQuery/helper plugins in here.
 (function(){
     var controller = new ScrollMagic.Controller();
-
+    var aboutController = new ScrollMagic.Controller();
 
     var aboutScene = new ScrollMagic.Scene({
       triggerElement: '#about',
@@ -34,7 +34,17 @@
     })
     .setPin('.about.chapter-title')
     .addIndicators()
-    .addTo(controller);
+    .addTo(controller
+
+    // var aboutSceneImg = new ScrollMagic.Scene({
+    //   triggerElement: '#about',
+    //   triggerHook: 'onLeave',
+    //   duration: $(window).height(),
+    //   offset: $("#about").scrollTop()
+    // })
+    // .setPin('img')
+    // .addIndicators()
+    // .addTo(aboutController);
 
     var workScene = new ScrollMagic.Scene({
       triggerElement: '#work',
@@ -46,6 +56,5 @@
     .addIndicators()
     .addTo(controller);
 
-    console.log(controller)
 
 })();
