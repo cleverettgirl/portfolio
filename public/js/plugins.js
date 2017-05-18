@@ -65,14 +65,14 @@ $(function(){
 
     controller.addScene([scale_scene, bg_scene]);
 
-    const contactScene = new ScrollMagic.Scene({
-      triggerElement: "#contact",
-      triggerElement: "onCenter",
-      duration: $('.text').height() * .83,
-      offset: $('#contact').scrollTop()
-    })
-    .setPin('.contact.chapter-title')
-    .addIndicators()
-    .addTo(controller);
+    // const contactScene = new ScrollMagic.Scene({
+    //   triggerElement: "#contact",
+    //   triggerElement: "onCenter",
+    //   duration: $('.text').height() * .83,
+    //   offset: $('#contact').scrollTop()
+    // })
+    // .setPin('.contact.chapter-title')
+    // .addIndicators()
+    // .addTo(controller);
 
 });

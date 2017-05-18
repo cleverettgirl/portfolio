@@ -88,9 +88,12 @@
   display: flex;
   align-items: center; }
   #contact .chapter-content {
+    height: 100vh;
+    display: flex;
     float: right;
     z-index: 10;
     background-color: white;
+    flex-wrap: wrap;
     align-items: center; }
   #contact .chapter-title {
     height: 100vh;
