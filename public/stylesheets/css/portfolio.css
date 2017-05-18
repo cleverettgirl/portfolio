@@ -1,7 +1,7 @@
 * {
   box-sizing: border-box; }
 
-#title-font {
+#title-font, #work, #contact {
   font-family: 'Playfair Display', sans-serif; }
 
 #landing {
@@ -43,48 +43,62 @@
     display: flex;
     align-items: center; }
     #about .chapter-title h1.title-font {
-      height: 100%;
+      justify-content: center;
       width: 100%;
       position: absolute;
+      align-self: center;
       text-align: center;
       font-family: 'Playfair Display', sans-serif; }
-    #about .chapter-title img {
-      width: 150px;
-      height: 150px;
-      z-index: 100000;
-      position: absolute;
-      top: 50px;
-      left: 90%;
-      border-radius: 75px; }
 
 .scrollmagic-pin-spacer {
   display: inline-block !important;
   float: left !important; }
 
 #work {
+  width: 100% !important;
   background-color: white;
   display: flex;
   align-items: center; }
+  #work .container-fluid {
+    width: 100%; }
   #work .chapter-content {
     background-color: white;
     float: right;
-    z-index: 10; }
-    #work .chapter-content text {
-      padding: 100px; }
+    z-index: 10;
+    padding: 0 !important; }
   #work .chapter-title {
-    display: flex;
+    justify-content: center; }
+  #work #kne {
+    height: 100vh;
+    width: 100%;
+    padding: 0;
+    background-color: red; }
+  #work #riddikulus {
+    height: 100vh;
+    width: 100%;
+    background-color: blue; }
+  #work #snakes {
+    height: 100vh;
+    width: 100%;
+    background-color: black; }
+
+#contact {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center; }
+  #contact .chapter-content {
+    float: right;
+    z-index: 10;
+    background-color: white;
     align-items: center; }
-    #work .chapter-title .title-font {
-      height: 100%;
-      width: 100%;
-      position: absolute;
-      text-align: center;
-      font-family: 'Playfair Display', sans-serif; }
-    #work .chapter-title img {
-      width: 150px;
-      height: 150px;
-      z-index: 10;
-      position: absolute;
-      top: 50px;
-      left: 90%;
-      border-radius: 75px; }
+  #contact .chapter-title {
+    height: 100vh;
+    background-color: #ccc;
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+  #contact .scrollmagic-pin-spacer {
+    display: inline-block !important;
+    float: left !important;
+    padding-top: 0 !important; }

@@ -22,39 +22,57 @@
 }());
 
 // Place any jQuery/helper plugins in here.
-(function(){
-    var controller = new ScrollMagic.Controller();
-    var aboutController = new ScrollMagic.Controller();
+$(function(){
+    const controller = new ScrollMagic.Controller();
 
-    var aboutScene = new ScrollMagic.Scene({
+    const aboutScene = new ScrollMagic.Scene({
       triggerElement: '#about',
-      triggerHook: 'onLeave',
-      duration: $(window).height(),
+      triggerHook: 'onCenter',
+      duration: $('.text').height() * .83, // until bottom of '.text' enters screen.
       offset: $("#about").scrollTop()
     })
     .setPin('.about.chapter-title')
     .addIndicators()
-    .addTo(controller
+    .addTo(controller);
 
-    // var aboutSceneImg = new ScrollMagic.Scene({
-    //   triggerElement: '#about',
-    //   triggerHook: 'onLeave',
-    //   duration: $(window).height(),
-    //   offset: $("#about").scrollTop()
-    // })
-    // .setPin('img')
-    // .addIndicators()
-    // .addTo(aboutController);
-
-    var workScene = new ScrollMagic.Scene({
+    const workScene = new ScrollMagic.Scene({
       triggerElement: '#work',
-      triggerHook: 'onLeave',
-      duration: $('.chapter-content').height(),
+      triggerHook: 'onCenter',
+      duration: $('.projects').height() * .83 ,
       offset: $('#work').scrollTop()
     })
     .setPin('.work.chapter-title')
     .addIndicators()
     .addTo(controller);
 
+    const scale_tween = TweenMax.to("#riddikulus", 1, {
+      ease: Linear.easeNone
+    })
 
-})();
+    const bg_tween = TweenMax.to("#snakes", 1, {
+      ease:Linear.easeNone
+    })
+
+    const scale_scene = new ScrollMagic.Scene({
+      triggerElement: "#riddikulus"
+    })
+    .setTween(scale_tween);
+
+    const bg_scene = new ScrollMagic.Scene({
+      triggerElement: "#snakes"
+    })
+    .setTween(bg_tween);
+
+    controller.addScene([scale_scene, bg_scene]);
+
+    const contactScene = new ScrollMagic.Scene({
+      triggerElement: "#contact",
+      triggerElement: "onCenter",
+      duration: $('.text').height() * .83,
+      offset: $('#contact').scrollTop()
+    })
+    .setPin('.contact.chapter-title')
+    .addIndicators()
+    .addTo(controller);
+
+});
