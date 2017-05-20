@@ -31,14 +31,17 @@
       padding: 0 10px; }
 
 #about {
-  background-color: #ccc;
+  background-color: #f7484e;
   display: flex;
   align-items: center; }
   #about .chapter-content {
     background-color: white;
     float: right; }
     #about .chapter-content .text {
-      padding: 100px; }
+      padding: 100px;
+      font-family: 'Open Sans', sans-serif; }
+  #about .scrollmagic-pin-spacer {
+    background-color: #f7484e !important; }
   #about .chapter-title {
     display: flex;
     align-items: center; }
@@ -47,6 +50,7 @@
       width: 100%;
       position: absolute;
       align-self: center;
+      color: white;
       text-align: center;
       font-family: 'Playfair Display', sans-serif; }
 
@@ -72,15 +76,20 @@
     height: 100vh;
     width: 100%;
     padding: 0;
-    background-color: red; }
+    background-image: url("../../img/kne.png");
+    background-size: cover;
+    background-position-x: -300px; }
   #work #riddikulus {
     height: 100vh;
     width: 100%;
-    background-color: blue; }
+    background-image: url("../../img/riddikulus.png");
+    background-size: cover; }
   #work #snakes {
     height: 100vh;
     width: 100%;
-    background-color: black; }
+    background-image: url("../../img/snakes.png");
+    background-size: cover;
+    background-position-x: -215px; }
 
 #contact {
   height: 100vh;

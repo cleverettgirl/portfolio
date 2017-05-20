@@ -38,7 +38,7 @@ $(function(){
     const workScene = new ScrollMagic.Scene({
       triggerElement: '#work',
       triggerHook: 'onCenter',
-      duration: $('.projects').height() * .83 ,
+      duration: $('.projects').height() * .85,
       offset: $('#work').scrollTop()
     })
     .setPin('.work.chapter-title')

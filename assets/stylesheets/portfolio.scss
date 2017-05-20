@@ -50,7 +50,7 @@
 }
 
 #about{
-    background-color:#ccc;
+    background-color:#f7484e;
     display:flex;
     align-items:center;
   .chapter-content{
@@ -58,8 +58,14 @@
       float:right;
       .text{
         padding:100px;
+        font-family: 'Open Sans', sans-serif;
       }
   }
+  .scrollmagic-pin-spacer{
+        // background-color:#f7484e;
+    background-color:#f7484e !important;
+  }
+
   .chapter-title{
     // height:100%;
     display:flex;
@@ -70,19 +76,11 @@
       width:100%;
       position:absolute;
       align-self: center;
+      color:white;
       // padding-top:100%; // makes the links in landingPage for some reason..
       text-align:center;
       font-family: 'Playfair Display', sans-serif;
     }
-      // img{
-      //   width:150px;
-      //   height:150px;
-      //   z-index:100000;
-      //   position: absolute;
-      //   top: 50px;
-      //   left: 90%;
-      //   border-radius:75px;
-      // }
   }
 }
 
@@ -116,17 +114,26 @@
     height:100vh;
     width:100%;
     padding:0;
-    background-color:red;
+    // background-color:red;
+    background-image:url('../../img/kne.png');
+    background-size:cover;
+    background-position-x:-300px;
   }
     #riddikulus{
       height:100vh;
       width:100%;
-      background-color:blue;
+      // background-color:blue;
+      background-image:url('../../img/riddikulus.png');
+      background-size:cover;
   }
     #snakes{
       height:100vh;
       width:100%;
-      background-color:black;
+      // background-color:black;
+      background-image:url('../../img/snakes.png');
+      background-size:cover;
+      background-position-x:-215px;
+
   }
 }
 
