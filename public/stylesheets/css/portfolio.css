@@ -5,54 +5,12 @@
   font-weight: normal;
   font-style: normal; }
 
-* {
-  box-sizing: border-box; }
-
-html, body {
-  height: 100%;
-  margin: 0; }
-
-.stylistic-font, #aboutSlide .title-block .title-text {
+.stylistic-font, #aboutSlide .title-block .title-text, #contactSlide #contact-header .title-text {
   font-family: 'Stylistic Alt', sans-serif !important;
   font-size: 75px; }
 
-.fixed-header {
-  position: fixed !important;
-  padding: 0 !important;
-  width: 50%; }
-
-.content-padding {
-  padding: 100px; }
-
-.wrapper {
-  width: 90%;
-  margin: 0 5%; }
-
-#title-font {
+.title-font, #landingSlide #wrapper #name {
   font-family: 'Playfair Display', sans-serif; }
-
-#landingSlide {
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  margin-left: 50px; }
-
-#aboutSlide {
-  z-index: 20;
-  margin: 0 !important; }
-  #aboutSlide .title-block {
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center; }
-    #aboutSlide .title-block .title-text {
-      color: white;
-      margin: 0; }
-  #aboutSlide #about-header {
-    padding: 0;
-    background-color: #f7484e; }
-  #aboutSlide #about-content {
-    height: auto; }
 
 .wrapper {
   max-width: 350px;
@@ -79,7 +37,7 @@ html, body {
 .slide .wrapper {
   position: absolute;
   top: 45%;
-  left: 10%; }
+  left: 15%; }
 
 .slide .img {
   position: absolute;
@@ -114,6 +72,61 @@ html, body {
   height: 100%;
   padding: 0 100px;
   text-align: center; }
+
+* {
+  box-sizing: border-box; }
+
+html, body {
+  height: 100%;
+  margin: 0; }
+
+.content-padding {
+  padding: 100px; }
+
+.wrapper {
+  width: 90%;
+  margin: 0 5%; }
+
+.fixed-header {
+  position: fixed !important;
+  padding: 0 !important;
+  width: 50%; }
+
+#landingSlide {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  margin-left: 50px; }
+  #landingSlide #wrapper {
+    text-align: center; }
+    #landingSlide #wrapper #name {
+      font-size: 55px; }
+
+#aboutSlide {
+  z-index: 20;
+  margin: 0 !important; }
+  #aboutSlide .title-block {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+    #aboutSlide .title-block .title-text {
+      color: white;
+      margin: 0; }
+  #aboutSlide #about-header {
+    padding: 0;
+    background-color: #f7484e; }
+  #aboutSlide #about-content {
+    height: auto; }
+
+#contactSlide #contact-header {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f7484e; }
+  #contactSlide #contact-header .title-text {
+    color: white; }
 
 @media screen and (min-width: 992px) {
   #about-header {

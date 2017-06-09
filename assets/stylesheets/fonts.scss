@@ -1,0 +1,18 @@
+@font-face {
+  font-family: 'Stylistic Alt';
+  src: url('/fonts/StylisticAlt.eot');
+  src: url('/fonts/StylisticAlt.eot?#iefix') format('embedded-opentype'),
+    url('/fonts/StylisticAlt.woff') format('woff'),
+    url('/fonts/StylisticAlt.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.stylistic-font{
+  font-family: 'Stylistic Alt', sans-serif !important;
+  font-size:75px;
+}
+
+.title-font{
+  font-family: 'Playfair Display', sans-serif;
+}

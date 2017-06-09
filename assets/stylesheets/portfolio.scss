@@ -1,13 +1,6 @@
-// title-font
-@font-face {
-  font-family: 'Stylistic Alt';
-  src: url('/fonts/StylisticAlt.eot');
-  src: url('/fonts/StylisticAlt.eot?#iefix') format('embedded-opentype'),
-    url('/fonts/StylisticAlt.woff') format('woff'),
-    url('/fonts/StylisticAlt.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-}
+@import 'variables';
+@import 'fonts';
+@import 'scrollmagic';
 
 *{
   box-sizing: border-box;
@@ -16,18 +9,6 @@
 html,body{
   height:100%;
   margin:0;
-}
-
-
-.stylistic-font{
-  font-family: 'Stylistic Alt', sans-serif !important;
-  font-size:75px;
-}
-
-.fixed-header{
-  position: fixed !important;
-  padding:0 !important;
-  width: 50%;
 }
 
 .content-padding{
@@ -39,16 +20,24 @@ html,body{
   margin: 0 5%;
 }
 
-#title-font{
-  font-family: 'Playfair Display', sans-serif;
+.fixed-header{
+  position: fixed !important;
+  padding:0 !important;
+  width: 50%;
 }
-
 
 #landingSlide{
   height:100vh;
   display:flex;
   align-items:center;
   margin-left:50px;
+  #wrapper{
+    text-align:center;
+    #name{
+      @extend .title-font;
+      font-size:55px;
+    }
+  }
 }
 
 #aboutSlide{
@@ -67,86 +56,26 @@ html,body{
   }
   #about-header{
     padding:0;
-    background-color: #f7484e;
+    background-color: $red;
   }
   #about-content{
     height: auto;
   }
 }
 
-
-// scrollMagic
-.wrapper {
-  max-width: 350px;
-  margin: 0 10%; }
-
-#slide01, #slide02, #slide03  {
-  background-color: white;
-}
-
-.slide {
-  position: relative;
-  overflow: hidden;
-  height: 100vh;
-}
-    .slide .pin-wrapper {
-        width: 100%;
-        height: 100%;
+#contactSlide{
+  #contact-header{
+    height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background-color:$red;
+    .title-text{
+      @extend .stylistic-font;
+      color:white;
     }
-
-    .slide .pin-wrapper .chapter-content{
-      width: 50%;
-      background-color: #EDEDED;
-      height: 100%;
-      float:right;
-    }
-
-    .slide .wrapper {
-        position: absolute;
-        top: 45%;
-        left: 10%;
-    }
-    .slide .img {
-        position: absolute;
-        top: 10%;
-        left: 50%;
-        width: 600px;
-        height: 418px;
-        background: url('/img/kne.png') no-repeat top left;
-        background-size:cover;
-        transform: translate(-80%, -40%);
-        transform: translate(10%, 0%)
-    }
-
-.scrollmagic-pin-spacer {
-    position: absolute !important;
-    clip: rect(auto, auto, auto, auto);
+  }
 }
-
-#slide02 .img {
-  background-image: url('/img/riddikulus.png');}
-
-#slide03 .img {
-  background-image: url('/img/snakes.png');}
-
-
-#slide02 .pin-wrapper,
-#slide03 .pin-wrapper{
-    transform: translateY(-100%);
-}
-
-.imgText{
-  position: absolute;
-  top: 70%;
-  left: 50%;
-  width: 700px;
-  height: 100%;
-  padding: 0 100px;
-  text-align: center;
-}
-
-
-
 
 @media screen and (min-width: 992px) {
   #about-header {
