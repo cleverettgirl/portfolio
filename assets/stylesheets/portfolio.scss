@@ -1,3 +1,4 @@
+// title-font
 @font-face {
   font-family: 'Stylistic Alt';
   src: url('/fonts/StylisticAlt.eot');
@@ -12,183 +13,145 @@
   box-sizing: border-box;
 }
 
+html,body{
+  height:100%;
+  margin:0;
+}
+
+.stylistic-font{
+  font-family: 'Stylistic Alt', sans-serif !important;
+  font-size:75px;
+}
+
+.fixed-header{
+  position: fixed !important;
+  padding-left:0 !important;
+}
+
+.content-padding{
+  padding: 100px;
+}
+
+.wrapper {
+  width: 90%;
+  margin: 0 5%;
+}
+
 #title-font{
   font-family: 'Playfair Display', sans-serif;
 }
 
-#stylistic-font{
-  font-family: 'Stylistic Alt', sans-serif;
-  font-size:75px;
-}
 
-#landing{
+#landingSlide{
   height:100vh;
-  display:flex;
-  align-items:center;
-  justify-content: center;
-
-  #name{
-    font-family: 'Playfair Display', sans-serif;
-    font-size:4em;
-    padding-left:20px;
-  }
-  #byline{
-    font-family: 'Oswald', sans-serif;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    font-size:16px;
-    padding-left:150px;
-  }
-
-  #nav-footer{
-    position:absolute;
-    bottom:25px;
-    justify-content:center;
-    text-align: center;
-    ul{
-      a{
-        &:nth-child(1n+2){
-          &::before{
-            content:'/'
-          }
-        }
-      }
-      li{
-        display:inline-flex;
-        padding: 0 10px;
-      }
-    }
-  }
 }
 
-#about{
-    background-color:#f7484e;
-    display:flex;
-    align-items:center;
-  .container-fluid{
-    width:100%;
-    .chapter-content{
-      background-color:white;
-      float:right;
-      .text{
-        padding:100px;
-        font-family: 'Open Sans', sans-serif;
-      }
-    }
-  }
-
-  .chapter-title{
-    display:flex;
-    align-items:center;
-    h1{
-     @extend #stylistic-font;
-      justify-content: center;
-      width:100%;
-      color:white;
-      text-align:center;
-    }
-  }
-}
-
-.scrollmagic-pin-spacer{
-  display:inline-block !important;
-  float:left !important;
-}
-
-#work{
-    width:100% !important;
-    // background-color:#ccc;
-    display:flex;
-    align-items:center;
-  .container-fluid{
-    width:100%;
-  }
-  .chapter-content{
-      background-color:#ccc;
-      float:right;
-      z-index:10;
-      padding:0 !important;
-  }
-  .chapter-title{
-    h1{
-      @extend #stylistic-font;
-    }
+#aboutSlide{
+  z-index:20;
+  .title-block{
+    height: 100vh;
+    display: flex;
     justify-content: center;
-  }
-
-  #kne{
-    height:100vh;
-    width:100%;
-    padding:0;
-    .project-text{
-      // background-color:#ccc;
-      padding:50px 100px;
+    align-items: center;
+    .title-text{
+      @extend .stylistic-font;
+      color: white;
+      padding: 12px 15px 15px;
+      margin: 0;
     }
-    background-image:url('../../img/kne.png');
-    background-size:cover;
-    background-position-x:-300px;
   }
-    #riddikulus{
-      height:100vh;
-      width:100%;
-      .project-text{
-        padding:50px 100px;
-      }
-      background-image:url('../../img/riddikulus2.png');
-      background-size:cover;
+  #about-header{
+    background-color: #f7484e;
   }
-    #snakes{
-      height:100vh;
-      width:100%;
-
-      .project-text{
-        padding:50px 100px;
-      }
-      background-image:url('../../img/snakes2.png');
-      background-size:cover;
-      // background-position-x:-215px;
+  #about-content{
+    height: auto;
   }
 }
 
 
-#contact{
-  display:flex;
-  align-items:center;
-  .container-fluid{
-    width:100%;
-    position:relative;
-    .chapter-content{
-      padding:100px;
-      float:right;
-      background-color:white;
-      h1{
-        width:100%;
-        text-align:center;
-      }
-      ul{
-        list-style-type: none;
-        padding:0;
-        position:absolute;
-        bottom:0;
-        li{
-          float:left;
-          padding-right:25px;
-          font-size:18px;
-           &:nth-child(1n+2){
-            &::before{
-              content:''
-            }
-          }
-        }
-      }
+// scrollMagic
+.wrapper {
+  max-width: 350px;
+  margin: 0 10%; }
+
+#slide01, #slide02, #slide03  {
+  background-color: white;
+}
+
+.slide {
+  position: relative;
+  overflow: hidden;
+  height: 100vh;
+}
+    .slide .pin-wrapper {
+        width: 100%;
+        height: 100%;
     }
+
+    .slide .pin-wrapper .chapter-content{
+      width: 50%;
+      background-color: #EDEDED;
+      height: 100%;
+    }
+
+    .slide .wrapper {
+        position: absolute;
+        top: 45%;
+        left: 10%;
+    }
+    .slide .img {
+        position: absolute;
+        top: 10%;
+        left: 50%;
+        width: 600px;
+        height: 418px;
+        border:1px solid red;
+        background: url('/img/kne.png') no-repeat top left;
+        background-size:cover;
+        transform: translate(-80%, -40%);
+        transform: translate(10%, 0%)
+    }
+
+.scrollmagic-pin-spacer {
+    position: absolute !important;
+    clip: rect(auto, auto, auto, auto);
+}
+
+#slide02 .img {
+  background-image: url('/img/riddikulus.png');}
+
+#slide03 .img {
+  background-image: url('/img/snakes.png');}
+
+
+#slide02 .pin-wrapper,
+#slide03 .pin-wrapper{
+    transform: translateY(-100%);
+}
+
+.imgText{
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  width: 700px;
+  height: 100%;
+  padding: 0 100px;
+  text-align: center;
+}
+
+
+
+
+@media screen and (min-width: 992px) {
+  #about-header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 200;
   }
-  .chapter-title{
-    @extend #stylistic-font;
-      height:100vh;
-      background-color:#ccc;
-      display:flex;
-      align-items:center;
-      justify-content:center
+  #about-content{
+    position:relative;
+    z-index: 100;
+    left:50%;
   }
 }

@@ -8,128 +8,115 @@
 * {
   box-sizing: border-box; }
 
+html, body {
+  height: 100%;
+  margin: 0; }
+
+.stylistic-font, #aboutSlide .title-block .title-text {
+  font-family: 'Stylistic Alt', sans-serif !important;
+  font-size: 75px; }
+
+.fixed-header {
+  position: fixed !important;
+  padding-left: 0 !important; }
+
+.content-padding {
+  padding: 100px; }
+
+.wrapper {
+  width: 90%;
+  margin: 0 5%; }
+
 #title-font {
   font-family: 'Playfair Display', sans-serif; }
 
-#stylistic-font, #about .chapter-title h1, #work .chapter-title h1, #contact .chapter-title {
-  font-family: 'Stylistic Alt', sans-serif;
-  font-size: 75px; }
+#landingSlide {
+  height: 100vh; }
 
-#landing {
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center; }
-  #landing #name {
-    font-family: 'Playfair Display', sans-serif;
-    font-size: 4em;
-    padding-left: 20px; }
-  #landing #byline {
-    font-family: 'Oswald', sans-serif;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    font-size: 16px;
-    padding-left: 150px; }
-  #landing #nav-footer {
-    position: absolute;
-    bottom: 25px;
-    justify-content: center;
-    text-align: center; }
-    #landing #nav-footer ul a:nth-child(1n+2)::before {
-      content: '/'; }
-    #landing #nav-footer ul li {
-      display: inline-flex;
-      padding: 0 10px; }
-
-#about {
-  background-color: #f7484e;
-  display: flex;
-  align-items: center; }
-  #about .container-fluid {
-    width: 100%; }
-    #about .container-fluid .chapter-content {
-      background-color: white;
-      float: right; }
-      #about .container-fluid .chapter-content .text {
-        padding: 100px;
-        font-family: 'Open Sans', sans-serif; }
-  #about .chapter-title {
+#aboutSlide {
+  z-index: 20; }
+  #aboutSlide .title-block {
+    height: 100vh;
     display: flex;
+    justify-content: center;
     align-items: center; }
-    #about .chapter-title h1 {
-      justify-content: center;
-      width: 100%;
+    #aboutSlide .title-block .title-text {
       color: white;
-      text-align: center; }
+      padding: 12px 15px 15px;
+      margin: 0; }
+  #aboutSlide #about-header {
+    background-color: #f7484e; }
+  #aboutSlide #about-content {
+    height: auto; }
+
+.wrapper {
+  max-width: 350px;
+  margin: 0 10%; }
+
+#slide01, #slide02, #slide03 {
+  background-color: white; }
+
+.slide {
+  position: relative;
+  overflow: hidden;
+  height: 100vh; }
+
+.slide .pin-wrapper {
+  width: 100%;
+  height: 100%; }
+
+.slide .pin-wrapper .chapter-content {
+  width: 50%;
+  background-color: #EDEDED;
+  height: 100%; }
+
+.slide .wrapper {
+  position: absolute;
+  top: 45%;
+  left: 10%; }
+
+.slide .img {
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  width: 600px;
+  height: 418px;
+  border: 1px solid red;
+  background: url("/img/kne.png") no-repeat top left;
+  background-size: cover;
+  transform: translate(-80%, -40%);
+  transform: translate(10%, 0%); }
 
 .scrollmagic-pin-spacer {
-  display: inline-block !important;
-  float: left !important; }
+  position: absolute !important;
+  clip: rect(auto, auto, auto, auto); }
 
-#work {
-  width: 100% !important;
-  display: flex;
-  align-items: center; }
-  #work .container-fluid {
-    width: 100%; }
-  #work .chapter-content {
-    background-color: #ccc;
-    float: right;
-    z-index: 10;
-    padding: 0 !important; }
-  #work .chapter-title {
-    justify-content: center; }
-  #work #kne {
-    height: 100vh;
-    width: 100%;
-    padding: 0;
-    background-image: url("../../img/kne.png");
-    background-size: cover;
-    background-position-x: -300px; }
-    #work #kne .project-text {
-      padding: 50px 100px; }
-  #work #riddikulus {
-    height: 100vh;
-    width: 100%;
-    background-image: url("../../img/riddikulus2.png");
-    background-size: cover; }
-    #work #riddikulus .project-text {
-      padding: 50px 100px; }
-  #work #snakes {
-    height: 100vh;
-    width: 100%;
-    background-image: url("../../img/snakes2.png");
-    background-size: cover; }
-    #work #snakes .project-text {
-      padding: 50px 100px; }
+#slide02 .img {
+  background-image: url("/img/riddikulus.png"); }
 
-#contact {
-  display: flex;
-  align-items: center; }
-  #contact .container-fluid {
-    width: 100%;
-    position: relative; }
-    #contact .container-fluid .chapter-content {
-      padding: 100px;
-      float: right;
-      background-color: white; }
-      #contact .container-fluid .chapter-content h1 {
-        width: 100%;
-        text-align: center; }
-      #contact .container-fluid .chapter-content ul {
-        list-style-type: none;
-        padding: 0;
-        position: absolute;
-        bottom: 0; }
-        #contact .container-fluid .chapter-content ul li {
-          float: left;
-          padding-right: 25px;
-          font-size: 18px; }
-          #contact .container-fluid .chapter-content ul li:nth-child(1n+2)::before {
-            content: ''; }
-  #contact .chapter-title {
-    height: 100vh;
-    background-color: #ccc;
-    display: flex;
-    align-items: center;
-    justify-content: center; }
+#slide03 .img {
+  background-image: url("/img/snakes.png"); }
+
+#slide02 .pin-wrapper,
+#slide03 .pin-wrapper {
+  transform: translateY(-100%); }
+
+.imgText {
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  width: 700px;
+  height: 100%;
+  padding: 0 100px;
+  text-align: center; }
+
+@media screen and (min-width: 992px) {
+  #about-header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 200; }
+  #about-content {
+    position: relative;
+    z-index: 100;
+    left: 50%; } }
