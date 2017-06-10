@@ -10,7 +10,7 @@
   font-size: 75px; }
 
 .title-font, #landingSlide #wrapper #name {
-  font-family: 'Playfair Display', sans-serif; }
+  font-family: 'Playfair Display', sans-serif !important; }
 
 .wrapper {
   max-width: 350px;
@@ -45,8 +45,8 @@
   left: 50%;
   width: 600px;
   height: 418px;
-  background: url("/img/kne.png") no-repeat top left;
-  background-size: cover;
+  background: url("/img/macbook-comp.png") no-repeat top left;
+  background-size: contain;
   transform: translate(-80%, -40%);
   transform: translate(10%, 0%); }
 
@@ -55,10 +55,12 @@
   clip: rect(auto, auto, auto, auto); }
 
 #slide02 .img {
-  background-image: url("/img/riddikulus.png"); }
+  background-image: url("/img/riddikulus-comp.png");
+  background-size: contain; }
 
 #slide03 .img {
-  background-image: url("/img/snakes.png"); }
+  background-image: url("/img/snakes-comp.png");
+  background-size: contain; }
 
 #slide02 .pin-wrapper,
 #slide03 .pin-wrapper {
@@ -101,6 +103,9 @@ html, body {
     text-align: center; }
     #landingSlide #wrapper #name {
       font-size: 55px; }
+    #landingSlide #wrapper #byline {
+      text-transform: uppercase;
+      letter-spacing: 1px; }
 
 #aboutSlide {
   z-index: 20;

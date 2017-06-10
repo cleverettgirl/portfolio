@@ -34,8 +34,8 @@
         left: 50%;
         width: 600px;
         height: 418px;
-        background: url('/img/kne.png') no-repeat top left;
-        background-size:cover;
+        background: url('/img/macbook-comp.png') no-repeat top left;
+        background-size:contain;
         transform: translate(-80%, -40%);
         transform: translate(10%, 0%)
     }
@@ -46,10 +46,14 @@
 }
 
 #slide02 .img {
-  background-image: url('/img/riddikulus.png');}
+  background-image: url('/img/riddikulus-comp.png');
+  background-size:contain;
+}
 
 #slide03 .img {
-  background-image: url('/img/snakes.png');}
+  background-image: url('/img/snakes-comp.png');
+  background-size:contain;
+}
 
 
 #slide02 .pin-wrapper,

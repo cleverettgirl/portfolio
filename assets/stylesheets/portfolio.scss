@@ -37,6 +37,10 @@ html,body{
       @extend .title-font;
       font-size:55px;
     }
+    #byline{
+      text-transform:uppercase;
+      letter-spacing:1px;
+    }
   }
 }
 
