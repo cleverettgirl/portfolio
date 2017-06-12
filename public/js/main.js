@@ -20,7 +20,7 @@ $(function(){
   });
 
 
-// *** MAKE WORK & ABOUT SECTION STICKY
+// MAKE WORK & ABOUT SECTION STICKY
   $(window).on('scroll resize', function () {
 
     const $about = $('#aboutSlide'),
@@ -28,7 +28,7 @@ $(function(){
           $window = $(window),
           $aboutHeader = $('#about-header')
 
-    //#about-main
+    //#about
     let aboutTop = $about.offset().top;
     let aboutBottom = $about.height() + aboutTop;
     let aboutHeaderTop = $aboutContent.height() - $window.height();
@@ -40,7 +40,6 @@ $(function(){
     let windowBottom = $window.height() + windowTop;
 
 
-    //logic for about
     if (windowBottom > aboutBottom) {
       $aboutHeader.removeClass('fixed-header');
       $aboutHeader.css('top', aboutHeaderTop);

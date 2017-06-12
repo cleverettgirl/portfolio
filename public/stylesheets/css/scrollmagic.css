@@ -1,3 +1,17 @@
+@font-face {
+  font-family: 'Stylistic Alt';
+  src: url("/fonts/StylisticAlt.eot");
+  src: url("/fonts/StylisticAlt.eot?#iefix") format("embedded-opentype"), url("/fonts/StylisticAlt.woff") format("woff"), url("/fonts/StylisticAlt.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal; }
+
+.stylistic-font {
+  font-family: 'Stylistic Alt', sans-serif !important;
+  font-size: 75px; }
+
+.title-font, .imgText h3 {
+  font-family: 'Playfair Display', sans-serif !important; }
+
 .wrapper {
   max-width: 350px;
   margin: 0 10%; }
@@ -54,9 +68,8 @@
 
 .imgText {
   position: absolute;
-  top: 70%;
+  top: 55%;
   left: 50%;
   width: 700px;
   height: 100%;
-  padding: 0 100px;
-  text-align: center; }
+  padding: 0 100px; }

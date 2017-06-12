@@ -9,7 +9,21 @@
   font-family: 'Stylistic Alt', sans-serif !important;
   font-size: 75px; }
 
-.title-font, #landingSlide #wrapper #name {
+.title-font, .imgText h3, #landingSlide #wrapper #name {
+  font-family: 'Playfair Display', sans-serif !important; }
+
+@font-face {
+  font-family: 'Stylistic Alt';
+  src: url("/fonts/StylisticAlt.eot");
+  src: url("/fonts/StylisticAlt.eot?#iefix") format("embedded-opentype"), url("/fonts/StylisticAlt.woff") format("woff"), url("/fonts/StylisticAlt.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal; }
+
+.stylistic-font, #aboutSlide .title-block .title-text, #contactSlide #contact-header .title-text {
+  font-family: 'Stylistic Alt', sans-serif !important;
+  font-size: 75px; }
+
+.title-font, .imgText h3, #landingSlide #wrapper #name {
   font-family: 'Playfair Display', sans-serif !important; }
 
 .wrapper {
@@ -68,12 +82,11 @@
 
 .imgText {
   position: absolute;
-  top: 70%;
+  top: 55%;
   left: 50%;
   width: 700px;
   height: 100%;
-  padding: 0 100px;
-  text-align: center; }
+  padding: 0 100px; }
 
 * {
   box-sizing: border-box; }
@@ -93,6 +106,17 @@ html, body {
   position: fixed !important;
   padding: 0 !important;
   width: 50%; }
+
+.nav-footer ul, #contactSlide #contact-text ul {
+  width: 100%;
+  position: absolute;
+  bottom: 20%;
+  padding-left: 0 !important; }
+  .nav-footer ul a:nth-child(1n+2)::before, #contactSlide #contact-text ul a:nth-child(1n+2)::before {
+    content: '/';
+    padding: 0 10px; }
+  .nav-footer ul a li, #contactSlide #contact-text ul a li {
+    display: inline-flex; }
 
 #landingSlide {
   height: 100vh;
@@ -121,17 +145,35 @@ html, body {
   #aboutSlide #about-header {
     padding: 0;
     background-color: #f7484e; }
+    #aboutSlide #about-header .about-img {
+      height: 125px;
+      width: 125px;
+      border-radius: 50%;
+      position: absolute;
+      top: 10%;
+      left: 90%; }
   #aboutSlide #about-content {
     height: auto; }
 
-#contactSlide #contact-header {
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: #f7484e; }
-  #contactSlide #contact-header .title-text {
-    color: white; }
+#contactSlide {
+  position: relative; }
+  #contactSlide #contact-header {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f7484e; }
+    #contactSlide #contact-header .title-text {
+      color: white; }
+  #contactSlide #contact-text {
+    height: 100vh;
+    padding: 100px;
+    position: relative;
+    padding-top: 10%; }
+    #contactSlide #contact-text #contact-text {
+      text-align: left; }
+      #contactSlide #contact-text #contact-text ul {
+        padding-left: 0 !important; }
 
 @media screen and (min-width: 992px) {
   #about-header {
