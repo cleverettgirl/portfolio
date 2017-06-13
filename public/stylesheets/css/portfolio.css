@@ -52,6 +52,19 @@
   position: absolute;
   top: 45%;
   left: 15%; }
+  .slide .wrapper .nav-footer, .slide .wrapper #landingSlide, .slide .wrapper #aboutSlide #about-header, #aboutSlide .slide .wrapper #about-header, .slide .wrapper #contactSlide #contact-header, #contactSlide .slide .wrapper #contact-header, .slide .wrapper #contactSlide #contact-text, #contactSlide .slide .wrapper #contact-text {
+    display: inline-flex;
+    list-style: none; }
+    .slide .wrapper .nav-footer ul, .slide .wrapper #landingSlide ul, .slide .wrapper #aboutSlide #about-header ul, #aboutSlide .slide .wrapper #about-header ul, .slide .wrapper #contactSlide #contact-header ul, #contactSlide .slide .wrapper #contact-header ul, .slide .wrapper #contactSlide #contact-text ul, #contactSlide .slide .wrapper #contact-text ul {
+      width: 50%;
+      position: absolute;
+      bottom: 20%;
+      padding-left: 0 !important; }
+      .slide .wrapper .nav-footer ul a:nth-child(1n+2)::before, .slide .wrapper #landingSlide ul a:nth-child(1n+2)::before, .slide .wrapper #aboutSlide #about-header ul a:nth-child(1n+2)::before, #aboutSlide .slide .wrapper #about-header ul a:nth-child(1n+2)::before, .slide .wrapper #contactSlide #contact-header ul a:nth-child(1n+2)::before, #contactSlide .slide .wrapper #contact-header ul a:nth-child(1n+2)::before, .slide .wrapper #contactSlide #contact-text ul a:nth-child(1n+2)::before, #contactSlide .slide .wrapper #contact-text ul a:nth-child(1n+2)::before {
+        content: '/';
+        padding: 0 10px; }
+      .slide .wrapper .nav-footer ul a li, .slide .wrapper #landingSlide ul a li, .slide .wrapper #aboutSlide #about-header ul a li, #aboutSlide .slide .wrapper #about-header ul a li, .slide .wrapper #contactSlide #contact-header ul a li, #contactSlide .slide .wrapper #contact-header ul a li, .slide .wrapper #contactSlide #contact-text ul a li, #contactSlide .slide .wrapper #contact-text ul a li {
+        display: inline-flex; }
 
 .slide .img {
   position: absolute;
@@ -84,9 +97,20 @@
   position: absolute;
   top: 55%;
   left: 50%;
-  width: 700px;
   height: 100%;
   padding: 0 100px; }
+  .imgText div.work-buttons {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding-top: 50px; }
+    .imgText div.work-buttons .work-button {
+      margin-right: 10px;
+      background-color: #f7484e;
+      border: none;
+      color: white;
+      border-radius: 7px;
+      padding: 5px; }
 
 * {
   box-sizing: border-box; }
@@ -95,8 +119,9 @@ html, body {
   height: 100%;
   margin: 0; }
 
-.content-padding {
-  padding: 100px; }
+body {
+  margin: 0;
+  overflow-x: hidden; }
 
 .wrapper {
   width: 90%;
@@ -107,15 +132,15 @@ html, body {
   padding: 0 !important;
   width: 50%; }
 
-.nav-footer ul, #contactSlide #contact-text ul {
+.nav-footer ul, #landingSlide ul, #aboutSlide #about-header ul, #contactSlide #contact-header ul, #contactSlide #contact-text ul {
   width: 100%;
   position: absolute;
   bottom: 20%;
   padding-left: 0 !important; }
-  .nav-footer ul a:nth-child(1n+2)::before, #contactSlide #contact-text ul a:nth-child(1n+2)::before {
+  .nav-footer ul a:nth-child(1n+2)::before, #landingSlide ul a:nth-child(1n+2)::before, #aboutSlide #about-header ul a:nth-child(1n+2)::before, #contactSlide #contact-header ul a:nth-child(1n+2)::before, #contactSlide #contact-text ul a:nth-child(1n+2)::before {
     content: '/';
     padding: 0 10px; }
-  .nav-footer ul a li, #contactSlide #contact-text ul a li {
+  .nav-footer ul a li, #landingSlide ul a li, #aboutSlide #about-header ul a li, #contactSlide #contact-header ul a li, #contactSlide #contact-text ul a li {
     display: inline-flex; }
 
 #landingSlide {
@@ -123,6 +148,10 @@ html, body {
   display: flex;
   align-items: center;
   margin-left: 50px; }
+  #landingSlide .nav-footer, #landingSlide #landingSlide, #landingSlide #aboutSlide #about-header, #aboutSlide #landingSlide #about-header, #landingSlide #contactSlide #contact-header, #contactSlide #landingSlide #contact-header, #landingSlide #contactSlide #contact-text, #contactSlide #landingSlide #contact-text {
+    display: flex;
+    justify-content: center;
+    bottom: 10%; }
   #landingSlide #wrapper {
     text-align: center; }
     #landingSlide #wrapper #name {
@@ -152,8 +181,15 @@ html, body {
       position: absolute;
       top: 10%;
       left: 90%; }
+    #aboutSlide #about-header .nav-footer, #aboutSlide #about-header #landingSlide, #aboutSlide #about-header #about-header, #aboutSlide #about-header #contactSlide #contact-header, #contactSlide #aboutSlide #about-header #contact-header, #aboutSlide #about-header #contactSlide #contact-text, #contactSlide #aboutSlide #about-header #contact-text {
+      display: flex;
+      justify-content: center;
+      color: white;
+      bottom: 10%; }
   #aboutSlide #about-content {
     height: auto; }
+    #aboutSlide #about-content .content-padding {
+      padding: 100px; }
 
 #contactSlide {
   position: relative; }
@@ -165,6 +201,10 @@ html, body {
     background-color: #f7484e; }
     #contactSlide #contact-header .title-text {
       color: white; }
+    #contactSlide #contact-header .nav-footer, #contactSlide #contact-header #landingSlide, #contactSlide #contact-header #aboutSlide #about-header, #aboutSlide #contactSlide #contact-header #about-header, #contactSlide #contact-header #contact-header, #contactSlide #contact-header #contact-text {
+      display: flex;
+      justify-content: center;
+      bottom: 10%; }
   #contactSlide #contact-text {
     height: 100vh;
     padding: 100px;

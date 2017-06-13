@@ -35,6 +35,11 @@
           </svg>
           <h4 id="byline"> Software Engineer </h4>
         </div>
+        <ul class="nav-footer">
+          <a href="#main-container"><li>Home</li></a>
+          <a href="#slide01"><li>Work</li></a>
+          <a href="#contactSlide"><li>Contact</li></a>
+        </ul>
       </div>
 
       <!-- ABOUT -->
@@ -42,9 +47,14 @@
         <div class="col-sm-12 col-md-6 title-block" id="about-header">
           <h1 class="title-text"> About </h1>
           <img src="/img/kne.png" class="about-img"/>
+          <ul class="nav-footer">
+            <a href="#landingSlide"><li>Home</li></a>
+            <a href="#slide01"><li>Work</li></a>
+            <a href="#contactSlide"><li>Contact</li></a>
+          </ul>
         </div>
-        <div class="col-md-6" id="about-content">
-          <div class="content-padding" style="margin: 0 auto;">
+        <div class="col-md-6" id="about-content" >
+          <div class="content-padding" style="max-width:850px; margin: 0 auto;">
             <br>
             <b><small><h4 style="font-weight:700; font-size:16px">I’m a detail-oriented software engineer from Florida living in New York City.</h4></small></b>
             <br>
@@ -60,7 +70,7 @@
             <br>
             <br>
             <br>
-            I started to really enjoy the process of creating these websites and soon spent hours admiring subtle animations and the small details on a site I would find. This propelled me to learn more, especially Javascript, which led me to Grace Hopper.
+            I started to really enjoy the process of creating websites and soon spent hours admiring subtle animations and the small details on a site I would find. This propelled me to learn more, especially Javascript, which led me to Grace Hopper.
             <br>
             <br>
             <br>
@@ -82,7 +92,7 @@
             <br>
             <br>
             <br>
-            <b><h3 style="font-weight:700; font-family: 'Playfair Display';">Skills</h3></b>
+            <b><h3 style="font-weight:700;">Skills</h3></b>
             <br>
             <svg height="10" width="500">
               <line x1="0" y1="0" x2="150" y2="0" style="stroke:#f7484e; stroke-width:5" />
@@ -95,11 +105,6 @@
             <br>
             <br>
             <br>
-            My ultimate goal is to work with a group of incredibly talented people, soak up their awesomeness and collectively make the world a better place.
-            <br>
-            <br>
-            <br>
-            <b>When I’m not in front of a computer screen,</b> I’m probably painting, eating good food that I didn’t make, traveling or playing puppies and kittens.
           </div>
         </div>
       </div>
@@ -107,6 +112,14 @@
       <!-- WORK -->
         <article id="slide01" class="slide">
           <div class="pin-wrapper"> <!--Everything inside this pin-wrapper container is what we'll want to pin using scroll Magic -->
+            <div class="wrapper">
+              <h1 class="stylistic-font">Work</h1>
+              <ul class="nav-footer">
+                <a href="#main-container"><li>Home</li></a>
+                <a href="#about"><li>Work</li></a>
+                <a href="#contactSlide"><li>Contact</li></a>
+              </ul>
+            </div>
             <div class="chapter-content">
               <div class="img"></div>
               <div class="imgText">
@@ -121,10 +134,11 @@
                   <br>
                   Technologies used include HTML5, CSS3, Javascript, jQuery.
                 </p>
+                <div class="work-buttons">
+                  <button class="work-button">< code /></button>
+                  <button class="work-button"> demo </button>
+                </div>
               </div>
-            </div>
-            <div class="wrapper">
-                <h1 class="stylistic-font">Work</h1>
             </div>
           </div>
         </article>
@@ -139,12 +153,15 @@
                   <line x1="0" y1="0" x2="500" y2="0" style="stroke:#f7484e;stroke-width:5" />
                 Sorry, your browser does not support inline SVG.
                 </svg>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                <p>
+                  Riddikulus is a Harry Potter inspired prototypal e-commerce website.
+                  <br>
+                  Technologies used include React, Redux, Sequelize, Express, Bootstrap
+                </p>
+                <div class="work-buttons">
+                  <button class="work-button">< code /></button>
+                  <button class="work-button"> demo </button>
+                </div>
               </div>
             </div>
             <div class="wrapper">
@@ -155,23 +172,27 @@
 
         <article id="slide03" class="slide">
           <div class="pin-wrapper">
-          <div class="chapter-content">
-            <div class="img"></div>
-            <div class="imgText">
-              <h3 class="title-text"> Snakes With Friends </h3>
-              <svg height="10" width="100">
-                <line x1="0" y1="0" x2="500" y2="0" style="stroke:#f7484e;stroke-width:5" />
-                Sorry, your browser does not support inline SVG.
-              </svg>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmodtempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <div class="chapter-content">
+              <div class="img"></div>
+              <div class="imgText">
+                <h3 class="title-text"> Snakes With Friends </h3>
+                <svg height="10" width="100">
+                  <line x1="0" y1="0" x2="500" y2="0" style="stroke:#f7484e;stroke-width:5" />
+                  Sorry, your browser does not support inline SVG.
+                </svg>
+                <p>
+                  Snakes with Friends is an in-browser, multiplayer game where users connect to a single screen and fight to the death.
+                  <br>
+                  Technologies used include: P5, React, Redux, Socket.io
+                </p>
+                <div class="work-buttons">
+                  <button class="work-button">< code /></button>
+                  <button class="work-button"> demo </button>
+                </div>
               </div>
-              </div>
+            </div>
             <div class="wrapper">
-                <h1 class="stylistic-font">Work</h1>
+              <h1 class="stylistic-font">Work</h1>
             </div> <!-- .wrapper -->
           </div>
         </article>
@@ -180,6 +201,11 @@
       <div class="row" id="contactSlide">
         <div class="col-md-6" id="contact-header">
           <h1 class="title-text"> Contact </h1>
+          <ul class="nav-footer">
+            <a href="#landingSlide"><li>Home</li></a>
+            <a href="#about"><li>About</li></a>
+            <a href="#slide01"><li>Work</li></a>
+          </ul>
         </div>
         <div class="col-md-6" id="contact-text">
           <b><small><h3 style="font-weight:700;">Get in touch</h3></small></b>
