@@ -5,26 +5,21 @@
   font-weight: normal;
   font-style: normal; }
 
-.stylistic-font, #aboutSlide .title-block .title-text, #contactSlide #contact-header .title-text {
+.stylistic-font {
   font-family: 'Stylistic Alt', sans-serif !important;
   font-size: 75px; }
 
-.title-font, .imgText h3, #landingSlide #wrapper #name {
-  font-family: 'Playfair Display', sans-serif !important; }
+.title-font, #landingSlide #wrapper #name, #aboutSlide .title-block .title-text, #contactSlide #contact-header .title-text {
+  font-family: 'Lato', sans-serif !important;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  word-spacing: 8px;
+  font-size: 45px; }
 
-@font-face {
-  font-family: 'Stylistic Alt';
-  src: url("/fonts/StylisticAlt.eot");
-  src: url("/fonts/StylisticAlt.eot?#iefix") format("embedded-opentype"), url("/fonts/StylisticAlt.woff") format("woff"), url("/fonts/StylisticAlt.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal; }
-
-.stylistic-font, #aboutSlide .title-block .title-text, #contactSlide #contact-header .title-text {
-  font-family: 'Stylistic Alt', sans-serif !important;
-  font-size: 75px; }
-
-.title-font, .imgText h3, #landingSlide #wrapper #name {
-  font-family: 'Playfair Display', sans-serif !important; }
+.subtitle-font, .imgText h3, .nav-footer ul a li, #landingSlide ul a li, #aboutSlide #about-header ul a li, #contactSlide #contact-header ul a li, #landingSlide #wrapper #byline {
+  font-family: 'Roboto', sans-serif !important;
+  text-transform: uppercase;
+  letter-spacing: 2px; }
 
 .wrapper {
   max-width: 350px;
@@ -40,7 +35,21 @@
 
 .slide .pin-wrapper {
   width: 100%;
-  height: 100%; }
+  height: 100%;
+  position: relative; }
+  .slide .pin-wrapper .nav-footer, .slide .pin-wrapper #landingSlide, .slide .pin-wrapper #aboutSlide #about-header, #aboutSlide .slide .pin-wrapper #about-header, .slide .pin-wrapper #contactSlide #contact-header, #contactSlide .slide .pin-wrapper #contact-header {
+    display: inline-flex;
+    list-style: none; }
+    .slide .pin-wrapper .nav-footer ul, .slide .pin-wrapper #landingSlide ul, .slide .pin-wrapper #aboutSlide #about-header ul, #aboutSlide .slide .pin-wrapper #about-header ul, .slide .pin-wrapper #contactSlide #contact-header ul, #contactSlide .slide .pin-wrapper #contact-header ul {
+      width: 50%;
+      position: absolute;
+      bottom: 20%;
+      padding-left: 0 !important; }
+      .slide .pin-wrapper .nav-footer ul a:nth-child(1n+2)::before, .slide .pin-wrapper #landingSlide ul a:nth-child(1n+2)::before, .slide .pin-wrapper #aboutSlide #about-header ul a:nth-child(1n+2)::before, #aboutSlide .slide .pin-wrapper #about-header ul a:nth-child(1n+2)::before, .slide .pin-wrapper #contactSlide #contact-header ul a:nth-child(1n+2)::before, #contactSlide .slide .pin-wrapper #contact-header ul a:nth-child(1n+2)::before {
+        content: '/';
+        padding: 0 10px; }
+      .slide .pin-wrapper .nav-footer ul a li, .slide .pin-wrapper #landingSlide ul a li, .slide .pin-wrapper #aboutSlide #about-header ul a li, #aboutSlide .slide .pin-wrapper #about-header ul a li, .slide .pin-wrapper #contactSlide #contact-header ul a li, #contactSlide .slide .pin-wrapper #contact-header ul a li {
+        display: inline-flex; }
 
 .slide .pin-wrapper .chapter-content {
   width: 50%;
@@ -52,19 +61,6 @@
   position: absolute;
   top: 45%;
   left: 15%; }
-  .slide .wrapper .nav-footer, .slide .wrapper #landingSlide, .slide .wrapper #aboutSlide #about-header, #aboutSlide .slide .wrapper #about-header, .slide .wrapper #contactSlide #contact-header, #contactSlide .slide .wrapper #contact-header, .slide .wrapper #contactSlide #contact-text, #contactSlide .slide .wrapper #contact-text {
-    display: inline-flex;
-    list-style: none; }
-    .slide .wrapper .nav-footer ul, .slide .wrapper #landingSlide ul, .slide .wrapper #aboutSlide #about-header ul, #aboutSlide .slide .wrapper #about-header ul, .slide .wrapper #contactSlide #contact-header ul, #contactSlide .slide .wrapper #contact-header ul, .slide .wrapper #contactSlide #contact-text ul, #contactSlide .slide .wrapper #contact-text ul {
-      width: 50%;
-      position: absolute;
-      bottom: 20%;
-      padding-left: 0 !important; }
-      .slide .wrapper .nav-footer ul a:nth-child(1n+2)::before, .slide .wrapper #landingSlide ul a:nth-child(1n+2)::before, .slide .wrapper #aboutSlide #about-header ul a:nth-child(1n+2)::before, #aboutSlide .slide .wrapper #about-header ul a:nth-child(1n+2)::before, .slide .wrapper #contactSlide #contact-header ul a:nth-child(1n+2)::before, #contactSlide .slide .wrapper #contact-header ul a:nth-child(1n+2)::before, .slide .wrapper #contactSlide #contact-text ul a:nth-child(1n+2)::before, #contactSlide .slide .wrapper #contact-text ul a:nth-child(1n+2)::before {
-        content: '/';
-        padding: 0 10px; }
-      .slide .wrapper .nav-footer ul a li, .slide .wrapper #landingSlide ul a li, .slide .wrapper #aboutSlide #about-header ul a li, #aboutSlide .slide .wrapper #about-header ul a li, .slide .wrapper #contactSlide #contact-header ul a li, #contactSlide .slide .wrapper #contact-header ul a li, .slide .wrapper #contactSlide #contact-text ul a li, #contactSlide .slide .wrapper #contact-text ul a li {
-        display: inline-flex; }
 
 .slide .img {
   position: absolute;
@@ -112,6 +108,29 @@
       border-radius: 7px;
       padding: 5px; }
 
+@font-face {
+  font-family: 'Stylistic Alt';
+  src: url("/fonts/StylisticAlt.eot");
+  src: url("/fonts/StylisticAlt.eot?#iefix") format("embedded-opentype"), url("/fonts/StylisticAlt.woff") format("woff"), url("/fonts/StylisticAlt.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal; }
+
+.stylistic-font {
+  font-family: 'Stylistic Alt', sans-serif !important;
+  font-size: 75px; }
+
+.title-font, #landingSlide #wrapper #name, #aboutSlide .title-block .title-text, #contactSlide #contact-header .title-text {
+  font-family: 'Lato', sans-serif !important;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  word-spacing: 8px;
+  font-size: 45px; }
+
+.subtitle-font, .imgText h3, .nav-footer ul a li, #landingSlide ul a li, #aboutSlide #about-header ul a li, #contactSlide #contact-header ul a li, #landingSlide #wrapper #byline {
+  font-family: 'Roboto', sans-serif !important;
+  text-transform: uppercase;
+  letter-spacing: 2px; }
+
 * {
   box-sizing: border-box; }
 
@@ -132,33 +151,43 @@ body {
   padding: 0 !important;
   width: 50%; }
 
-.nav-footer ul, #landingSlide ul, #aboutSlide #about-header ul, #contactSlide #contact-header ul, #contactSlide #contact-text ul {
+.nav-footer ul, #landingSlide ul, #aboutSlide #about-header ul, #contactSlide #contact-header ul {
   width: 100%;
   position: absolute;
   bottom: 20%;
   padding-left: 0 !important; }
-  .nav-footer ul a:nth-child(1n+2)::before, #landingSlide ul a:nth-child(1n+2)::before, #aboutSlide #about-header ul a:nth-child(1n+2)::before, #contactSlide #contact-header ul a:nth-child(1n+2)::before, #contactSlide #contact-text ul a:nth-child(1n+2)::before {
+  .nav-footer ul a:hover, #landingSlide ul a:hover, #aboutSlide #about-header ul a:hover, #contactSlide #contact-header ul a:hover {
+    text-decoration: none; }
+  .nav-footer ul a:nth-child(1n+2)::before, #landingSlide ul a:nth-child(1n+2)::before, #aboutSlide #about-header ul a:nth-child(1n+2)::before, #contactSlide #contact-header ul a:nth-child(1n+2)::before {
     content: '/';
-    padding: 0 10px; }
-  .nav-footer ul a li, #landingSlide ul a li, #aboutSlide #about-header ul a li, #contactSlide #contact-header ul a li, #contactSlide #contact-text ul a li {
-    display: inline-flex; }
+    padding: 0 10px;
+    color: black; }
+  .nav-footer ul a li, #landingSlide ul a li, #aboutSlide #about-header ul a li, #contactSlide #contact-header ul a li {
+    display: inline-flex;
+    font-size: 12px;
+    color: black; }
 
 #landingSlide {
   height: 100vh;
   display: flex;
   align-items: center;
   margin-left: 50px; }
-  #landingSlide .nav-footer, #landingSlide #landingSlide, #landingSlide #aboutSlide #about-header, #aboutSlide #landingSlide #about-header, #landingSlide #contactSlide #contact-header, #contactSlide #landingSlide #contact-header, #landingSlide #contactSlide #contact-text, #contactSlide #landingSlide #contact-text {
+  #landingSlide .nav-footer, #landingSlide #landingSlide, #landingSlide #aboutSlide #about-header, #aboutSlide #landingSlide #about-header, #landingSlide #contactSlide #contact-header, #contactSlide #landingSlide #contact-header {
     display: flex;
     justify-content: center;
     bottom: 10%; }
+    #landingSlide .nav-footer a:nth-child(1n+2)::before, #landingSlide #landingSlide a:nth-child(1n+2)::before, #landingSlide #aboutSlide #about-header a:nth-child(1n+2)::before, #aboutSlide #landingSlide #about-header a:nth-child(1n+2)::before, #landingSlide #contactSlide #contact-header a:nth-child(1n+2)::before, #contactSlide #landingSlide #contact-header a:nth-child(1n+2)::before {
+      color: #f7484e; }
+    #landingSlide .nav-footer a li, #landingSlide #landingSlide a li, #landingSlide #aboutSlide #about-header a li, #aboutSlide #landingSlide #about-header a li, #landingSlide #contactSlide #contact-header a li, #contactSlide #landingSlide #contact-header a li {
+      color: #f7484e; }
   #landingSlide #wrapper {
     text-align: center; }
     #landingSlide #wrapper #name {
       font-size: 55px; }
     #landingSlide #wrapper #byline {
+      font-weight: 400;
       text-transform: uppercase;
-      letter-spacing: 1px; }
+      letter-spacing: 4px; }
 
 #aboutSlide {
   z-index: 20;
@@ -175,16 +204,18 @@ body {
     padding: 0;
     background-color: #f7484e; }
     #aboutSlide #about-header .about-img {
+      background-image: url(/img/coffee.jpg);
+      background-repeat: no-repeat;
+      background-size: cover;
       height: 125px;
       width: 125px;
       border-radius: 50%;
       position: absolute;
       top: 10%;
       left: 90%; }
-    #aboutSlide #about-header .nav-footer, #aboutSlide #about-header #landingSlide, #aboutSlide #about-header #about-header, #aboutSlide #about-header #contactSlide #contact-header, #contactSlide #aboutSlide #about-header #contact-header, #aboutSlide #about-header #contactSlide #contact-text, #contactSlide #aboutSlide #about-header #contact-text {
+    #aboutSlide #about-header .nav-footer, #aboutSlide #about-header #landingSlide, #aboutSlide #about-header #about-header, #aboutSlide #about-header #contactSlide #contact-header, #contactSlide #aboutSlide #about-header #contact-header {
       display: flex;
       justify-content: center;
-      color: white;
       bottom: 10%; }
   #aboutSlide #about-content {
     height: auto; }
@@ -201,7 +232,7 @@ body {
     background-color: #f7484e; }
     #contactSlide #contact-header .title-text {
       color: white; }
-    #contactSlide #contact-header .nav-footer, #contactSlide #contact-header #landingSlide, #contactSlide #contact-header #aboutSlide #about-header, #aboutSlide #contactSlide #contact-header #about-header, #contactSlide #contact-header #contact-header, #contactSlide #contact-header #contact-text {
+    #contactSlide #contact-header .nav-footer, #contactSlide #contact-header #landingSlide, #contactSlide #contact-header #aboutSlide #about-header, #aboutSlide #contactSlide #contact-header #about-header, #contactSlide #contact-header #contact-header {
       display: flex;
       justify-content: center;
       bottom: 10%; }
@@ -214,6 +245,19 @@ body {
       text-align: left; }
       #contactSlide #contact-text #contact-text ul {
         padding-left: 0 !important; }
+    #contactSlide #contact-text .social-footer {
+      display: flex;
+      padding-left: 0 !important;
+      margin-top: 5%; }
+      #contactSlide #contact-text .social-footer a:hover {
+        text-decoration: none; }
+      #contactSlide #contact-text .social-footer a li {
+        list-style-type: none;
+        display: inline-flex;
+        padding-right: 15px;
+        color: black; }
+        #contactSlide #contact-text .social-footer a li i {
+          font-size: 20px; }
 
 @media screen and (min-width: 992px) {
   #about-header {

@@ -18,22 +18,24 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
     <link rel="stylesheet" href="stylesheets/css/portfolio.css">
     <!-- <script src="js/vendor/modernizr-2.8.3.min.js"></script> -->
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Lato|Roboto:300, 400" rel="stylesheet">
+
   </head>
   <body>
     <!--[if lt IE 8]>
     <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
-
     <div class="fluid-container main-contaier" class="main">
-
       <div class="row" id="landingSlide" style="z-index: 20;">
         <div class="col-md-6" id="wrapper">
-          <h1 id="name">Christine Leverett</h1>
-          <svg height="10" width="500">
-            <line x1="0" y1="0" x2="500" y2="0" style="stroke:#f7484e;stroke-width:5" />
+          <h1 id="name" class="title-font">Christine Leverett</h1>
+          <svg height="10" width="650">
+            <line x1="0" y1="0" x2="700" y2="0" style="stroke:#E2D6DB;stroke-width:10" />
             Sorry, your browser does not support inline SVG.
           </svg>
-          <h4 id="byline"> Software Engineer </h4>
+          <h4 id="byline" class="subtitle-font"> Software Engineer </h4>
         </div>
         <ul class="nav-footer">
           <a href="#main-container"><li>Home</li></a>
@@ -41,12 +43,11 @@
           <a href="#contactSlide"><li>Contact</li></a>
         </ul>
       </div>
-
       <!-- ABOUT -->
       <div class="row" id="aboutSlide" style="position:relative;">
         <div class="col-sm-12 col-md-6 title-block" id="about-header">
           <h1 class="title-text"> About </h1>
-          <img src="/img/kne.png" class="about-img"/>
+          <div class='about-img img-responsive'></div>
           <ul class="nav-footer">
             <a href="#landingSlide"><li>Home</li></a>
             <a href="#slide01"><li>Work</li></a>
@@ -110,27 +111,19 @@
       </div>
 
       <!-- WORK -->
+
         <article id="slide01" class="slide">
-          <div class="pin-wrapper"> <!--Everything inside this pin-wrapper container is what we'll want to pin using scroll Magic -->
-            <div class="wrapper">
-              <h1 class="stylistic-font">Work</h1>
-              <ul class="nav-footer">
-                <a href="#main-container"><li>Home</li></a>
-                <a href="#about"><li>Work</li></a>
-                <a href="#contactSlide"><li>Contact</li></a>
-              </ul>
-            </div>
+          <div class="pin-wrapper"> <!--Everything inside this pin-wrapper container is what we'll want to pin using scroll Magic-->
             <div class="chapter-content">
               <div class="img"></div>
               <div class="imgText">
-                <h3 class="title-text"> Keeley Nicole Events </h3>
+                <h4 class="subtitle-font"> Keeley Nicole Events </h4>
                 <svg height="10" width="100">
-                  <line x1="0" y1="0" x2="500" y2="0" style="stroke:#f7484e;stroke-width:5" />
+                  <line x1="0" y1="0" x2="500" y2="0" style="stroke:#E2D6DB;stroke-width:5" />
                 Sorry, your browser does not support inline SVG.
                 </svg>
-                <br>
                 <p>
-                  KNE is a personal website and blog for wedding planner, Keeley Spagnola.
+                   KNE is a personal website and blog for wedding planner, Keeley Spagnola.
                   <br>
                   Technologies used include HTML5, CSS3, Javascript, jQuery.
                 </p>
@@ -140,17 +133,21 @@
                 </div>
               </div>
             </div>
+            <div class="wrapper">
+              <h1 class="title-font">Work</h1>
+            </div>
           </div>
         </article>
+
 
         <article id="slide02" class="slide">
           <div class="pin-wrapper"> <!--Everything inside this pin-wrapper container is what we'll want to pin using scroll Magic -->
             <div class="chapter-content">
               <div class="img"></div>
               <div class="imgText">
-                <h3 class="title-text"> Riddikulus </h3>
+                <h4 class="subtitle-font"> Riddikulus </h4>
                 <svg height="10" width="100">
-                  <line x1="0" y1="0" x2="500" y2="0" style="stroke:#f7484e;stroke-width:5" />
+                  <line x1="0" y1="0" x2="500" y2="0" style="stroke:#E2D6DB;stroke-width:5" />
                 Sorry, your browser does not support inline SVG.
                 </svg>
                 <p>
@@ -165,8 +162,8 @@
               </div>
             </div>
             <div class="wrapper">
-                <h1 class="stylistic-font">Work</h1>
-            </div> <!-- .wrapper -->
+                <h1 class="title-font">Work</h1>
+            </div>
           </div>
         </article>
 
@@ -175,9 +172,9 @@
             <div class="chapter-content">
               <div class="img"></div>
               <div class="imgText">
-                <h3 class="title-text"> Snakes With Friends </h3>
+                <h4 class="subtitle-font"> Snakes With Friends </h4>
                 <svg height="10" width="100">
-                  <line x1="0" y1="0" x2="500" y2="0" style="stroke:#f7484e;stroke-width:5" />
+                  <line x1="0" y1="0" x2="500" y2="0" style="stroke:#E2D6DB;stroke-width:5" />
                   Sorry, your browser does not support inline SVG.
                 </svg>
                 <p>
@@ -192,8 +189,8 @@
               </div>
             </div>
             <div class="wrapper">
-              <h1 class="stylistic-font">Work</h1>
-            </div> <!-- .wrapper -->
+              <h1 class="title-font">Work</h1>
+            </div>
           </div>
         </article>
 
@@ -203,21 +200,21 @@
           <h1 class="title-text"> Contact </h1>
           <ul class="nav-footer">
             <a href="#landingSlide"><li>Home</li></a>
-            <a href="#about"><li>About</li></a>
+            <a href="#aboutSlide"><li>About</li></a>
             <a href="#slide01"><li>Work</li></a>
           </ul>
         </div>
         <div class="col-md-6" id="contact-text">
           <b><small><h3 style="font-weight:700;">Get in touch</h3></small></b>
           <svg height="10" width="550">
-            <line x1="0" y1="0" x2="200" y2="0" style="stroke:#f7484e; stroke-width:5" />
+            <line x1="0" y1="0" x2="200" y2="0" style="stroke:#E2D6DB; stroke-width:10" />
               Sorry, your browser does not support inline SVG.
           </svg>
           <br>
           <br>
           <br>
           <p>Want to reach out with a project idea or just say hi? Feel free to send me an email at cleverett1 at gmail dot com.</p>
-          <ul class="nav-footer">
+          <ul class="social-footer">
             <a href="https://github.com/cleverettgirl"><li><i class="fa fa-github-alt" aria-hidden="true"></i></li></a>
             <a href="https://www.linkedin.com/in/cleverett1/"><li><i class="fa fa-linkedin" aria-hidden="true"></i></li></a>
             <a href="https://twitter.com/cleverettgirl"><li><i class="fa fa-twitter" aria-hidden="true"></i></li></a>

@@ -21,9 +21,4 @@
     }
 }());
 
-// Place any jQuery/helper plugins in here.
-$(function(){
-    const controller = new ScrollMagic.Controller();
 
-
-});
