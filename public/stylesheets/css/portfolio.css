@@ -1,3 +1,19 @@
+.nav-footer ul, .slides .pin-wrappers #work01-header ul, .slides .pin-wrappers #work02-header ul, .slides .pin-wrappers #work03-header ul, #landingSlide ul, #aboutSlide #about-header ul, #contactSlide #contact-header ul {
+  width: 100%;
+  position: absolute;
+  bottom: 20%;
+  padding-left: 0 !important; }
+  .nav-footer ul a:hover, .slides .pin-wrappers #work01-header ul a:hover, .slides .pin-wrappers #work02-header ul a:hover, .slides .pin-wrappers #work03-header ul a:hover, #landingSlide ul a:hover, #aboutSlide #about-header ul a:hover, #contactSlide #contact-header ul a:hover {
+    text-decoration: none; }
+  .nav-footer ul a:nth-child(1n+2)::before, .slides .pin-wrappers #work01-header ul a:nth-child(1n+2)::before, .slides .pin-wrappers #work02-header ul a:nth-child(1n+2)::before, .slides .pin-wrappers #work03-header ul a:nth-child(1n+2)::before, #landingSlide ul a:nth-child(1n+2)::before, #aboutSlide #about-header ul a:nth-child(1n+2)::before, #contactSlide #contact-header ul a:nth-child(1n+2)::before {
+    content: '/';
+    padding: 0 10px;
+    color: black; }
+  .nav-footer ul a li, .slides .pin-wrappers #work01-header ul a li, .slides .pin-wrappers #work02-header ul a li, .slides .pin-wrappers #work03-header ul a li, #landingSlide ul a li, #aboutSlide #about-header ul a li, #contactSlide #contact-header ul a li {
+    display: inline-flex;
+    font-size: 12px;
+    color: black; }
+
 @font-face {
   font-family: 'Stylistic Alt';
   src: url("/fonts/StylisticAlt.eot");
@@ -22,15 +38,6 @@
   text-transform: uppercase;
   letter-spacing: 2px; }
 
-.chapter-content {
-  background-color: #EDEDED; }
-
-.chapter-title {
-  background-color: white; }
-
-.scrollmagic-pin-spacer {
-  pointer-events: none; }
-
 .nav-footer ul, .slides .pin-wrappers #work01-header ul, .slides .pin-wrappers #work02-header ul, .slides .pin-wrappers #work03-header ul, #landingSlide ul, #aboutSlide #about-header ul, #contactSlide #contact-header ul {
   width: 100%;
   position: absolute;
@@ -46,6 +53,15 @@
     display: inline-flex;
     font-size: 12px;
     color: black; }
+
+.chapter-content {
+  background-color: #EDEDED; }
+
+.chapter-title {
+  background-color: white; }
+
+.scrollmagic-pin-spacer {
+  pointer-events: none; }
 
 .row.slides {
   pointer-events: none; }
@@ -81,12 +97,24 @@
         height: 368px;
         width: 650px;
         top: 10%; }
+      .slides .pin-wrappers #work01-content .work-text p, .slides .pin-wrappers #work02-content .work-text p, .slides .pin-wrappers #work03-content .work-text p {
+        width: 90%; }
       .slides .pin-wrappers #work01-content .work-nav, .slides .pin-wrappers #work02-content .work-nav, .slides .pin-wrappers #work03-content .work-nav {
         pointer-events: all;
         position: absolute;
-        top: 75%;
+        bottom: 11%;
         margin-left: 6%;
-        z-index: 999; }
+        z-index: 999;
+        left: 30%; }
+        .slides .pin-wrappers #work01-content .work-nav a, .slides .pin-wrappers #work02-content .work-nav a, .slides .pin-wrappers #work03-content .work-nav a {
+          border: thin solid #E2D6DB;
+          padding: 8px;
+          background-color: #E2D6DB;
+          border-radius: 4px;
+          color: black;
+          margin-right: 5px; }
+          .slides .pin-wrappers #work01-content .work-nav a:hover, .slides .pin-wrappers #work02-content .work-nav a:hover, .slides .pin-wrappers #work03-content .work-nav a:hover {
+            text-decoration: none; }
 
 #slides02 #work02-content .img {
   background-image: url(../../img/riddikulus-comp.png) !important; }
@@ -147,22 +175,6 @@ body {
   position: fixed !important;
   padding: 0 !important;
   width: 50%; }
-
-.nav-footer ul, .slides .pin-wrappers #work01-header ul, .slides .pin-wrappers #work02-header ul, .slides .pin-wrappers #work03-header ul, #landingSlide ul, #aboutSlide #about-header ul, #contactSlide #contact-header ul {
-  width: 100%;
-  position: absolute;
-  bottom: 20%;
-  padding-left: 0 !important; }
-  .nav-footer ul a:hover, .slides .pin-wrappers #work01-header ul a:hover, .slides .pin-wrappers #work02-header ul a:hover, .slides .pin-wrappers #work03-header ul a:hover, #landingSlide ul a:hover, #aboutSlide #about-header ul a:hover, #contactSlide #contact-header ul a:hover {
-    text-decoration: none; }
-  .nav-footer ul a:nth-child(1n+2)::before, .slides .pin-wrappers #work01-header ul a:nth-child(1n+2)::before, .slides .pin-wrappers #work02-header ul a:nth-child(1n+2)::before, .slides .pin-wrappers #work03-header ul a:nth-child(1n+2)::before, #landingSlide ul a:nth-child(1n+2)::before, #aboutSlide #about-header ul a:nth-child(1n+2)::before, #contactSlide #contact-header ul a:nth-child(1n+2)::before {
-    content: '/';
-    padding: 0 10px;
-    color: black; }
-  .nav-footer ul a li, .slides .pin-wrappers #work01-header ul a li, .slides .pin-wrappers #work02-header ul a li, .slides .pin-wrappers #work03-header ul a li, #landingSlide ul a li, #aboutSlide #about-header ul a li, #contactSlide #contact-header ul a li {
-    display: inline-flex;
-    font-size: 12px;
-    color: black; }
 
 #landingSlide {
   height: 100vh;

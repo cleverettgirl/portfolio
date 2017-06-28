@@ -27,34 +27,6 @@ body{
   width: 50%;
 }
 
-.nav-footer{
-  ul{
-    width:100%;
-    position:absolute;
-    bottom:20%;
-    padding-left:0 !important;
-    a{
-      &:hover{
-        text-decoration: none;
-      }
-      &:nth-child(1n+2){
-        &::before{
-          content:'/';
-          padding:0 10px;
-          color:black;
-        }
-      }
-      li{
-        @extend .subtitle-font;
-        display:inline-flex;
-        font-size:12px;
-        color:black;
-      }
-    }
-  }
-}
-
-
 #landingSlide{
   @extend .nav-footer;
   .nav-footer{

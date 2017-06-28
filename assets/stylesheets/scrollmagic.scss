@@ -2,6 +2,7 @@
 @import 'variables';
 
 
+
 .chapter-content{
   background-color: #EDEDED;
 }
@@ -13,34 +14,6 @@
 .scrollmagic-pin-spacer {
   pointer-events: none;
 }
-
-
-.nav-footer{
-  ul{
-    width:100%;
-    position:absolute;
-    bottom:20%;
-    padding-left:0 !important;
-    a{
-      &:hover{
-        text-decoration: none;
-      }
-      &:nth-child(1n+2){
-        &::before{
-          content:'/';
-          padding:0 10px;
-          color:black;
-        }
-      }
-      li{
-        display:inline-flex;
-        font-size:12px;
-        color:black;
-      }
-    }
-  }
-}
-
 
 .row.slides { pointer-events: none; }
 
@@ -69,8 +42,10 @@
           bottom:10%;
         }
       }
+
       #work01-content, #work02-content, #work03-content {
         height:100%;
+
         .img {
           position:absolute;
           z-index:1;
@@ -81,12 +56,31 @@
           width:650px;
           top:10%;
         }
+
+        .work-text{
+          p{
+            width:90%;
+          }
+        }
+
         .work-nav {
           pointer-events: all;
           position:absolute;
-          top:75%;
+          bottom:11%;
           margin-left:6%;
           z-index:999;
+          left:30%;
+          a{
+            border: thin solid #E2D6DB;
+            padding:8px;
+            background-color:#E2D6DB;
+            border-radius:4px;
+            color:black;
+            margin-right:5px;
+            &:hover{
+              text-decoration: none;
+            }
+          }
         }
       }
     }

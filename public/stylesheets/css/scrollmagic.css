@@ -17,19 +17,10 @@
   font-size: 45px;
   text-align: center; }
 
-.subtitle-font {
+.subtitle-font, .nav-footer ul a li, .slides .pin-wrappers #work01-header ul a li, .slides .pin-wrappers #work02-header ul a li, .slides .pin-wrappers #work03-header ul a li {
   font-family: 'Roboto', sans-serif !important;
   text-transform: uppercase;
   letter-spacing: 2px; }
-
-.chapter-content {
-  background-color: #EDEDED; }
-
-.chapter-title {
-  background-color: white; }
-
-.scrollmagic-pin-spacer {
-  pointer-events: none; }
 
 .nav-footer ul, .slides .pin-wrappers #work01-header ul, .slides .pin-wrappers #work02-header ul, .slides .pin-wrappers #work03-header ul {
   width: 100%;
@@ -46,6 +37,15 @@
     display: inline-flex;
     font-size: 12px;
     color: black; }
+
+.chapter-content {
+  background-color: #EDEDED; }
+
+.chapter-title {
+  background-color: white; }
+
+.scrollmagic-pin-spacer {
+  pointer-events: none; }
 
 .row.slides {
   pointer-events: none; }
@@ -81,12 +81,24 @@
         height: 368px;
         width: 650px;
         top: 10%; }
+      .slides .pin-wrappers #work01-content .work-text p, .slides .pin-wrappers #work02-content .work-text p, .slides .pin-wrappers #work03-content .work-text p {
+        width: 90%; }
       .slides .pin-wrappers #work01-content .work-nav, .slides .pin-wrappers #work02-content .work-nav, .slides .pin-wrappers #work03-content .work-nav {
         pointer-events: all;
         position: absolute;
-        top: 75%;
+        bottom: 11%;
         margin-left: 6%;
-        z-index: 999; }
+        z-index: 999;
+        left: 30%; }
+        .slides .pin-wrappers #work01-content .work-nav a, .slides .pin-wrappers #work02-content .work-nav a, .slides .pin-wrappers #work03-content .work-nav a {
+          border: thin solid #E2D6DB;
+          padding: 8px;
+          background-color: #E2D6DB;
+          border-radius: 4px;
+          color: black;
+          margin-right: 5px; }
+          .slides .pin-wrappers #work01-content .work-nav a:hover, .slides .pin-wrappers #work02-content .work-nav a:hover, .slides .pin-wrappers #work03-content .work-nav a:hover {
+            text-decoration: none; }
 
 #slides02 #work02-content .img {
   background-image: url(../../img/riddikulus-comp.png) !important; }
