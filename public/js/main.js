@@ -2,9 +2,7 @@ $(function(){
 
   // to test distance of about section from top
   // var distance = $('#slide01').offset().top;
-
   let $window = window;
-
   // link scrolling
   $('a[href^="#"]').on('click', function(event) {
     var $target = $(this.getAttribute('href'));
@@ -53,34 +51,37 @@ $(function(){
 
   });
 
-// scroll magic:
 
-  var controller = new ScrollMagic.Controller(); // init scrollMagic
+  // Init ScrollMagic
+  var controller = new ScrollMagic.Controller();
 
-    var pinScene02 = new ScrollMagic.Scene({
-      triggerElement: '#slide01',
-      triggerHook: 0, // 0 is the top of the viewport, 0.5 is middle and 1 is bottom of view port
-      duration: '100%' // user needs to scroll 100% of the view port height to unpin this section.
-    })
-    .setPin("#slide01 .pin-wrapper") // pass it the ID of the element we want to pin
-    .addTo(controller)
+  // Scene 1 - pin the second section
+  var pinScene01 = new ScrollMagic.Scene({
+    triggerElement: '#slides01',
+    triggerHook: 0,
+    duration: '100%'
+  })
+  .setPin('#slides01 .pin-wrappers')
+  .addTo(controller);
 
-        // Scene 2 - pin the third section
-    var pinScene03 = new ScrollMagic.Scene({
-      triggerElement: '#slide01',
-      triggerHook: 0, // 0 is the top of the viewport, 0.5 is middle and 1 is bottom of view port --> this new scene doesn't get pinned until it is at the top of the view port!
-      duration: '200%' // user needs to scroll 100% of the view port height to unpin this section.
-    })
-    .setPin("#slide02 .pin-wrapper") // pass it the ID of the element we want to pin
-    .addTo(controller)
+  // Scene 2 - pin the third section
+  var pinScene02 = new ScrollMagic.Scene({
+    triggerElement: '#slides01',
+    triggerHook: 0,
+    duration: '200%'
+  })
+  .setPin('#slides02 .pin-wrappers')
+  .addTo(controller);
 
-    var pinScene04 = new ScrollMagic.Scene({
-      triggerElement: '#slide02',
-      triggerHook: 0,
-      duration: '100%'
-    })
-    .setPin('#slide03 .pin-wrapper')
-    .addTo(controller)
+  // Scene 3 - pin the fourth section
+  var pinScene03 = new ScrollMagic.Scene({
+    triggerElement: '#slides02',
+    triggerHook: 0,
+    duration: '100%'
+  })
+  .setPin('#slides03 .pin-wrappers')
+  .addTo(controller);
+
 })
 
 

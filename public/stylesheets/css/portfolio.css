@@ -14,99 +14,95 @@
   text-transform: uppercase;
   letter-spacing: 4px;
   word-spacing: 8px;
-  font-size: 45px; }
+  font-size: 45px;
+  text-align: center; }
 
-.subtitle-font, .imgText h3, .nav-footer ul a li, #landingSlide ul a li, #aboutSlide #about-header ul a li, #contactSlide #contact-header ul a li, #landingSlide #wrapper #byline {
+.subtitle-font, .nav-footer ul a li, .slides .pin-wrappers #work01-header ul a li, .slides .pin-wrappers #work02-header ul a li, .slides .pin-wrappers #work03-header ul a li, #landingSlide ul a li, #aboutSlide #about-header ul a li, #contactSlide #contact-header ul a li, #landingSlide #wrapper #byline {
   font-family: 'Roboto', sans-serif !important;
   text-transform: uppercase;
   letter-spacing: 2px; }
 
-.wrapper {
-  max-width: 350px;
-  margin: 0 10%; }
+.chapter-content {
+  background-color: #EDEDED; }
 
-#slide01, #slide02, #slide03 {
+.chapter-title {
   background-color: white; }
 
-.slide {
+.scrollmagic-pin-spacer {
+  pointer-events: none; }
+
+.nav-footer ul, .slides .pin-wrappers #work01-header ul, .slides .pin-wrappers #work02-header ul, .slides .pin-wrappers #work03-header ul, #landingSlide ul, #aboutSlide #about-header ul, #contactSlide #contact-header ul {
+  width: 100%;
+  position: absolute;
+  bottom: 20%;
+  padding-left: 0 !important; }
+  .nav-footer ul a:hover, .slides .pin-wrappers #work01-header ul a:hover, .slides .pin-wrappers #work02-header ul a:hover, .slides .pin-wrappers #work03-header ul a:hover, #landingSlide ul a:hover, #aboutSlide #about-header ul a:hover, #contactSlide #contact-header ul a:hover {
+    text-decoration: none; }
+  .nav-footer ul a:nth-child(1n+2)::before, .slides .pin-wrappers #work01-header ul a:nth-child(1n+2)::before, .slides .pin-wrappers #work02-header ul a:nth-child(1n+2)::before, .slides .pin-wrappers #work03-header ul a:nth-child(1n+2)::before, #landingSlide ul a:nth-child(1n+2)::before, #aboutSlide #about-header ul a:nth-child(1n+2)::before, #contactSlide #contact-header ul a:nth-child(1n+2)::before {
+    content: '/';
+    padding: 0 10px;
+    color: black; }
+  .nav-footer ul a li, .slides .pin-wrappers #work01-header ul a li, .slides .pin-wrappers #work02-header ul a li, .slides .pin-wrappers #work03-header ul a li, #landingSlide ul a li, #aboutSlide #about-header ul a li, #contactSlide #contact-header ul a li {
+    display: inline-flex;
+    font-size: 12px;
+    color: black; }
+
+.row.slides {
+  pointer-events: none; }
+
+.slides {
   position: relative;
   overflow: hidden;
   height: 100vh; }
+  .slides .pin-wrappers {
+    height: 100%;
+    width: 100%;
+    pointer-events: none; }
+    .slides .pin-wrappers .title-block {
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center; }
+    .slides .pin-wrappers #work01-header, .slides .pin-wrappers #work02-header, .slides .pin-wrappers #work03-header {
+      padding: 0;
+      background-color: white; }
+      .slides .pin-wrappers #work01-header .nav-footer, .slides .pin-wrappers #work01-header #work01-header, .slides .pin-wrappers #work01-header #work02-header, .slides .pin-wrappers #work01-header #work03-header, .slides .pin-wrappers #work01-header #landingSlide, .slides .pin-wrappers #work01-header #aboutSlide #about-header, #aboutSlide .slides .pin-wrappers #work01-header #about-header, .slides .pin-wrappers #work01-header #contactSlide #contact-header, #contactSlide .slides .pin-wrappers #work01-header #contact-header, .slides .pin-wrappers #work02-header .nav-footer, .slides .pin-wrappers #work02-header #work01-header, .slides .pin-wrappers #work02-header #work02-header, .slides .pin-wrappers #work02-header #work03-header, .slides .pin-wrappers #work02-header #landingSlide, .slides .pin-wrappers #work02-header #aboutSlide #about-header, #aboutSlide .slides .pin-wrappers #work02-header #about-header, .slides .pin-wrappers #work02-header #contactSlide #contact-header, #contactSlide .slides .pin-wrappers #work02-header #contact-header, .slides .pin-wrappers #work03-header .nav-footer, .slides .pin-wrappers #work03-header #work01-header, .slides .pin-wrappers #work03-header #work02-header, .slides .pin-wrappers #work03-header #work03-header, .slides .pin-wrappers #work03-header #landingSlide, .slides .pin-wrappers #work03-header #aboutSlide #about-header, #aboutSlide .slides .pin-wrappers #work03-header #about-header, .slides .pin-wrappers #work03-header #contactSlide #contact-header, #contactSlide .slides .pin-wrappers #work03-header #contact-header {
+        display: flex;
+        justify-content: center;
+        bottom: 10%; }
+    .slides .pin-wrappers #work01-content, .slides .pin-wrappers #work02-content, .slides .pin-wrappers #work03-content {
+      height: 100%; }
+      .slides .pin-wrappers #work01-content .img, .slides .pin-wrappers #work02-content .img, .slides .pin-wrappers #work03-content .img {
+        position: absolute;
+        z-index: 1;
+        background-image: url(../../img/macbook-comp.png);
+        background-repeat: no-repeat;
+        background-size: contain;
+        height: 368px;
+        width: 650px;
+        top: 10%; }
+      .slides .pin-wrappers #work01-content .work-nav, .slides .pin-wrappers #work02-content .work-nav, .slides .pin-wrappers #work03-content .work-nav {
+        pointer-events: all;
+        position: absolute;
+        top: 75%;
+        margin-left: 6%;
+        z-index: 999; }
 
-.slide .pin-wrapper {
-  width: 100%;
-  height: 100%;
-  position: relative; }
-  .slide .pin-wrapper .nav-footer, .slide .pin-wrapper #landingSlide, .slide .pin-wrapper #aboutSlide #about-header, #aboutSlide .slide .pin-wrapper #about-header, .slide .pin-wrapper #contactSlide #contact-header, #contactSlide .slide .pin-wrapper #contact-header {
-    display: inline-flex;
-    list-style: none; }
-    .slide .pin-wrapper .nav-footer ul, .slide .pin-wrapper #landingSlide ul, .slide .pin-wrapper #aboutSlide #about-header ul, #aboutSlide .slide .pin-wrapper #about-header ul, .slide .pin-wrapper #contactSlide #contact-header ul, #contactSlide .slide .pin-wrapper #contact-header ul {
-      width: 50%;
-      position: absolute;
-      bottom: 20%;
-      padding-left: 0 !important; }
-      .slide .pin-wrapper .nav-footer ul a:nth-child(1n+2)::before, .slide .pin-wrapper #landingSlide ul a:nth-child(1n+2)::before, .slide .pin-wrapper #aboutSlide #about-header ul a:nth-child(1n+2)::before, #aboutSlide .slide .pin-wrapper #about-header ul a:nth-child(1n+2)::before, .slide .pin-wrapper #contactSlide #contact-header ul a:nth-child(1n+2)::before, #contactSlide .slide .pin-wrapper #contact-header ul a:nth-child(1n+2)::before {
-        content: '/';
-        padding: 0 10px; }
-      .slide .pin-wrapper .nav-footer ul a li, .slide .pin-wrapper #landingSlide ul a li, .slide .pin-wrapper #aboutSlide #about-header ul a li, #aboutSlide .slide .pin-wrapper #about-header ul a li, .slide .pin-wrapper #contactSlide #contact-header ul a li, #contactSlide .slide .pin-wrapper #contact-header ul a li {
-        display: inline-flex; }
+#slides02 #work02-content .img {
+  background-image: url(../../img/riddikulus-comp.png) !important; }
 
-.slide .pin-wrapper .chapter-content {
-  width: 50%;
-  background-color: #EDEDED;
-  height: 100%;
-  float: right; }
+#slides03 #work03-content .img {
+  background-image: url(../../img/snakes-comp.png); }
 
-.slide .wrapper {
-  position: absolute;
-  top: 45%;
-  left: 15%; }
+#slides02 .pin-wrappers {
+  transform: translateY(-100%); }
 
-.slide .img {
-  position: absolute;
-  top: 10%;
-  left: 50%;
-  width: 600px;
-  height: 418px;
-  background: url("/img/macbook-comp.png") no-repeat top left;
-  background-size: contain;
-  transform: translate(-80%, -40%);
-  transform: translate(10%, 0%); }
+#slides03 .pin-wrappers {
+  transform: translateY(-100%); }
 
 .scrollmagic-pin-spacer {
   position: absolute !important;
   clip: rect(auto, auto, auto, auto); }
-
-#slide02 .img {
-  background-image: url("/img/riddikulus-comp.png");
-  background-size: contain; }
-
-#slide03 .img {
-  background-image: url("/img/snakes-comp.png");
-  background-size: contain; }
-
-#slide02 .pin-wrapper,
-#slide03 .pin-wrapper {
-  transform: translateY(-100%); }
-
-.imgText {
-  position: absolute;
-  top: 55%;
-  left: 50%;
-  height: 100%;
-  padding: 0 100px; }
-  .imgText div.work-buttons {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    padding-top: 50px; }
-    .imgText div.work-buttons .work-button {
-      margin-right: 10px;
-      background-color: #f7484e;
-      border: none;
-      color: white;
-      border-radius: 7px;
-      padding: 5px; }
 
 @font-face {
   font-family: 'Stylistic Alt';
@@ -124,9 +120,10 @@
   text-transform: uppercase;
   letter-spacing: 4px;
   word-spacing: 8px;
-  font-size: 45px; }
+  font-size: 45px;
+  text-align: center; }
 
-.subtitle-font, .imgText h3, .nav-footer ul a li, #landingSlide ul a li, #aboutSlide #about-header ul a li, #contactSlide #contact-header ul a li, #landingSlide #wrapper #byline {
+.subtitle-font, .nav-footer ul a li, .slides .pin-wrappers #work01-header ul a li, .slides .pin-wrappers #work02-header ul a li, .slides .pin-wrappers #work03-header ul a li, #landingSlide ul a li, #aboutSlide #about-header ul a li, #contactSlide #contact-header ul a li, #landingSlide #wrapper #byline {
   font-family: 'Roboto', sans-serif !important;
   text-transform: uppercase;
   letter-spacing: 2px; }
@@ -151,18 +148,18 @@ body {
   padding: 0 !important;
   width: 50%; }
 
-.nav-footer ul, #landingSlide ul, #aboutSlide #about-header ul, #contactSlide #contact-header ul {
+.nav-footer ul, .slides .pin-wrappers #work01-header ul, .slides .pin-wrappers #work02-header ul, .slides .pin-wrappers #work03-header ul, #landingSlide ul, #aboutSlide #about-header ul, #contactSlide #contact-header ul {
   width: 100%;
   position: absolute;
   bottom: 20%;
   padding-left: 0 !important; }
-  .nav-footer ul a:hover, #landingSlide ul a:hover, #aboutSlide #about-header ul a:hover, #contactSlide #contact-header ul a:hover {
+  .nav-footer ul a:hover, .slides .pin-wrappers #work01-header ul a:hover, .slides .pin-wrappers #work02-header ul a:hover, .slides .pin-wrappers #work03-header ul a:hover, #landingSlide ul a:hover, #aboutSlide #about-header ul a:hover, #contactSlide #contact-header ul a:hover {
     text-decoration: none; }
-  .nav-footer ul a:nth-child(1n+2)::before, #landingSlide ul a:nth-child(1n+2)::before, #aboutSlide #about-header ul a:nth-child(1n+2)::before, #contactSlide #contact-header ul a:nth-child(1n+2)::before {
+  .nav-footer ul a:nth-child(1n+2)::before, .slides .pin-wrappers #work01-header ul a:nth-child(1n+2)::before, .slides .pin-wrappers #work02-header ul a:nth-child(1n+2)::before, .slides .pin-wrappers #work03-header ul a:nth-child(1n+2)::before, #landingSlide ul a:nth-child(1n+2)::before, #aboutSlide #about-header ul a:nth-child(1n+2)::before, #contactSlide #contact-header ul a:nth-child(1n+2)::before {
     content: '/';
     padding: 0 10px;
     color: black; }
-  .nav-footer ul a li, #landingSlide ul a li, #aboutSlide #about-header ul a li, #contactSlide #contact-header ul a li {
+  .nav-footer ul a li, .slides .pin-wrappers #work01-header ul a li, .slides .pin-wrappers #work02-header ul a li, .slides .pin-wrappers #work03-header ul a li, #landingSlide ul a li, #aboutSlide #about-header ul a li, #contactSlide #contact-header ul a li {
     display: inline-flex;
     font-size: 12px;
     color: black; }
@@ -172,13 +169,13 @@ body {
   display: flex;
   align-items: center;
   margin-left: 50px; }
-  #landingSlide .nav-footer, #landingSlide #landingSlide, #landingSlide #aboutSlide #about-header, #aboutSlide #landingSlide #about-header, #landingSlide #contactSlide #contact-header, #contactSlide #landingSlide #contact-header {
+  #landingSlide .nav-footer, #landingSlide .slides .pin-wrappers #work01-header, .slides .pin-wrappers #landingSlide #work01-header, #landingSlide .slides .pin-wrappers #work02-header, .slides .pin-wrappers #landingSlide #work02-header, #landingSlide .slides .pin-wrappers #work03-header, .slides .pin-wrappers #landingSlide #work03-header, #landingSlide #landingSlide, #landingSlide #aboutSlide #about-header, #aboutSlide #landingSlide #about-header, #landingSlide #contactSlide #contact-header, #contactSlide #landingSlide #contact-header {
     display: flex;
     justify-content: center;
     bottom: 10%; }
-    #landingSlide .nav-footer a:nth-child(1n+2)::before, #landingSlide #landingSlide a:nth-child(1n+2)::before, #landingSlide #aboutSlide #about-header a:nth-child(1n+2)::before, #aboutSlide #landingSlide #about-header a:nth-child(1n+2)::before, #landingSlide #contactSlide #contact-header a:nth-child(1n+2)::before, #contactSlide #landingSlide #contact-header a:nth-child(1n+2)::before {
+    #landingSlide .nav-footer a:nth-child(1n+2)::before, #landingSlide .slides .pin-wrappers #work01-header a:nth-child(1n+2)::before, .slides .pin-wrappers #landingSlide #work01-header a:nth-child(1n+2)::before, #landingSlide .slides .pin-wrappers #work02-header a:nth-child(1n+2)::before, .slides .pin-wrappers #landingSlide #work02-header a:nth-child(1n+2)::before, #landingSlide .slides .pin-wrappers #work03-header a:nth-child(1n+2)::before, .slides .pin-wrappers #landingSlide #work03-header a:nth-child(1n+2)::before, #landingSlide #landingSlide a:nth-child(1n+2)::before, #landingSlide #aboutSlide #about-header a:nth-child(1n+2)::before, #aboutSlide #landingSlide #about-header a:nth-child(1n+2)::before, #landingSlide #contactSlide #contact-header a:nth-child(1n+2)::before, #contactSlide #landingSlide #contact-header a:nth-child(1n+2)::before {
       color: #f7484e; }
-    #landingSlide .nav-footer a li, #landingSlide #landingSlide a li, #landingSlide #aboutSlide #about-header a li, #aboutSlide #landingSlide #about-header a li, #landingSlide #contactSlide #contact-header a li, #contactSlide #landingSlide #contact-header a li {
+    #landingSlide .nav-footer a li, #landingSlide .slides .pin-wrappers #work01-header a li, .slides .pin-wrappers #landingSlide #work01-header a li, #landingSlide .slides .pin-wrappers #work02-header a li, .slides .pin-wrappers #landingSlide #work02-header a li, #landingSlide .slides .pin-wrappers #work03-header a li, .slides .pin-wrappers #landingSlide #work03-header a li, #landingSlide #landingSlide a li, #landingSlide #aboutSlide #about-header a li, #aboutSlide #landingSlide #about-header a li, #landingSlide #contactSlide #contact-header a li, #contactSlide #landingSlide #contact-header a li {
       color: #f7484e; }
   #landingSlide #wrapper {
     text-align: center; }
@@ -213,7 +210,7 @@ body {
       position: absolute;
       top: 10%;
       left: 90%; }
-    #aboutSlide #about-header .nav-footer, #aboutSlide #about-header #landingSlide, #aboutSlide #about-header #about-header, #aboutSlide #about-header #contactSlide #contact-header, #contactSlide #aboutSlide #about-header #contact-header {
+    #aboutSlide #about-header .nav-footer, #aboutSlide #about-header .slides .pin-wrappers #work01-header, .slides .pin-wrappers #aboutSlide #about-header #work01-header, #aboutSlide #about-header .slides .pin-wrappers #work02-header, .slides .pin-wrappers #aboutSlide #about-header #work02-header, #aboutSlide #about-header .slides .pin-wrappers #work03-header, .slides .pin-wrappers #aboutSlide #about-header #work03-header, #aboutSlide #about-header #landingSlide, #aboutSlide #about-header #about-header, #aboutSlide #about-header #contactSlide #contact-header, #contactSlide #aboutSlide #about-header #contact-header {
       display: flex;
       justify-content: center;
       bottom: 10%; }
@@ -232,7 +229,7 @@ body {
     background-color: #f7484e; }
     #contactSlide #contact-header .title-text {
       color: white; }
-    #contactSlide #contact-header .nav-footer, #contactSlide #contact-header #landingSlide, #contactSlide #contact-header #aboutSlide #about-header, #aboutSlide #contactSlide #contact-header #about-header, #contactSlide #contact-header #contact-header {
+    #contactSlide #contact-header .nav-footer, #contactSlide #contact-header .slides .pin-wrappers #work01-header, .slides .pin-wrappers #contactSlide #contact-header #work01-header, #contactSlide #contact-header .slides .pin-wrappers #work02-header, .slides .pin-wrappers #contactSlide #contact-header #work02-header, #contactSlide #contact-header .slides .pin-wrappers #work03-header, .slides .pin-wrappers #contactSlide #contact-header #work03-header, #contactSlide #contact-header #landingSlide, #contactSlide #contact-header #aboutSlide #about-header, #aboutSlide #contactSlide #contact-header #about-header, #contactSlide #contact-header #contact-header {
       display: flex;
       justify-content: center;
       bottom: 10%; }
