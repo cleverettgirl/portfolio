@@ -2,7 +2,6 @@
 @import 'variables';
 
 
-
 .chapter-content{
   background-color: #EDEDED;
 }
@@ -69,8 +68,12 @@
           bottom:11%;
           margin-left:6%;
           z-index:999;
-          left:30%;
+          left:35%;
           a{
+            font-family: 'Roboto', sans-serif !important;
+            text-transform:uppercase;
+            letter-spacing:2px;
+            font-size:12px;
             border: thin solid #E2D6DB;
             padding:8px;
             background-color:#E2D6DB;

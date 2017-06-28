@@ -8,7 +8,7 @@ $(function(){
     var $target = $(this.getAttribute('href'));
     // console.log("***** ", target)
     if( $target.length ) {
-        // event.preventDefault();
+      event.preventDefault();
       $('html, body').stop().animate({
         // .stop() -> stops any current animation on 'html' and 'body'
           scrollTop: $target.offset().top
@@ -81,6 +81,53 @@ $(function(){
   })
   .setPin('#slides03 .pin-wrappers')
   .addTo(controller);
+
+
+  // Blogger posts
+
+  function findImg(str){
+    let imgContent = str.slice(str.indexOf('<img'))
+        imgContent = imgContent.slice(0, imgContent.indexOf('>'))
+        imgContent = imgContent.slice(imgContent.indexOf('src="'))
+        imgContent = imgContent.slice(5)
+        imgContent = imgContent.slice(0, imgContent.indexOf('"'))
+    return imgContent
+  }
+
+  function formatDate(x){
+    let nums = x.slice(0, x.indexOf('T'))
+    console.log(nums)
+    return `${nums.slice(5, 7)} / ${nums.slice(8)} / ${nums.slice(0, 4)}`
+  }
+
+
+  function handleResponse(response){
+
+    let image, url, title, author, date;
+
+    let content = response.items[0].content
+    let imgContent = findImg(content)
+    title = response.items[0].title
+    url = response.items[0].url
+    author = response.items[0].author.displayName;
+    date = formatDate(response.items[0].published)
+
+
+    document.getElementById('post1').style.backgroundImage = imgContent === '' ? `url('img/stock.png')` : `url("${image}")`
+
+    $('#post1').click(function(){
+      window.location = `${url}`
+    })
+    $('#blog-title').text(`${title}`)
+    $('#blogpost-author').text(`${author}`)
+    $('#blogpost-date').text(`${date}`)
+  }
+
+  $.get("https://www.googleapis.com/blogger/v3/blogs/905598030170974301/posts?callback=handleResponse&key=AIzaSyBKlnzrE10UrA-90id4JfkwYa830CyzGAM")
+  .then(data => {
+    let dataObj = JSON.parse(data.slice(31, -2))
+    handleResponse(dataObj)
+  })
 
 })
 

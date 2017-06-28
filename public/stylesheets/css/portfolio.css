@@ -105,8 +105,12 @@
         bottom: 11%;
         margin-left: 6%;
         z-index: 999;
-        left: 30%; }
+        left: 35%; }
         .slides .pin-wrappers #work01-content .work-nav a, .slides .pin-wrappers #work02-content .work-nav a, .slides .pin-wrappers #work03-content .work-nav a {
+          font-family: 'Roboto', sans-serif !important;
+          text-transform: uppercase;
+          letter-spacing: 2px;
+          font-size: 12px;
           border: thin solid #E2D6DB;
           padding: 8px;
           background-color: #E2D6DB;
@@ -185,10 +189,6 @@ body {
     display: flex;
     justify-content: center;
     bottom: 10%; }
-    #landingSlide .nav-footer a:nth-child(1n+2)::before, #landingSlide .slides .pin-wrappers #work01-header a:nth-child(1n+2)::before, .slides .pin-wrappers #landingSlide #work01-header a:nth-child(1n+2)::before, #landingSlide .slides .pin-wrappers #work02-header a:nth-child(1n+2)::before, .slides .pin-wrappers #landingSlide #work02-header a:nth-child(1n+2)::before, #landingSlide .slides .pin-wrappers #work03-header a:nth-child(1n+2)::before, .slides .pin-wrappers #landingSlide #work03-header a:nth-child(1n+2)::before, #landingSlide #landingSlide a:nth-child(1n+2)::before, #landingSlide #aboutSlide #about-header a:nth-child(1n+2)::before, #aboutSlide #landingSlide #about-header a:nth-child(1n+2)::before, #landingSlide #contactSlide #contact-header a:nth-child(1n+2)::before, #contactSlide #landingSlide #contact-header a:nth-child(1n+2)::before {
-      color: #f7484e; }
-    #landingSlide .nav-footer a li, #landingSlide .slides .pin-wrappers #work01-header a li, .slides .pin-wrappers #landingSlide #work01-header a li, #landingSlide .slides .pin-wrappers #work02-header a li, .slides .pin-wrappers #landingSlide #work02-header a li, #landingSlide .slides .pin-wrappers #work03-header a li, .slides .pin-wrappers #landingSlide #work03-header a li, #landingSlide #landingSlide a li, #landingSlide #aboutSlide #about-header a li, #aboutSlide #landingSlide #about-header a li, #landingSlide #contactSlide #contact-header a li, #contactSlide #landingSlide #contact-header a li {
-      color: #f7484e; }
   #landingSlide #wrapper {
     text-align: center; }
     #landingSlide #wrapper #name {
@@ -254,19 +254,50 @@ body {
       text-align: left; }
       #contactSlide #contact-text #contact-text ul {
         padding-left: 0 !important; }
-    #contactSlide #contact-text .social-footer {
+    #contactSlide #contact-text .social-buttons {
       display: flex;
       padding-left: 0 !important;
       margin-top: 5%; }
-      #contactSlide #contact-text .social-footer a:hover {
+      #contactSlide #contact-text .social-buttons a:hover {
         text-decoration: none; }
-      #contactSlide #contact-text .social-footer a li {
+      #contactSlide #contact-text .social-buttons a li {
         list-style-type: none;
         display: inline-flex;
         padding-right: 15px;
         color: black; }
-        #contactSlide #contact-text .social-footer a li i {
+        #contactSlide #contact-text .social-buttons a li i {
           font-size: 20px; }
+    #contactSlide #contact-text #post1 {
+      height: 150px;
+      width: 150px;
+      border-radius: 5px;
+      display: inline-flex;
+      float: left;
+      margin-right: 15px;
+      background-size: cover;
+      background-repeat: no-repeat; }
+      #contactSlide #contact-text #post1 #blog-title {
+        position: absolute;
+        top: 0; }
+    #contactSlide #contact-text #blog-title {
+      font-style: italic; }
+    #contactSlide #contact-text #blog-content {
+      width: 42%; }
+    #contactSlide #contact-text #read-more {
+      position: absolute;
+      bottom: 0;
+      border: thin solid #E2D6DB;
+      padding: 8px;
+      background-color: #E2D6DB;
+      border-radius: 4px;
+      color: black;
+      margin-right: 10px;
+      font-family: 'Roboto', sans-serif !important;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-size: 12px; }
+      #contactSlide #contact-text #read-more:hover {
+        text-decoration: none; }
 
 @media screen and (min-width: 992px) {
   #about-header {
