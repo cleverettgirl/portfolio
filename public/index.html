@@ -6,7 +6,7 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
 
     <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
 
     <!-- Place favicon.ico in the root directory -->
     <script src="https://use.fontawesome.com/0e5a6e2029.js"></script>
@@ -16,7 +16,7 @@
 
     <!-- Optional theme -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-    <link rel="stylesheet" href="stylesheets/css/portfolio.css">
+    <link rel="stylesheet" href="stylesheets/css/media-queries.css">
     <!-- <script src="js/vendor/modernizr-2.8.3.min.js"></script> -->
 
     <!-- Google Fonts -->
@@ -32,7 +32,7 @@
         <div class="col-md-6" id="wrapper">
           <h1 id="name" class="title-font">Christine Leverett</h1>
 
-          <svg height="10" width="650">
+          <svg height="10" width="100">
             <line x1="0" y1="0" x2="700" y2="0" style="stroke:#E2D6DB;stroke-width:10" />
             Sorry, your browser does not support inline SVG.
           </svg>
@@ -46,7 +46,7 @@
       </div>
       <!-- ABOUT -->
       <div class="row" id="aboutSlide" style="position:relative;">
-        <div class="col-sm-12 col-md-6 title-block" id="about-header">
+        <div class="col-xs-12 col-sm-6 col-md-6 title-block" id="about-header">
           <h1 class="title-text"> About </h1>
           <div class='about-img img-responsive'></div>
           <ul class="nav-footer">
@@ -55,7 +55,7 @@
             <a href="#contactSlideOuter"><li>Contact</li></a>
           </ul>
         </div>
-        <div class="col-md-6" id="about-content" >
+        <div class="col-sm-6" id="about-content" >
           <div class="content-padding" style="max-width:850px; margin: 0 auto;">
             <br>
             <b><small><h4 style="font-weight:700; font-size:16px">I’m a detail-oriented software engineer from Florida living in New York City.</h4></small></b>
@@ -124,10 +124,10 @@
            </ul>
           </div>
 
-          <div class="col-md-6 chapter-content" id="work01-content">
+          <div class="col-sm-12 col-md-6 chapter-content" id="work01-content">
             <div class="img"></div>
-
-            <div class="work-text" style="position:absolute; top:60%; margin-left:5%;">
+<!-- style="position:absolute; top:60%; margin-left:5%;" -->
+            <div class="work-text">
               <h4 class="subtitle-font">Keeley Nicole Events</h4>
               <br>
               <svg height="10" width="500">
@@ -158,9 +158,10 @@
             </ul>
           </div>
 
-          <div class="col-md-6 chapter-content" id="work02-content">
+          <div class="col-sm-12 col-md-6 chapter-content" id="work02-content">
             <div class="img"></div>
-            <div class="work-text" style="position:absolute; top:60%; margin-left:5%;">
+    <!--         style="position:absolute; top:60%; margin-left:5%;" -->
+            <div class="work-text">
               <h4 class="subtitle-font">Riddikulus</h4>
               <br>
               <svg height="10" width="500">
@@ -192,7 +193,8 @@
 
           <div class="col-md-6 chapter-content" id="work03-content">
             <div class="img"></div>
-            <div class="work-text" style="position:absolute; top:60%; margin-left:5%;">
+        <!--     style="position:absolute; top:60%; margin-left:5%;" -->
+            <div class="work-text">
               <h4 class="subtitle-font">Snakes With Friends</h4>
               <br>
               <svg height="10" width="500">
@@ -210,13 +212,13 @@
           </div>
         </div>
       </div>
-<!--           </div> #main-container -->
+    </div> <!-- #main-container -->
 
 
       <!-- CONTACT -->
       <div class="fluid-container" id="contactSlideOuter">
         <div class="row" id="contactSlide">
-          <div class="col-md-6" id="contact-header">
+          <div class="col-sm-6 col-md-6 title-block" id="contact-header">
             <h1 class="title-text"> Contact </h1>
             <ul class="nav-footer">
               <a href="#landingSlide"><li>Home</li></a>
@@ -224,7 +226,7 @@
               <a href="#slides01"><li>Work</li></a>
             </ul>
           </div>
-          <div class="col-md-6" id="contact-text">
+          <div class="col-sm-6 col-md-6" id="contact-text">
             <b><small><h4 class="subtitle-font">Get in touch</h4></small></b>
             <br>
             <svg height="10" width="550">
@@ -238,7 +240,6 @@
               <a href="https://github.com/cleverettgirl"><li><i class="fa fa-github-alt" aria-hidden="true"></i></li></a>
               <a href="https://www.linkedin.com/in/cleverett1/"><li><i class="fa fa-linkedin" aria-hidden="true"></i></li></a>
               <a href="https://twitter.com/cleverettgirl"><li><i class="fa fa-twitter" aria-hidden="true"></i></li></a>
-              <!-- <a href="https://thecleverettgirl.blogspot.com/"><li><i class="fa fa-rss" aria-hidden="true"></i></li></a> -->
             </ul>
             <br>
             <br>
@@ -251,14 +252,12 @@
             </svg>
             <br>
             <br>
-            <div class="container">
+            <div class="container" id="blog-container">
               <div class="row" style="position:relative">
                 <div class="col-md-4" id="post1"></div>
                 <h5 class="subtitle-font" id="blog-title"></h5>
                 <p id="blogpost-author"></p>
                 <p id="blogpost-date"></p>
-                <!-- <p id="blog-content"></p> -->
-
                 <a id="read-more" href="https://www.google.com">read more</a>
               </div>
             </div>

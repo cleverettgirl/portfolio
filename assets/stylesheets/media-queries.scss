@@ -1,0 +1,620 @@
+@import 'variables';
+@import 'fonts';
+// @import 'scrollmagic';
+
+
+@mixin respond-to($media){
+  @if $media == handhelds {
+    @media only screen and (max-width: $break-small){ @content; }
+  }
+
+  @else if $media == med-lg-screens {
+    @media only screen and (min-width: $break-small + 1) { @content; }
+  }
+}
+
+
+*{
+  box-sizing: border-box;
+}
+
+html, body{
+  height:100%;
+  margin:0;
+}
+
+body{
+  margin:0;
+  overflow-x: hidden;
+}
+
+.wrapper {
+  @include respond-to(med-lg-screens){
+    width:90%;
+    margin:0 5%;
+  }
+}
+
+.fixed-header{
+  @include respond-to(med-lg-screens){
+    position:fixed !important;
+    padding:0 !important;
+    width:50%;
+  }
+}
+
+#landingSlide{
+  height:100vh;
+  display:flex;
+  align-items:center;
+  .wrapper{
+    text-align:center;
+    #name{
+      font-size:55px;
+      @incldue title-font;
+    }
+  }
+  #byline{
+    @inlude subtitle-font;
+    font-weight:400;
+    text-transform: uppercase;
+    letter-spacing:4px;
+  }
+
+  // these styles are for landingSlide on mobile
+  @include respond-to(handhelds){
+    display:flex;
+    margin:0;
+    .nav-footer{
+      visibility: hidden;
+    }
+  }
+  // this ends styles for landingSlide on mobile
+
+  @include respond-to(med-lg-screens){
+    margin-left:50px;
+    @include nav-footer;
+    .nav-footer{
+      display:flex;
+      justify-content: center;
+      bottom:10%;
+    }
+  }
+
+}
+
+#aboutSlide{
+  z-index:20;
+  margin:0 !important;
+  .title-block{
+    @include title-font;
+    background-color:$red;
+    .title-text{
+      margin-top:0;
+      color:white;
+      margin:0;
+    }
+  }
+
+  #about-content{
+    height:auto;
+    .content-padding{
+      padding: 100px;
+    }
+  }
+
+  @include respond-to(handhelds){
+    .title-block{
+      height:50vh;
+      display:flex;
+      align-items:center;
+      .nav-footer{
+        visibility:hidden;
+      }
+    }
+  }
+
+  @include respond-to(med-lg-screens){
+    z-index:20;
+    margin:0 !important;
+    .title-block{
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .title-text{
+        @include title-font;
+        color: white;
+        margin: 0;
+      }
+    }
+    #about-header{
+      padding:0;
+      background-color: $red;
+      .about-img {
+        background-image:url(/img/coffee.jpg);
+        background-repeat:no-repeat;
+        background-size:cover;
+        height:125px;
+        width:125px;
+        border-radius:50%;
+        position:absolute;
+        top:10%;
+        left:90%;
+      }
+      @include nav-footer;
+      .nav-footer{
+        display:flex;
+        justify-content:center;
+        bottom:10%;
+      }
+    }
+
+    #about-header {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 200;
+      padding:0;
+    }
+    #about-content{
+      position:relative;
+      z-index: 100;
+      left:50%;
+    }
+
+  }
+}
+
+.chapter-content{
+  @include respond-to(med-lg-screens){
+    background-color: #EDEDED;
+  }
+}
+
+.chapter-title{
+  @include respond-to(med-lg-screens){
+    background-color:white
+  }
+}
+
+.scrollmagic-pin-spacer{
+  @include respond-to(med-lg-screens){
+    pointer-events:none;
+    position:absolute;
+    clip:rect(auto, auto, auto, auto);
+  }
+}
+
+.row.slides {
+  @include respond-to(med-lg-screens){
+    pointer-events:none;
+  }
+}
+
+.slides {
+  @include respond-to(med-lg-screens){
+    position:relative;
+    overflow:hidden;
+    height:100vh;
+    .pin-wrappers{
+      height:100%;
+      width:100%;
+      pointer-events:none;
+      .title-block {
+        height:100%;
+        display:flex;
+        align-items:center;
+        justify-content: center;
+      }
+      #work01-header, #work02-header, #work03-header{
+        padding:0;
+        background-color:white;
+        @include nav-footer;
+        .nav-footer{
+          display:flex;
+          justify-content:center;
+          bottom:10%;
+        }
+      }
+      #work01-content, #work02-content, #work03-content {
+        height:100%;
+
+        .img {
+          position:absolute;
+          z-index:1;
+          background-image: url(../../img/macbook-comp.png);
+          background-repeat:no-repeat;
+          background-size:contain;
+          height:368px;
+          width:650px;
+          top:10%;
+        }
+        .work-text{
+          p{
+            width:90%;
+          }
+        }
+        .work-nav {
+          pointer-events: all;
+          position:absolute;
+          bottom:11%;
+          margin-left:6%;
+          z-index:999;
+          left:35%;
+          a{
+            font-family: 'Roboto', sans-serif !important;
+            text-transform:uppercase;
+            letter-spacing:2px;
+            font-size:12px;
+            border: thin solid #E2D6DB;
+            padding:8px;
+            background-color:#E2D6DB;
+            border-radius:4px;
+            color:black;
+            margin-right:5px;
+            &:hover{
+              text-decoration: none;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+#slides01{
+  z-index:20;
+  margin:0 !important;
+
+  @include respond-to(handhelds){
+    #work01-header{
+      background-color:#EDEDED;
+    }
+    .title-block{
+      height:50vh;
+      display:flex;
+      align-items:center;
+      background-color:#EDEDED;
+
+      @include title-font;
+      .nav-footer{
+        visibility:hidden;
+      }
+    }
+    #work01-content{
+      margin-top:50px;
+      .img{
+        height:200px;
+        width:90%;
+        background-image:url(../../img/macbook-comp.png);
+        background-size:contain;
+        background-repeat:no-repeat;
+        margin:0 auto;
+      }
+      .work-text{
+        padding: 0 25px;
+      }
+      .work-nav{
+        margin-top:40px;
+        padding: 0 25px;
+        text-align:center;
+        a{
+          font-family: 'Roboto', sans-serif !important;
+          text-transform:uppercase;
+          letter-spacing:2px;
+          font-size:12px;
+          border: thin solid #E2D6DB;
+          padding:8px;
+          background-color:#E2D6DB;
+          border-radius:4px;
+          color:black;
+          margin-right:5px;
+          &:hover{
+            text-decoration: none;
+          }
+        }
+      }
+    }
+  }
+}
+
+#slides02{
+  z-index:20;
+  margin:0 !important;
+  @include respond-to(handhelds){
+    .title-block{
+      visibility:hidden;
+      height:20px;
+    }
+    #work02-content{
+      margin-top:50px;
+      .img{
+        height:200px;
+        width:90%;
+        background-image:url(../../img/riddikulus-comp.png);
+        background-size:contain;
+        background-repeat:no-repeat;
+        margin:0 auto;
+      }
+      .work-text{
+        padding: 0 25px;
+      }
+      .work-nav{
+        margin-top:40px;
+        padding: 0 25px;
+        text-align:center;
+        a{
+          font-family: 'Roboto', sans-serif !important;
+          text-transform:uppercase;
+          letter-spacing:2px;
+          font-size:12px;
+          border: thin solid #E2D6DB;
+          padding:8px;
+          background-color:#E2D6DB;
+          border-radius:4px;
+          color:black;
+          margin-right:5px;
+          &:hover{
+            text-decoration: none;
+          }
+        }
+      }
+    }
+  }
+  @include respond-to(med-lg-screens){
+    #work02-content {
+      .img {
+        background-image: url(../../img/riddikulus-comp.png) !important;
+      }
+    }
+    .pin-wrappers{
+      transform: translateY(-100%)
+    }
+  }
+}
+
+#slides03{
+  z-index:20;
+  margin:0 !important;
+  @include respond-to(handhelds){
+    .title-block{
+      visibility:hidden;
+      height:20px;
+    }
+    #work03-content{
+      margin-top:50px;
+      .img{
+        height:200px;
+        width:90%;
+        background-image:url(../../img/snakes-comp.png);
+        background-size:contain;
+        background-repeat:no-repeat;
+        margin:0 auto;
+      }
+      .work-text{
+        padding: 0 25px;
+      }
+      .work-nav{
+        margin-top:40px;
+        padding: 0 25px;
+        text-align:center;
+        a{
+          font-family: 'Roboto', sans-serif !important;
+          text-transform:uppercase;
+          letter-spacing:2px;
+          font-size:12px;
+          border: thin solid #E2D6DB;
+          padding:8px;
+          background-color:#E2D6DB;
+          border-radius:4px;
+          color:black;
+          margin-right:5px;
+          &:hover{
+            text-decoration: none;
+          }
+        }
+      }
+    }
+  }
+
+  @include respond-to(med-lg-screens){
+    #work03-content{
+      .img{
+        background-image:url(../../img/snakes-comp.png);
+      }
+    }
+    .pin-wrappers{
+      transform: translateY(-100%)
+    }
+  }
+}
+
+
+#contactSlideOuter{
+  @include respond-to(handhelds){
+    margin-top: 100px;
+    margin-left: 0 !important;
+    margin-right:0 !important;
+  }
+
+  #contactSlide{
+    margin:0 !important;
+    .title-block{
+      background-color:$red;
+      margin-bottom:0;
+    }
+
+    .social-buttons{
+      display:flex;
+      padding-left: 0 !important;
+      margin-top: 5%;
+      a {
+        &:hover{
+          text-decoration: none;
+        }
+        li {
+        list-style-type: none;
+        display:inline-flex;
+        padding-right:15px;
+        color:black;
+          i {
+            font-size:20px;
+          }
+        }
+      }
+    }
+
+    #post1{
+      height: 150px;
+      width:150px;
+      border-radius:5px;
+      display:inline-flex;
+      float:left;
+      margin-right:15px;
+      background-size:cover;
+      background-repeat:no-repeat;
+      #blog-title{
+        position:absolute;
+        top:0;
+      }
+    }
+
+    #read-more{
+      position:absolute;
+      bottom:0;
+      border: thin solid #E2D6DB;
+      padding:8px;
+      background-color:#E2D6DB;
+      border-radius:4px;
+      color:black;
+      margin-right:10px;
+      font-family: 'Roboto', sans-serif !important;
+      text-transform:uppercase;
+      letter-spacing:2px;
+      font-size:12px;
+      &:hover{
+        text-decoration: none;
+      }
+    }
+
+    @include respond-to(handhelds){
+      .title-block{
+        height:50vh;
+        display:flex;
+        align-items:center;
+        margin-bottom:50px;
+        @include title-font;
+
+        .nav-footer{
+          visibility:hidden;
+        }
+
+        .title-text{
+          margin-top:0;
+          margin:0;
+          color:white;
+        }
+      }
+      #contact-text{
+        margin-bottom:85px;
+      }
+    }
+
+    @include respond-to(med-lg-screens){
+      position:relative;
+
+      #contact-header{
+        height:100vh;
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        background-color:$red;
+        .title-text{
+          @include title-font;
+          color:white;
+        }
+        @include nav-footer;
+        .nav-footer{
+          display:flex;
+          justify-content: center;
+          bottom:10%;
+        }
+      }
+      #contact-text{
+        height:100vh;
+        padding:50px;
+        position:relative;
+        padding-top:10%;
+        width:50%;
+        text-align:left;
+        ul{
+          padding-left:0 !important;
+        }
+        .social-buttons{
+          display:flex;
+          padding-left: 0 !important;
+          margin-top: 5%;
+          a {
+            &:hover{
+              text-decoration: none;
+            }
+            li {
+            list-style-type: none;
+            display:inline-flex;
+            padding-right:15px;
+            color:black;
+              i {
+                font-size:20px;
+              }
+            }
+          }
+        }
+
+        #blog-container{
+
+          width:100%;
+
+          #post1{
+            height: 150px;
+            width:150px;
+            border-radius:5px;
+            display:inline-flex;
+            float:left;
+            margin-right:15px;
+            background-size:cover;
+            background-repeat:no-repeat;
+            #blog-title{
+              position:absolute;
+              top:0;
+            }
+          }
+          #blog-title{
+            font-style: italic;
+          }
+          #blog-content{
+            width:42%;
+          }
+          #read-more{
+            position:absolute;
+            bottom:0;
+            border: thin solid #E2D6DB;
+            padding:8px;
+            background-color:#E2D6DB;
+            border-radius:4px;
+            color:black;
+            margin-right:10px;
+            font-family: 'Roboto', sans-serif !important;
+            text-transform:uppercase;
+            letter-spacing:2px;
+            font-size:12px;
+            &:hover{
+              text-decoration: none;
+            }
+          }
+        }
+      }
+    }
+
+  }
+}

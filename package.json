@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "nodemon -e js,css,scss,html app.js",
-    "build-css": "node-sass -w assets/stylesheets/portfolio.scss -o public/stylesheets/css"
+    "build-css": "node-sass -w assets/stylesheets/media-queries.scss -o public/stylesheets/css"
 
   },
   "keywords": [],

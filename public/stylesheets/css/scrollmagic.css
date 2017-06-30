@@ -1,13 +1,7 @@
-@font-face {
-  font-family: 'Stylistic Alt';
-  src: url("/fonts/StylisticAlt.eot");
-  src: url("/fonts/StylisticAlt.eot?#iefix") format("embedded-opentype"), url("/fonts/StylisticAlt.woff") format("woff"), url("/fonts/StylisticAlt.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal; }
-
-.stylistic-font {
-  font-family: 'Stylistic Alt', sans-serif !important;
-  font-size: 75px; }
+.subtitle-font, .nav-footer ul a li, .slides .pin-wrappers #work01-header ul a li, .slides .pin-wrappers #work02-header ul a li, .slides .pin-wrappers #work03-header ul a li {
+  font-family: 'Roboto', sans-serif !important;
+  text-transform: uppercase;
+  letter-spacing: 2px; }
 
 .title-font {
   font-family: 'Lato', sans-serif !important;
@@ -16,11 +10,6 @@
   word-spacing: 8px;
   font-size: 45px;
   text-align: center; }
-
-.subtitle-font, .nav-footer ul a li, .slides .pin-wrappers #work01-header ul a li, .slides .pin-wrappers #work02-header ul a li, .slides .pin-wrappers #work03-header ul a li {
-  font-family: 'Roboto', sans-serif !important;
-  text-transform: uppercase;
-  letter-spacing: 2px; }
 
 .nav-footer ul, .slides .pin-wrappers #work01-header ul, .slides .pin-wrappers #work02-header ul, .slides .pin-wrappers #work03-header ul {
   width: 100%;

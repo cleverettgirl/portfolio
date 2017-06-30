@@ -1,23 +1,10 @@
-@font-face {
-  font-family: 'Stylistic Alt';
-  src: url('/fonts/StylisticAlt.eot');
-  src: url('/fonts/StylisticAlt.eot?#iefix') format('embedded-opentype'),
-    url('/fonts/StylisticAlt.woff') format('woff'),
-    url('/fonts/StylisticAlt.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
+@mixin subtitle-font{
+  font-family: 'Roboto', sans-serif !important;
+  text-transform:uppercase;
+  letter-spacing:2px;
 }
 
-.stylistic-font{
-  font-family: 'Stylistic Alt', sans-serif !important;
-  font-size:75px;
-}
-
-// .title-font{
-//   font-family: 'Playfair Display', sans-serif !important;
-// }
-
-.title-font{
+@mixin title-font{
   font-family: 'Lato', sans-serif !important;
   text-transform: uppercase;
   letter-spacing: 4px;
@@ -26,8 +13,19 @@
   text-align:center;
 }
 
-.subtitle-font{
-  font-family: 'Roboto', sans-serif !important;
-  text-transform:uppercase;
-  letter-spacing:2px;
+%subtitle-font{
+  @include subtitle-font;
 }
+
+%title-font{
+  @include title-font;
+}
+
+.subtitle-font{
+  @extend %subtitle-font;
+}
+
+.title-font{
+  @extend %title-font;
+}
+

@@ -32,55 +32,60 @@ $(function(){
     let aboutBottom = $about.height() + aboutTop;
     let aboutHeaderTop = $aboutContent.height() - $window.height();
 
-    //window
-    let windowTop = $window.scrollTop();
-    let windowBottom = $window.height() + windowTop;
 
-    if (windowBottom > aboutBottom) {
-      $aboutHeader.removeClass('fixed-header');
-      $aboutHeader.css('top', aboutHeaderTop);
-    }
-    else if (windowTop > aboutTop) {
-      $aboutHeader.addClass('fixed-header');
-      $aboutHeader.css('top', 0);
-    }
-    else {
-      $aboutHeader.removeClass('fixed-header');
-      $aboutHeader.css('top', 0);
+    if($window.width() > 768){
+    //window
+      let windowTop = $window.scrollTop();
+      let windowBottom = $window.height() + windowTop;
+
+      if (windowBottom > aboutBottom) {
+        $aboutHeader.removeClass('fixed-header');
+        $aboutHeader.css('top', aboutHeaderTop);
+      }
+      else if (windowTop > aboutTop) {
+        $aboutHeader.addClass('fixed-header');
+        $aboutHeader.css('top', 0);
+      }
+      else {
+        $aboutHeader.removeClass('fixed-header');
+        $aboutHeader.css('top', 0);
+      }
+
+      // Init ScrollMagic
+
+      var controller = new ScrollMagic.Controller();
+
+      // Scene 1 - pin the second section
+      var pinScene01 = new ScrollMagic.Scene({
+        triggerElement: '#slides01',
+        triggerHook: 0,
+        duration: '100%'
+      })
+      .setPin('#slides01 .pin-wrappers')
+      .addTo(controller);
+
+      // Scene 2 - pin the third section
+      var pinScene02 = new ScrollMagic.Scene({
+        triggerElement: '#slides01',
+        triggerHook: 0,
+        duration: '200%'
+      })
+      .setPin('#slides02 .pin-wrappers')
+      .addTo(controller);
+
+      // Scene 3 - pin the fourth section
+      var pinScene03 = new ScrollMagic.Scene({
+        triggerElement: '#slides02',
+        triggerHook: 0,
+        duration: '100%'
+      })
+      .setPin('#slides03 .pin-wrappers')
+      .addTo(controller);
+
     }
 
   });
 
-
-  // Init ScrollMagic
-  var controller = new ScrollMagic.Controller();
-
-  // Scene 1 - pin the second section
-  var pinScene01 = new ScrollMagic.Scene({
-    triggerElement: '#slides01',
-    triggerHook: 0,
-    duration: '100%'
-  })
-  .setPin('#slides01 .pin-wrappers')
-  .addTo(controller);
-
-  // Scene 2 - pin the third section
-  var pinScene02 = new ScrollMagic.Scene({
-    triggerElement: '#slides01',
-    triggerHook: 0,
-    duration: '200%'
-  })
-  .setPin('#slides02 .pin-wrappers')
-  .addTo(controller);
-
-  // Scene 3 - pin the fourth section
-  var pinScene03 = new ScrollMagic.Scene({
-    triggerElement: '#slides02',
-    triggerHook: 0,
-    duration: '100%'
-  })
-  .setPin('#slides03 .pin-wrappers')
-  .addTo(controller);
 
 
   // Blogger posts
@@ -129,8 +134,6 @@ $(function(){
     handleResponse(dataObj)
   })
 
+
+  // some media-queries stuffs
 })
-
-
-
-
