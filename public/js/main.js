@@ -18,35 +18,81 @@ $(function(){
     }
   });
 
+  // media queries stuffs
+
+
 
 // MAKE WORK & ABOUT SECTION STICKY
   $(window).on('scroll resize', function () {
 
-    const $about = $('#aboutSlide'),
+    const $window = $(window),
+          $about = $('#aboutSlide'),
           $aboutContent = $('#about-content'),
-          $window = $(window),
-          $aboutHeader = $('#about-header')
+          $aboutHeader = $('#about-header'),
+          $contact = $('#contactSlide'),
+          $contactText = $('#contact-text')
+          $contactHeader = $('#contact-header')
 
     //#about
     let aboutTop = $about.offset().top;
     let aboutBottom = $about.height() + aboutTop;
     let aboutHeaderTop = $aboutContent.height() - $window.height();
 
+    // $contact
+    let contactTop = $contact.offset().top;
+    let contactBottom = $contact.height() + contactTop;
+    let contactHeaderTop = $contactText.height() - $window.height();
+
     //window
     let windowTop = $window.scrollTop();
     let windowBottom = $window.height() + windowTop;
 
-    if (windowBottom > aboutBottom) {
-      $aboutHeader.removeClass('fixed-header');
-      $aboutHeader.css('top', aboutHeaderTop);
-    }
-    else if (windowTop > aboutTop) {
-      $aboutHeader.addClass('fixed-header');
-      $aboutHeader.css('top', 0);
-    }
-    else {
-      $aboutHeader.removeClass('fixed-header');
-      $aboutHeader.css('top', 0);
+    // logic for about
+    if($window.width() >= 768){
+      if (windowBottom > aboutBottom) {
+        $aboutHeader.removeClass('fixed-header');
+        $aboutHeader.css('top', aboutHeaderTop);
+        if($window.width() < 992){
+          $aboutContent.removeClass('float-right');
+        }
+      }
+      else if (windowTop > aboutTop) {
+        $aboutHeader.addClass('fixed-header');
+        $aboutHeader.css('top', 0);
+        if($window.width() < 992){
+          $aboutContent.addClass('float-right');
+        }
+      }
+      else {
+        $aboutHeader.removeClass('fixed-header');
+        $aboutHeader.css('top', 0);
+        if($window.width() < 992){
+          $aboutContent.removeClass('float-right');
+        }
+      }
+
+      if(windowBottom > contactBottom){
+        $contactHeader.removeClass('fixed-header');
+        $contactHeader.css('top', contactHeaderTop)
+        if($window.width() < 992){
+          $contactText.removeClass('float-right');
+        }
+      }
+
+      else if (windowTop > contactTop) {
+        $contactHeader.addClass('fixed-header');
+        $contactHeader.css('top', 0);
+        if($window.width() < 992){
+          $contactText.addClass('float-right');
+        }
+      }
+      else {
+        $contactHeader.removeClass('fixed-header');
+        $contactHeader.css('top', 0);
+        if($window.width() < 992){
+          $contactText.removeClass('float-right');
+        }
+      }
     }
 
   });
@@ -99,7 +145,6 @@ $(function(){
     console.log(nums)
     return `${nums.slice(5, 7)} / ${nums.slice(8)} / ${nums.slice(0, 4)}`
   }
-
 
   function handleResponse(response){
 

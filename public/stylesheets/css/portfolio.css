@@ -180,6 +180,9 @@ body {
   padding: 0 !important;
   width: 50%; }
 
+.float-right {
+  float: right !important; }
+
 #landingSlide {
   height: 100vh;
   display: flex;
@@ -232,12 +235,15 @@ body {
       padding: 100px; }
 
 #contactSlide {
-  position: relative; }
-  #contactSlide #contact-header {
+  position: relative;
+  z-index: 20;
+  margin: 0 !important; }
+  #contactSlide .title-block {
     height: 100vh;
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center; }
+  #contactSlide #contact-header {
     background-color: #f7484e; }
     #contactSlide #contact-header .title-text {
       color: white; }
@@ -246,7 +252,7 @@ body {
       justify-content: center;
       bottom: 10%; }
   #contactSlide #contact-text {
-    height: 100vh;
+    height: auto;
     padding: 100px;
     position: relative;
     padding-top: 10%; }
@@ -300,13 +306,13 @@ body {
         text-decoration: none; }
 
 @media screen and (min-width: 992px) {
-  #about-header {
+  #about-header, #contact-header {
     position: absolute;
     top: 0;
     left: 0;
     z-index: 200;
     padding: 0; }
-  #about-content {
+  #about-content, #contact-text {
     position: relative;
     z-index: 100;
     left: 50%; } }

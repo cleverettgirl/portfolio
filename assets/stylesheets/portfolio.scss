@@ -27,6 +27,10 @@ body{
   width: 50%;
 }
 
+.float-right{
+  float:right !important;
+}
+
 #landingSlide{
   @extend .nav-footer;
   .nav-footer{
@@ -99,12 +103,17 @@ body{
 
 #contactSlide{
   position:relative;
+  z-index:20;
+  margin:0 !important;
 
-  #contact-header{
+  .title-block{
     height:100vh;
     display:flex;
+    justify-content: center;
     align-items:center;
-    justify-content:center;
+  }
+
+  #contact-header{
     background-color:$red;
     .title-text{
       @extend .title-font;
@@ -118,7 +127,8 @@ body{
     }
   }
   #contact-text{
-    height:100vh;
+    // height:100vh;
+    height:auto;
     padding:100px;
     position:relative;
     padding-top:10%;
@@ -188,16 +198,18 @@ body{
 }
 
 @media screen and (min-width: 992px) {
-  #about-header {
+  #about-header, #contact-header {
     position: absolute;
     top: 0;
     left: 0;
     z-index: 200;
     padding:0;
   }
-  #about-content{
+  #about-content, #contact-text {
     position:relative;
     z-index: 100;
     left:50%;
   }
+
+
 }

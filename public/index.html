@@ -16,7 +16,10 @@
 
     <!-- Optional theme -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-    <link rel="stylesheet" href="stylesheets/css/portfolio.css">
+
+    <link rel="stylesheet" media="screen and (min-device-width: 768px)" href="stylesheets/css/portfolio.css" />
+
+    <!-- <link rel="stylesheet" href="stylesheets/css/portfolio.css"> -->
     <!-- <script src="js/vendor/modernizr-2.8.3.min.js"></script> -->
 
     <!-- Google Fonts -->
@@ -29,7 +32,7 @@
     <![endif]-->
     <div class="fluid-container main-container" class="main">
       <div class="row" id="landingSlide" style="z-index: 20;">
-        <div class="col-md-6" id="wrapper">
+        <div class="col-sm-6" id="wrapper">
           <h1 id="name" class="title-font">Christine Leverett</h1>
 
           <svg height="10" width="650">
@@ -46,7 +49,7 @@
       </div>
       <!-- ABOUT -->
       <div class="row" id="aboutSlide" style="position:relative;">
-        <div class="col-sm-12 col-md-6 title-block" id="about-header">
+        <div class="col-sm-6 title-block" id="about-header">
           <h1 class="title-text"> About </h1>
           <div class='about-img img-responsive'></div>
           <ul class="nav-footer">
@@ -55,7 +58,7 @@
             <a href="#contactSlideOuter"><li>Contact</li></a>
           </ul>
         </div>
-        <div class="col-md-6" id="about-content" >
+        <div class="col-sm-6" id="about-content" >
           <div class="content-padding" style="max-width:850px; margin: 0 auto;">
             <br>
             <b><small><h4 style="font-weight:700; font-size:16px">I’m a detail-oriented software engineer from Florida living in New York City.</h4></small></b>
@@ -115,7 +118,7 @@
 
       <div class="row slides" id="slides01">
         <div class="pin-wrappers">
-          <div class="col-sm-12 col-md-6 title-block" id="work01-header">
+          <div class="col-sm-6 title-block" id="work01-header">
            <h1 class="title-font">WORK</h1>
            <ul class="nav-footer">
              <a href="#landingSlide"><li>Home</li></a>
@@ -124,7 +127,7 @@
            </ul>
           </div>
 
-          <div class="col-md-6 chapter-content" id="work01-content">
+          <div class="col-sm-6 chapter-content" id="work01-content">
             <div class="img"></div>
 
             <div class="work-text" style="position:absolute; top:60%; margin-left:5%;">
@@ -149,7 +152,7 @@
 
       <div class="row slides" id="slides02">
         <div class="pin-wrappers">
-          <div class="col-sm-12 col-md-6 title-block" id="work02-header">
+          <div class="col-sm-6 col-md-6 title-block" id="work02-header">
             <h1 class="title-font">WORK</h1>
             <ul class="nav-footer">
               <a href="#landingSlide"><li>Home</li></a>
@@ -158,7 +161,7 @@
             </ul>
           </div>
 
-          <div class="col-md-6 chapter-content" id="work02-content">
+          <div class="col-sm-6 col-md-6 chapter-content" id="work02-content">
             <div class="img"></div>
             <div class="work-text" style="position:absolute; top:60%; margin-left:5%;">
               <h4 class="subtitle-font">Riddikulus</h4>
@@ -181,7 +184,7 @@
 
       <div class="row slides" id="slides03">
         <div class="pin-wrappers">
-          <div class="col-sm-12 col-md-6 title-block" id="work03-header">
+          <div class="col-sm-6 col-md-6 title-block" id="work03-header">
             <h1 class="title-font">WORK</h1>
             <ul class="nav-footer">
               <a href="#landingSlide"><li>Home</li></a>
@@ -190,7 +193,7 @@
             </ul>
           </div>
 
-          <div class="col-md-6 chapter-content" id="work03-content">
+          <div class="col-sm-6 col-md-6 chapter-content" id="work03-content">
             <div class="img"></div>
             <div class="work-text" style="position:absolute; top:60%; margin-left:5%;">
               <h4 class="subtitle-font">Snakes With Friends</h4>
@@ -216,7 +219,7 @@
       <!-- CONTACT -->
       <div class="fluid-container" id="contactSlideOuter">
         <div class="row" id="contactSlide">
-          <div class="col-md-6" id="contact-header">
+          <div class="col-sm-6 col-md-6 title-block" id="contact-header">
             <h1 class="title-text"> Contact </h1>
             <ul class="nav-footer">
               <a href="#landingSlide"><li>Home</li></a>
@@ -224,7 +227,7 @@
               <a href="#slides01"><li>Work</li></a>
             </ul>
           </div>
-          <div class="col-md-6" id="contact-text">
+          <div class="col-sm-6 col-md-6" id="contact-text">
             <b><small><h4 class="subtitle-font">Get in touch</h4></small></b>
             <br>
             <svg height="10" width="550">
@@ -251,9 +254,9 @@
             </svg>
             <br>
             <br>
-            <div class="container">
+            <!-- <div class="container"> -->
               <div class="row" style="position:relative">
-                <div class="col-md-4" id="post1"></div>
+                <div class="col-sm-4 col-md-4" id="post1"></div>
                 <h5 class="subtitle-font" id="blog-title"></h5>
                 <p id="blogpost-author"></p>
                 <p id="blogpost-date"></p>
@@ -261,7 +264,7 @@
 
                 <a id="read-more" href="https://www.google.com">read more</a>
               </div>
-            </div>
+            <!-- </div> -->
           </div>
         </div>
       </div>
