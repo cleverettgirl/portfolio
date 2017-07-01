@@ -85,6 +85,12 @@ html,body{
     display:flex;
     align-items:center;
   }
+
+  .scrollmagic-pin-spacer{
+    height:0 !important;
+    padding-top: 0 !important;
+  }
+
   #about-header{
     background-color:$red;
     .nav-footer{
@@ -113,10 +119,16 @@ html,body{
 }
 
 #slides01 {
+  height:((100%) + 10);
   .title-block{
     height:50vh;
     display:flex;
     align-items:center;
+  }
+  .scrollmagic-pin-spacer{
+    height:0 !important;
+    min-height:0 !important;
+    padding-top: 0 !important;
   }
   #work01-header{
     background-color:$gray;
@@ -166,7 +178,12 @@ html,body{
   .title-block{
     visibility:hidden;
   }
-
+  .scrollmagic-pin-spacer{
+    height:0 !important;
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+    margin-top:40% !important;
+  }
   #work02-content{
     .img{
       background-image: url(../../img/riddikulus-comp.png);
@@ -202,10 +219,16 @@ html,body{
 }
 
 #slides03 {
-  margin-bottom:40%;
+  // margin-bottom:40%;
   .title-block{
     visibility:hidden;
   }
+
+  .scrollmagic-pin-spacer{
+    margin-bottom:40% !important;
+    padding-bottom:0 !important;
+  }
+
 
   #work03-content{
     .img{
@@ -317,4 +340,8 @@ html,body{
       }
     }
   }
+}
+
+@media screen and (min-width: 321px) {
+
 }
