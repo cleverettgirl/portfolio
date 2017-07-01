@@ -99,35 +99,41 @@ $(function(){
 
 
   // Init ScrollMagic
-  var controller = new ScrollMagic.Controller();
+  // var controller = new ScrollMagic.Controller();
 
-  // Scene 1 - pin the second section
-  var pinScene01 = new ScrollMagic.Scene({
-    triggerElement: '#slides01',
-    triggerHook: 0,
-    duration: '100%'
-  })
-  .setPin('#slides01 .pin-wrappers')
-  .addTo(controller);
+  // // Scene 1 - pin the second section
+  // var pinScene01 = new ScrollMagic.Scene({
+  //   triggerElement: '#slides01',
+  //   triggerHook: 0,
+  //   duration: '100%'
+  // })
+  // .setPin('#slides01 .pin-wrappers')
+  // .addTo(controller);
 
-  // Scene 2 - pin the third section
-  var pinScene02 = new ScrollMagic.Scene({
-    triggerElement: '#slides01',
-    triggerHook: 0,
-    duration: '200%'
-  })
-  .setPin('#slides02 .pin-wrappers')
-  .addTo(controller);
+  // // Scene 2 - pin the third section
+  // var pinScene02 = new ScrollMagic.Scene({
+  //   triggerElement: '#slides01',
+  //   triggerHook: 0,
+  //   duration: '200%'
+  // })
+  // .setPin('#slides02 .pin-wrappers')
+  // .addTo(controller);
 
-  // Scene 3 - pin the fourth section
-  var pinScene03 = new ScrollMagic.Scene({
-    triggerElement: '#slides02',
-    triggerHook: 0,
-    duration: '100%'
-  })
-  .setPin('#slides03 .pin-wrappers')
-  .addTo(controller);
+  // // Scene 3 - pin the fourth section
+  // var pinScene03 = new ScrollMagic.Scene({
+  //   triggerElement: '#slides02',
+  //   triggerHook: 0,
+  //   duration: '100%'
+  // })
+  // .setPin('#slides03 .pin-wrappers')
+  // .addTo(controller);
 
+  // if($(window).width() < 768){
+  //   console.log("YAYYYYY")
+  //   controller.enabled(false)
+  //   // let truOrFalse = controller.enabled()
+  //   // console.log(truOrFalse)
+  // }
 
   // Blogger posts
 
