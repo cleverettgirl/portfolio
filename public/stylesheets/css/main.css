@@ -1,30 +1,38 @@
 /* color variables */
 /* font variables */
-.title-font {
+.title-font, #landingSlide #wrapper #name, #aboutSlide .title-block .title-text {
   font-family: 'Lato', sans-serif !important;
   text-transform: uppercase;
   letter-spacing: 4px;
   word-spacing: 8px;
-  font-size: 45px;
-  text-align: center; }
+  font-size: 45px; }
 
-.subtitle-font, .nav-footer ul a li {
+.subtitle-font, #landingSlide #wrapper #byline {
   font-family: 'Roboto', sans-serif !important;
   text-transform: uppercase;
   letter-spacing: 2px; }
 
-.nav-footer ul {
+.subtitle-font, #landingSlide #wrapper #byline {
+  font-family: 'Roboto', sans-serif !important;
+  text-transform: uppercase;
+  letter-spacing: 2px; }
+
+/* mixins for media queries issues */
+.nav-footer ul, #landingSlide ul, #aboutSlide #about-header ul, #contactSlide #contact-header ul {
   width: 100%;
   position: absolute;
   bottom: 20%;
   padding-left: 0 !important; }
-  .nav-footer ul a:hover {
+  .nav-footer ul a:hover, #landingSlide ul a:hover, #aboutSlide #about-header ul a:hover, #contactSlide #contact-header ul a:hover {
     text-decoration: none; }
-  .nav-footer ul a:nth-child(1n+2)::before {
+  .nav-footer ul a:nth-child(1n+2)::before, #landingSlide ul a:nth-child(1n+2)::before, #aboutSlide #about-header ul a:nth-child(1n+2)::before, #contactSlide #contact-header ul a:nth-child(1n+2)::before {
     content: '/';
     padding: 0 10px;
     color: black; }
-  .nav-footer ul a li {
+  .nav-footer ul a li, #landingSlide ul a li, #aboutSlide #about-header ul a li, #contactSlide #contact-header ul a li {
+    font-family: 'Roboto', sans-serif !important;
+    text-transform: uppercase;
+    letter-spacing: 2px;
     display: inline-flex;
     font-size: 12px;
     color: black; }
@@ -36,171 +44,223 @@ html, body {
   height: 100%;
   margin: 0; }
 
+body {
+  margin: 0 !important;
+  overflow-x: hidden; }
+
 .float-right {
   float: right !important; }
 
-.wrapper, #slides01 #work01-content .work-text, #slides02 #work02-content .work-text, #slides03 #work03-content .work-text {
+.wrapper {
   width: 90%;
   margin: 0 5%; }
+
+.fixed-header {
+  position: fixed !important;
+  padding: 0 !important;
+  width: 50%; }
 
 #landingSlide {
   height: 100vh;
   display: flex;
   align-items: center; }
-  #landingSlide .nav-footer {
-    visibility: hidden; }
+  #landingSlide .nav-footer, #landingSlide #landingSlide, #landingSlide #aboutSlide #about-header, #aboutSlide #landingSlide #about-header, #landingSlide #contactSlide #contact-header, #contactSlide #landingSlide #contact-header {
+    visibility: hidden;
+    display: flex;
+    justify-content: center;
+    bottom: 10%; }
+  #landingSlide #wrapper {
+    text-align: center; }
+    #landingSlide #wrapper #name {
+      font-size: 55px; }
+    #landingSlide #wrapper #byline {
+      font-weight: 400;
+      text-transform: uppercase;
+      letter-spacing: 4px; }
   #landingSlide #landing-svg {
     width: 100%; }
 
-#aboutSlide .title-block {
-  height: 50vh;
-  display: flex;
-  align-items: center; }
-
-#aboutSlide .scrollmagic-pin-spacer {
-  height: 0 !important;
-  padding-top: 0 !important; }
-
-#aboutSlide #about-header {
-  background-color: #f7484e; }
-  #aboutSlide #about-header .nav-footer {
-    visibility: hidden; }
-  #aboutSlide #about-header .title-font {
-    color: white;
-    margin-left: 5%; }
-  #aboutSlide #about-header .about-img {
-    background-image: url(/img/coffee.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 125px;
-    width: 125px;
-    border-radius: 50%;
-    position: absolute;
-    left: 33%;
-    top: 80%; }
-
-#aboutSlide #about-content {
-  margin-top: 10%;
-  padding: 10% 15%; }
-
-#slides01 {
-  height: 110%; }
-  #slides01 .title-block {
-    height: 50vh;
+#aboutSlide {
+  z-index: 20;
+  margin: 0 !important; }
+  #aboutSlide .title-block {
+    height: 100vh;
     display: flex;
+    justify-content: center;
     align-items: center; }
-  #slides01 .scrollmagic-pin-spacer {
-    height: 0 !important;
-    min-height: 0 !important;
-    padding-top: 0 !important; }
-  #slides01 #work01-header {
-    background-color: #EDEDED; }
-    #slides01 #work01-header .nav-footer {
-      visibility: hidden; }
-    #slides01 #work01-header .title-font {
-      margin-left: 5%; }
-  #slides01 #work01-content {
-    margin-top: 50px; }
-    #slides01 #work01-content .img {
-      background-image: url(../../img/macbook-comp.png);
+    #aboutSlide .title-block .title-text {
+      color: white;
+      margin: 0; }
+  #aboutSlide #about-header {
+    padding: 0;
+    background-color: #f7484e; }
+    #aboutSlide #about-header .about-img {
+      background-image: url(/img/coffee.jpg);
       background-repeat: no-repeat;
-      background-size: contain;
-      width: calc(90%);
-      height: 250px;
-      margin: 0 auto; }
-    #slides01 #work01-content .work-nav {
-      margin-left: 5%;
-      margin-top: 15%; }
-      #slides01 #work01-content .work-nav a {
-        font-family: 'Roboto', sans-serif !important;
-        text-transform: uppercase;
-        letter-spacing: 2px;
-        font-size: 12px;
-        border: thin solid #E2D6DB;
-        padding: 8px;
-        background-color: #E2D6DB;
-        border-radius: 4px;
-        color: black;
-        margin-right: 5px; }
-        #slides01 #work01-content .work-nav a:hover {
-          text-decoration: none; }
+      background-size: cover;
+      height: 125px;
+      width: 125px;
+      border-radius: 50%;
+      position: absolute;
+      bottom: calc(0% - 62px); }
+    #aboutSlide #about-header .nav-footer, #aboutSlide #about-header #landingSlide, #aboutSlide #about-header #about-header, #aboutSlide #about-header #contactSlide #contact-header, #contactSlide #aboutSlide #about-header #contact-header {
+      display: flex;
+      justify-content: center;
+      bottom: 10%;
+      visibility: hidden; }
+  #aboutSlide #about-content {
+    height: auto; }
+    #aboutSlide #about-content .content-padding {
+      padding: 80px; }
 
-#slides02 .title-block {
+@media screen and (max-width: 767px) {
+  #slides01 {
+    height: 200%; } }
+
+@media screen and (max-width: 767px) {
+  #slides02 {
+    height: 120%; } }
+
+@media screen and (max-width: 767px) {
+  #slides03 {
+    height: 120vh; } }
+
+#work01-header {
+  height: 100vh;
+  background-color: #ededed;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+  #work01-header .nav-footer, #work01-header #landingSlide, #work01-header #aboutSlide #about-header, #aboutSlide #work01-header #about-header, #work01-header #contactSlide #contact-header, #contactSlide #work01-header #contact-header {
+    visibility: hidden; }
+
+#work01-content {
+  padding-top: 100px; }
+  #work01-content .img {
+    background-image: url(../../img/macbook-comp.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 75%;
+    height: 250px;
+    margin: 0 auto; }
+  #work01-content .work-text {
+    width: 75%;
+    margin: 0 auto;
+    padding-top: 50px; }
+  #work01-content .work-nav {
+    width: 75%;
+    margin: 0 auto;
+    padding-top: 50px; }
+    #work01-content .work-nav a {
+      font-family: 'Roboto', sans-serif !important;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-size: 12px;
+      border: thin solid #E2D6DB;
+      padding: 8px;
+      background-color: #E2D6DB;
+      border-radius: 4px;
+      color: black;
+      margin-right: 5px; }
+      #work01-content .work-nav a:hover {
+        text-decoration: none; }
+
+#work02-header {
+  height: 0vh;
+  background-color: #ededed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   visibility: hidden; }
+  #work02-header .nav-footer, #work02-header #landingSlide, #work02-header #aboutSlide #about-header, #aboutSlide #work02-header #about-header, #work02-header #contactSlide #contact-header, #contactSlide #work02-header #contact-header {
+    visibility: hidden; }
 
-#slides02 .scrollmagic-pin-spacer {
-  height: 0 !important;
-  padding-top: 0 !important;
-  padding-bottom: 0 !important;
-  margin-top: 40% !important; }
+#work02-content {
+  padding-top: 100px; }
+  #work02-content .img {
+    background-image: url(../../img/riddikulus-comp.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 75%;
+    height: 250px;
+    margin: 0 auto; }
+  #work02-content .work-text {
+    width: 75%;
+    margin: 0 auto;
+    padding-top: 50px; }
+  #work02-content .work-nav {
+    width: 75%;
+    margin: 0 auto;
+    padding-top: 50px; }
+    #work02-content .work-nav a {
+      font-family: 'Roboto', sans-serif !important;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-size: 12px;
+      border: thin solid #E2D6DB;
+      padding: 8px;
+      background-color: #E2D6DB;
+      border-radius: 4px;
+      color: black;
+      margin-right: 5px; }
+      #work02-content .work-nav a:hover {
+        text-decoration: none; }
 
-#slides02 #work02-content .img {
-  background-image: url(../../img/riddikulus-comp.png);
-  background-repeat: no-repeat;
-  background-size: contain;
-  width: calc(90%);
-  height: 250px;
-  margin: 0 auto; }
-
-#slides02 #work02-content .work-nav {
-  margin-left: 5%;
-  margin-top: 15%; }
-  #slides02 #work02-content .work-nav a {
-    font-family: 'Roboto', sans-serif !important;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    font-size: 12px;
-    border: thin solid #E2D6DB;
-    padding: 8px;
-    background-color: #E2D6DB;
-    border-radius: 4px;
-    color: black;
-    margin-right: 5px; }
-    #slides02 #work02-content .work-nav a:hover {
-      text-decoration: none; }
-
-#slides03 .title-block {
+#work03-header {
+  height: 0vh;
+  background-color: #ededed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   visibility: hidden; }
+  #work03-header .nav-footer, #work03-header #landingSlide, #work03-header #aboutSlide #about-header, #aboutSlide #work03-header #about-header, #work03-header #contactSlide #contact-header, #contactSlide #work03-header #contact-header {
+    visibility: hidden; }
 
-#slides03 .scrollmagic-pin-spacer {
-  margin-bottom: 40% !important;
-  padding-bottom: 0 !important; }
-
-#slides03 #work03-content .img {
-  background-image: url(../../img/snakes-comp.png);
-  background-repeat: no-repeat;
-  background-size: contain;
-  width: calc(90%);
-  height: 250px;
-  margin: 0 auto; }
-
-#slides03 #work03-content .work-nav {
-  margin-left: 5%;
-  margin-top: 15%; }
-  #slides03 #work03-content .work-nav a {
-    font-family: 'Roboto', sans-serif !important;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    font-size: 12px;
-    border: thin solid #E2D6DB;
-    padding: 8px;
-    background-color: #E2D6DB;
-    border-radius: 4px;
-    color: black;
-    margin-right: 5px; }
-    #slides03 #work03-content .work-nav a:hover {
-      text-decoration: none; }
+#work03-content {
+  padding-top: 100px; }
+  #work03-content .img {
+    background-image: url(../../img/snakes-comp.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 75%;
+    height: 250px;
+    margin: 0 auto; }
+  #work03-content .work-text {
+    width: 75%;
+    margin: 0 auto;
+    padding-top: 50px; }
+  #work03-content .work-nav {
+    width: 75%;
+    margin: 0 auto;
+    padding-top: 50px; }
+    #work03-content .work-nav a {
+      font-family: 'Roboto', sans-serif !important;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-size: 12px;
+      border: thin solid #E2D6DB;
+      padding: 8px;
+      background-color: #E2D6DB;
+      border-radius: 4px;
+      color: black;
+      margin-right: 5px; }
+      #work03-content .work-nav a:hover {
+        text-decoration: none; }
 
 #contactSlide .title-block {
-  height: 50vh;
+  height: 100vh;
   display: flex;
-  align-items: center; }
+  align-items: center;
+  justify-content: center; }
 
 #contactSlide #contact-header {
   background-color: #f7484e; }
-  #contactSlide #contact-header .nav-footer {
-    visibility: hidden; }
-  #contactSlide #contact-header .title-font {
+  #contactSlide #contact-header .nav-footer, #contactSlide #contact-header #landingSlide, #contactSlide #contact-header #aboutSlide #about-header, #aboutSlide #contactSlide #contact-header #about-header, #contactSlide #contact-header #contact-header {
+    visibility: hidden;
+    display: flex;
+    justify-content: center;
+    bottom: 10%; }
+  #contactSlide #contact-header .title-font, #contactSlide #contact-header #landingSlide #wrapper #name, #landingSlide #wrapper #contactSlide #contact-header #name, #contactSlide #contact-header #aboutSlide .title-block .title-text, #aboutSlide .title-block #contactSlide #contact-header .title-text {
     color: white;
     margin-left: 5%; }
 
@@ -251,3 +311,134 @@ html, body {
     font-size: 12px; }
     #contactSlide #contact-text #read-more:hover {
       text-decoration: none; }
+
+@media screen and (min-width: 768px) {
+  .fixed-header {
+    position: fixed !important;
+    padding: 0 !important;
+    width: 50%; }
+  #landingSlide .nav-footer, #landingSlide #landingSlide, #landingSlide #aboutSlide #about-header, #aboutSlide #landingSlide #about-header, #landingSlide #contactSlide #contact-header, #contactSlide #landingSlide #contact-header {
+    visibility: visible; }
+  #landingSlide .wrapper {
+    width: 650px;
+    text-align: center; }
+    #landingSlide .wrapper #byline {
+      font-weight: 400;
+      text-transform: uppercase;
+      letter-spacing: 4px; }
+  #aboutSlide .about-img {
+    top: 10%;
+    right: calc(0% - 62px); }
+  #aboutSlide .nav-footer, #aboutSlide #landingSlide, #aboutSlide #about-header, #aboutSlide #contactSlide #contact-header, #contactSlide #aboutSlide #contact-header {
+    visibility: visible !important; }
+  .chapter-content {
+    background-color: #EDEDED; }
+  .chapter-title {
+    background-color: white; }
+  .scrollmagic-pin-spacer {
+    pointer-events: none; }
+  .row {
+    pointer-events: none;
+    margin: 0 !important; }
+  .slides {
+    position: relative;
+    overflow: hidden;
+    height: 100vh; }
+    .slides #slides01 {
+      height: 100vh !important; }
+    .slides #slides02 {
+      height: 100vh !important; }
+    .slides #slides02, .slides #slides03 {
+      height: 100vh !important; }
+      .slides #slides02 .title-block, .slides #slides03 .title-block {
+        visibility: visible;
+        background-color: #EDEDED; }
+    .slides .pin-wrappers {
+      height: 100%;
+      width: 100%;
+      pointer-events: none; }
+      .slides .pin-wrappers .title-block {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center; }
+      .slides .pin-wrappers #work01-header, .slides .pin-wrappers #work02-header, .slides .pin-wrappers #work03-header {
+        height: 100vh;
+        visibility: visible;
+        padding: 0;
+        background-color: white !important; }
+        .slides .pin-wrappers #work01-header ul, .slides .pin-wrappers #work02-header ul, .slides .pin-wrappers #work03-header ul {
+          width: 100%;
+          position: absolute;
+          bottom: 20%;
+          padding-left: 0 !important; }
+          .slides .pin-wrappers #work01-header ul a:hover, .slides .pin-wrappers #work02-header ul a:hover, .slides .pin-wrappers #work03-header ul a:hover {
+            text-decoration: none; }
+          .slides .pin-wrappers #work01-header ul a:nth-child(1n+2)::before, .slides .pin-wrappers #work02-header ul a:nth-child(1n+2)::before, .slides .pin-wrappers #work03-header ul a:nth-child(1n+2)::before {
+            content: '/';
+            padding: 0 10px;
+            color: black; }
+          .slides .pin-wrappers #work01-header ul a li, .slides .pin-wrappers #work02-header ul a li, .slides .pin-wrappers #work03-header ul a li {
+            font-family: 'Roboto', sans-serif !important;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            display: inline-flex;
+            font-size: 12px;
+            color: black; }
+        .slides .pin-wrappers #work01-header .nav-footer, .slides .pin-wrappers #work01-header #landingSlide, .slides .pin-wrappers #work01-header #aboutSlide #about-header, #aboutSlide .slides .pin-wrappers #work01-header #about-header, .slides .pin-wrappers #work01-header #contactSlide #contact-header, #contactSlide .slides .pin-wrappers #work01-header #contact-header, .slides .pin-wrappers #work02-header .nav-footer, .slides .pin-wrappers #work02-header #landingSlide, .slides .pin-wrappers #work02-header #aboutSlide #about-header, #aboutSlide .slides .pin-wrappers #work02-header #about-header, .slides .pin-wrappers #work02-header #contactSlide #contact-header, #contactSlide .slides .pin-wrappers #work02-header #contact-header, .slides .pin-wrappers #work03-header .nav-footer, .slides .pin-wrappers #work03-header #landingSlide, .slides .pin-wrappers #work03-header #aboutSlide #about-header, #aboutSlide .slides .pin-wrappers #work03-header #about-header, .slides .pin-wrappers #work03-header #contactSlide #contact-header, #contactSlide .slides .pin-wrappers #work03-header #contact-header {
+          visibility: visible;
+          display: flex;
+          justify-content: center;
+          bottom: 10%; }
+      .slides .pin-wrappers #work01-content, .slides .pin-wrappers #work02-content, .slides .pin-wrappers #work03-content {
+        margin-top: 0 !important;
+        height: 100vh;
+        background-color: #EDEDED; }
+        .slides .pin-wrappers #work01-content .img, .slides .pin-wrappers #work02-content .img, .slides .pin-wrappers #work03-content .img {
+          position: absolute;
+          z-index: 1;
+          background-image: url(../../img/macbook-comp.png);
+          background-repeat: no-repeat;
+          background-size: contain;
+          height: 40%;
+          width: calc(80%);
+          top: 10%; }
+        .slides .pin-wrappers #work01-content .work-text, .slides .pin-wrappers #work02-content .work-text, .slides .pin-wrappers #work03-content .work-text {
+          position: absolute !important;
+          top: 45%;
+          margin-left: 5%;
+          width: 80%; }
+        .slides .pin-wrappers #work01-content .work-nav, .slides .pin-wrappers #work02-content .work-nav, .slides .pin-wrappers #work03-content .work-nav {
+          pointer-events: all;
+          position: absolute;
+          bottom: 11%;
+          z-index: 999;
+          left: 35%; }
+          .slides .pin-wrappers #work01-content .work-nav a, .slides .pin-wrappers #work02-content .work-nav a, .slides .pin-wrappers #work03-content .work-nav a {
+            font-family: 'Roboto', sans-serif !important;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: 12px;
+            border: thin solid #E2D6DB;
+            padding: 8px;
+            background-color: #E2D6DB;
+            border-radius: 4px;
+            color: black;
+            margin-right: 5px; }
+            .slides .pin-wrappers #work01-content .work-nav a:hover, .slides .pin-wrappers #work02-content .work-nav a:hover, .slides .pin-wrappers #work03-content .work-nav a:hover {
+              text-decoration: none; }
+  #slides02 #work02-content .img {
+    background-image: url(../../img/riddikulus-comp.png) !important; }
+  #slides03 #work03-content .img {
+    background-image: url(../../img/snakes-comp.png); }
+  #slides02 .pin-wrappers {
+    transform: translateY(-100%); }
+  #slides03 .pin-wrappers {
+    transform: translateY(-100%); }
+  .scrollmagic-pin-spacer {
+    position: absolute !important;
+    clip: rect(auto, auto, auto, auto); }
+  #contactSlide .nav-footer, #contactSlide #landingSlide, #contactSlide #aboutSlide #about-header, #aboutSlide #contactSlide #about-header, #contactSlide #contact-header {
+    visibility: visible !important; }
+  #contactSlide #contact-text {
+    margin-top: 0%; } }

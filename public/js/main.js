@@ -50,48 +50,51 @@ $(function(){
     // logic for about
     if($window.width() >= 768){
       if (windowBottom > aboutBottom) {
+        // console.log("WINDOW:", winowBottom);
+        // console.log("ABOUT", aboutBottom)
+        // console.log("ABOUT TOP:", aboutHeaderTop)
         $aboutHeader.removeClass('fixed-header');
         $aboutHeader.css('top', aboutHeaderTop);
-        if($window.width() < 992){
+        // if($window.width() < 992){
           $aboutContent.removeClass('float-right');
-        }
+        // }
       }
       else if (windowTop > aboutTop) {
         $aboutHeader.addClass('fixed-header');
         $aboutHeader.css('top', 0);
-        if($window.width() < 992){
+        // if($window.width() < 992){
           $aboutContent.addClass('float-right');
-        }
+        // }
       }
       else {
         $aboutHeader.removeClass('fixed-header');
         $aboutHeader.css('top', 0);
-        if($window.width() < 992){
+        // if($window.width() < 992){
           $aboutContent.removeClass('float-right');
-        }
+        // }
       }
 
       if(windowBottom > contactBottom){
         $contactHeader.removeClass('fixed-header');
         $contactHeader.css('top', contactHeaderTop)
-        if($window.width() < 992){
+        // if($window.width() < 992){
           $contactText.removeClass('float-right');
-        }
+        // }
       }
 
       else if (windowTop > contactTop) {
         $contactHeader.addClass('fixed-header');
         $contactHeader.css('top', 0);
-        if($window.width() < 992){
+        // if($window.width() < 992){
           $contactText.addClass('float-right');
-        }
+        // }
       }
       else {
         $contactHeader.removeClass('fixed-header');
         $contactHeader.css('top', 0);
-        if($window.width() < 992){
+        // if($window.width() < 992){
           $contactText.removeClass('float-right');
-        }
+        // }
       }
     }
 
