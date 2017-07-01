@@ -34,7 +34,6 @@ $gray: #EDEDED;
 
 
 /* mixins for media queries issues */
-
 @mixin nav-footer {
   ul{
       width:100%;
@@ -468,20 +467,9 @@ body{
       height:100vh;
       #slides01{
         height: 100vh !important;
-        // .scrollmagic-pin-spacer{
-        //   height:auto !important;
-        //   min-height:auto !important;
-        //   padding-top:auto !important;
-        // }
       }
       #slides02{
         height:100vh !important;
-        // .scrollmagic-pin-spacer{
-        //   height:auto !important;
-        //   padding-top: auto !important;
-        //   padding-bottom:auto !important;
-        //   margin-top:0 !important;
-        // }
       }
       #slides02, #slides03{
         height:100vh !important;
@@ -564,7 +552,6 @@ body{
         }
       }
     }
-// }
 
   #slides02 #work02-content .img {
     background-image: url(../../img/riddikulus-comp.png) !important;
@@ -596,7 +583,7 @@ body{
   #contactSlide{
     #contact-text{
       margin-top: 0%;
+      padding:10%;
     }
   }
-
 }

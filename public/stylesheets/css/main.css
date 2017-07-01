@@ -441,4 +441,5 @@ body {
   #contactSlide .nav-footer, #contactSlide #landingSlide, #contactSlide #aboutSlide #about-header, #aboutSlide #contactSlide #about-header, #contactSlide #contact-header {
     visibility: visible !important; }
   #contactSlide #contact-text {
-    margin-top: 0%; } }
+    margin-top: 0%;
+    padding: 10%; } }
