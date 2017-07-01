@@ -102,18 +102,23 @@ body{
 
 
 #contactSlide{
-  position:relative;
+  z-index:20;
+  margin:0 !important;
 
-  #contact-header{
+  .title-block{
     height:100vh;
     display:flex;
-    align-items:center;
     justify-content:center;
-    background-color:$red;
+    align-items:center;
     .title-text{
       @extend .title-font;
       color:white;
     }
+  }
+
+  #contact-header{
+    padding:0;
+    background-color:$red;
     @extend .nav-footer;
     .nav-footer{
       display:flex;
@@ -122,15 +127,13 @@ body{
     }
   }
   #contact-text{
-    height:100vh;
+    height:auto;
     padding:100px;
     position:relative;
     padding-top:10%;
-    #contact-text{
-      text-align:left;
-      ul{
-        padding-left:0 !important;
-      }
+    text-align:left;
+    ul{
+      padding-left:0 !important;
     }
     .social-buttons{
       display:flex;
@@ -199,7 +202,7 @@ body{
     z-index: 200;
     padding:0;
   }
-  #about-content{
+  #about-content {
     position:relative;
     z-index: 100;
     left:50%;

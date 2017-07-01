@@ -25,7 +25,7 @@
   font-family: 'Stylistic Alt', sans-serif !important;
   font-size: 75px; }
 
-.title-font, #landingSlide #wrapper #name, #aboutSlide .title-block .title-text, #contactSlide #contact-header .title-text {
+.title-font, #landingSlide #wrapper #name, #aboutSlide .title-block .title-text, #contactSlide .title-block .title-text {
   font-family: 'Lato', sans-serif !important;
   text-transform: uppercase;
   letter-spacing: 4px;
@@ -147,7 +147,7 @@
   font-family: 'Stylistic Alt', sans-serif !important;
   font-size: 75px; }
 
-.title-font, #landingSlide #wrapper #name, #aboutSlide .title-block .title-text, #contactSlide #contact-header .title-text {
+.title-font, #landingSlide #wrapper #name, #aboutSlide .title-block .title-text, #contactSlide .title-block .title-text {
   font-family: 'Lato', sans-serif !important;
   text-transform: uppercase;
   letter-spacing: 4px;
@@ -235,28 +235,30 @@ body {
       padding: 100px; }
 
 #contactSlide {
-  position: relative; }
-  #contactSlide #contact-header {
+  z-index: 20;
+  margin: 0 !important; }
+  #contactSlide .title-block {
     height: 100vh;
     display: flex;
-    align-items: center;
     justify-content: center;
-    background-color: #f7484e; }
-    #contactSlide #contact-header .title-text {
+    align-items: center; }
+    #contactSlide .title-block .title-text {
       color: white; }
+  #contactSlide #contact-header {
+    padding: 0;
+    background-color: #f7484e; }
     #contactSlide #contact-header .nav-footer, #contactSlide #contact-header .slides .pin-wrappers #work01-header, .slides .pin-wrappers #contactSlide #contact-header #work01-header, #contactSlide #contact-header .slides .pin-wrappers #work02-header, .slides .pin-wrappers #contactSlide #contact-header #work02-header, #contactSlide #contact-header .slides .pin-wrappers #work03-header, .slides .pin-wrappers #contactSlide #contact-header #work03-header, #contactSlide #contact-header #landingSlide, #contactSlide #contact-header #aboutSlide #about-header, #aboutSlide #contactSlide #contact-header #about-header, #contactSlide #contact-header #contact-header {
       display: flex;
       justify-content: center;
       bottom: 10%; }
   #contactSlide #contact-text {
-    height: 100vh;
+    height: auto;
     padding: 100px;
     position: relative;
-    padding-top: 10%; }
-    #contactSlide #contact-text #contact-text {
-      text-align: left; }
-      #contactSlide #contact-text #contact-text ul {
-        padding-left: 0 !important; }
+    padding-top: 10%;
+    text-align: left; }
+    #contactSlide #contact-text ul {
+      padding-left: 0 !important; }
     #contactSlide #contact-text .social-buttons {
       display: flex;
       padding-left: 0 !important;
