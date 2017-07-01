@@ -180,6 +180,9 @@ body {
   padding: 0 !important;
   width: 50%; }
 
+.float-right {
+  float: right !important; }
+
 #landingSlide {
   height: 100vh;
   display: flex;

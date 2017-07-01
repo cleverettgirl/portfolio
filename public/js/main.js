@@ -36,17 +36,26 @@ $(function(){
     let windowTop = $window.scrollTop();
     let windowBottom = $window.height() + windowTop;
 
-    if (windowBottom > aboutBottom) {
-      $aboutHeader.removeClass('fixed-header');
-      $aboutHeader.css('top', aboutHeaderTop);
-    }
-    else if (windowTop > aboutTop) {
-      $aboutHeader.addClass('fixed-header');
-      $aboutHeader.css('top', 0);
-    }
-    else {
-      $aboutHeader.removeClass('fixed-header');
-      $aboutHeader.css('top', 0);
+    // logic
+    if($window.width() >= 768){
+      if (windowBottom > aboutBottom) {
+        $aboutHeader.removeClass('fixed-header');
+        $aboutHeader.css('top', aboutHeaderTop);
+      }
+      else if (windowTop > aboutTop) {
+        $aboutHeader.addClass('fixed-header');
+        $aboutHeader.css('top', 0);
+        if($window.width() < 992){
+          $aboutContent.addClass('float-right');
+        }
+      }
+      else {
+        $aboutHeader.removeClass('fixed-header');
+        $aboutHeader.css('top', 0);
+        if($window.width() < 992){
+          $aboutContent.removeClass('float-right');
+        }
+      }
     }
 
   });
