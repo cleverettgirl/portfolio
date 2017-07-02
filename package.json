@@ -6,7 +6,6 @@
   "scripts": {
     "start": "nodemon -e js,css,scss,html app.js",
     "build-css": "node-sass -w assets/stylesheets/main.scss -o public/stylesheets/css"
-
   },
   "keywords": [],
   "author": "Christine Leverett",
@@ -14,6 +13,7 @@
   "dependencies": {
     "body-parser": "^1.17.1",
     "express": "^4.15.2",
+    "homedir": "^0.6.0",
     "morgan": "^1.8.1",
     "node-sass": "^4.5.2",
     "nodemon": "^1.11.0",

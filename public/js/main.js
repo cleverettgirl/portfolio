@@ -1,5 +1,5 @@
 $(function(){
-
+  console.log("GOOOGLEE KEYYYYY:", process.env.googleKey)
   // to test distance of about section from top
   // var distance = $('#slide01').offset().top;
   let $window = window;
