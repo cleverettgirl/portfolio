@@ -401,7 +401,8 @@ body {
           background-repeat: no-repeat;
           background-size: contain;
           height: 40%;
-          width: calc(80%);
+          width: 95%;
+          margin: 0 auto;
           top: 10%; }
         .slides .pin-wrappers #work01-content .work-text, .slides .pin-wrappers #work02-content .work-text, .slides .pin-wrappers #work03-content .work-text {
           position: absolute !important;
