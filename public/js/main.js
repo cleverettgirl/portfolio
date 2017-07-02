@@ -163,7 +163,6 @@ $(function(){
 
   $.get("https://www.googleapis.com/blogger/v3/blogs/905598030170974301/posts?callback=handleResponse&key=AIzaSyDBW5kUdiR1AndhWteFJwmDEJnjkrXNepA")
   .then(data => {
-    console.log("DATA :", data)
     let dataObj = JSON.parse(data.slice(31, -2))
     handleResponse(dataObj)
   })
