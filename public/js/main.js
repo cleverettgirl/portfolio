@@ -49,65 +49,44 @@ $(function(){
     // logic for about
     if($window.width() >= 768){
       if (windowBottom > aboutBottom) {
-        // console.log("WINDOW:", winowBottom);
-        // console.log("ABOUT", aboutBottom)
-        // console.log("ABOUT TOP:", aboutHeaderTop)
         $aboutHeader.removeClass('fixed-header');
         $aboutHeader.css('top', aboutHeaderTop);
-        // if($window.width() < 992){
-          $aboutContent.removeClass('float-right');
-        // }
+        $aboutContent.removeClass('float-right');
       }
       else if (windowTop > aboutTop) {
         $aboutHeader.addClass('fixed-header');
         $aboutHeader.css('top', 0);
-        // if($window.width() < 992){
           $aboutContent.addClass('float-right');
-        // }
       }
       else {
         $aboutHeader.removeClass('fixed-header');
         $aboutHeader.css('top', 0);
-        // if($window.width() < 992){
-          $aboutContent.removeClass('float-right');
-        // }
+        $aboutContent.removeClass('float-right');
       }
 
       if(windowBottom > contactBottom){
         $contactHeader.removeClass('fixed-header');
         $contactHeader.css('top', contactHeaderTop)
-        // if($window.width() < 992){
-          $contactText.removeClass('float-right');
-        // }
+        $contactText.removeClass('float-right');
       }
 
       else if (windowTop > contactTop) {
         $contactHeader.addClass('fixed-header');
         $contactHeader.css('top', 0);
-        // if($window.width() < 992){
-          $contactText.addClass('float-right');
-        // }
+        $contactText.addClass('float-right');
       }
       else {
         $contactHeader.removeClass('fixed-header');
         $contactHeader.css('top', 0);
-        // if($window.width() < 992){
-          $contactText.removeClass('float-right');
-        // }
+        $contactText.removeClass('float-right');
       }
     }
 
     if($(window).width() < 768){
-      console.log("DISABLED")
       controller.enabled(false)
-      // let truOrFalse = controller.enabled()
-      // console.log(truOrFalse)
     }
     else{
-      console.log("ENABLED!!!")
       controller.enabled(true)
-      let truOrFalse = controller.enabled()
-      console.log("TRU OR FALSE?", truOrFalse)
     }
 
 
@@ -162,9 +141,8 @@ $(function(){
   }
 
   function handleResponse(response){
-
+    console.log("RESPONSE: ", response)
     let image, url, title, author, date;
-
     let content = response.items[0].content
     let imgContent = findImg(content)
     title = response.items[0].title
@@ -183,8 +161,9 @@ $(function(){
     $('#blogpost-date').text(`${date}`)
   }
 
-  $.get("https://www.googleapis.com/blogger/v3/blogs/905598030170974301/posts?callback=handleResponse&key=AIzaSyBKlnzrE10UrA-90id4JfkwYa830CyzGAM")
+  $.get("https://www.googleapis.com/blogger/v3/blogs/905598030170974301/posts?callback=handleResponse&key=AIzaSyDBW5kUdiR1AndhWteFJwmDEJnjkrXNepA")
   .then(data => {
+    console.log("DATA :", data)
     let dataObj = JSON.parse(data.slice(31, -2))
     handleResponse(dataObj)
   })
