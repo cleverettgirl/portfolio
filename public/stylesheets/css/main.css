@@ -7,12 +7,12 @@
   word-spacing: 8px;
   font-size: 45px; }
 
-.subtitle-font, #landingSlide #wrapper #byline {
+.subtitle-font, .menu-nav-link, #landingSlide #wrapper #byline {
   font-family: 'Roboto', sans-serif !important;
   text-transform: uppercase;
   letter-spacing: 2px; }
 
-.subtitle-font, #landingSlide #wrapper #byline {
+.subtitle-font, .menu-nav-link, #landingSlide #wrapper #byline {
   font-family: 'Roboto', sans-serif !important;
   text-transform: uppercase;
   letter-spacing: 2px; }
@@ -60,6 +60,106 @@ body {
   padding: 0 !important;
   width: 50%; }
 
+body {
+  padding: 0; }
+
+a {
+  @extends .subtitle-font;
+  text-decoration: none;
+  color: #232323;
+  transition: color 0.3s ease; }
+
+a:hover {
+  color: black;
+  text-decoration: none; }
+
+#menuToggle {
+  visibility: hidden;
+  display: block;
+  position: fixed;
+  top: 50px;
+  left: 50px;
+  z-index: 999;
+  -webkit-user-select: none;
+  user-select: none; }
+
+#menuToggle input {
+  display: block;
+  width: 40px;
+  height: 32px;
+  position: absolute;
+  top: -7px;
+  left: -5px;
+  cursor: pointer;
+  opacity: 0;
+  /* hide this */
+  z-index: 2;
+  /* and place it over the hamburger */
+  -webkit-touch-callout: none; }
+
+/*
+ * Just a quick hamburger
+ */
+#menuToggle span {
+  display: block;
+  width: 33px;
+  height: 4px;
+  margin-bottom: 5px;
+  position: relative;
+  background: #E2D6DB;
+  border-radius: 3px;
+  z-index: 1;
+  transform-origin: 4px 0px;
+  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease; }
+
+#menuToggle span:first-child {
+  transform-origin: 0% 0%; }
+
+#menuToggle span:nth-last-child(2) {
+  transform-origin: 0% 100%; }
+
+/*
+ * Transform all the slices of hamburger
+ * into a crossmark.
+ */
+#menuToggle input:checked ~ span {
+  opacity: 1;
+  transform: rotate(45deg) translate(-2px, -1px);
+  background: black; }
+
+#menuToggle input:checked ~ span:nth-last-child(3) {
+  opacity: 0;
+  transform: rotate(0deg) scale(0.2, 0.2); }
+
+#menuToggle input:checked ~ span:nth-last-child(2) {
+  opacity: 1;
+  transform: rotate(-45deg) translate(0, -1px); }
+
+#menu {
+  position: absolute;
+  height: 101vh;
+  width: 58vw;
+  margin: -80px 0 0 -50px;
+  padding: 50px;
+  padding-top: 125px;
+  background: #E2D6DB;
+  list-style-type: none;
+  -webkit-font-smoothing: antialiased;
+  /* to stop flickering of text in safari */
+  transform-origin: 0% 0%;
+  transform: translate(-100%, 0);
+  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1); }
+
+#menu li {
+  @extends .subtitle-font;
+  padding: 20px 0;
+  font-size: 22px; }
+
+#menuToggle input:checked ~ ul {
+  transform: scale(1, 1);
+  opacity: 1; }
+
+/* slides */
 #landingSlide {
   height: 100vh;
   display: flex;
@@ -95,9 +195,10 @@ body {
     padding: 0;
     background-color: #f7484e; }
     #aboutSlide #about-header .about-img {
-      background-image: url(/img/coffee.jpg);
+      background-image: url(../../img/profile-pic.png);
       background-repeat: no-repeat;
       background-size: cover;
+      background-position-y: -15px;
       height: 125px;
       width: 125px;
       border-radius: 50%;
@@ -317,6 +418,8 @@ body {
     position: fixed !important;
     padding: 0 !important;
     width: 50%; }
+  .nav-container-icon {
+    visibility: hidden; }
   #landingSlide .nav-footer, #landingSlide #landingSlide, #landingSlide #aboutSlide #about-header, #aboutSlide #landingSlide #about-header, #landingSlide #contactSlide #contact-header, #contactSlide #landingSlide #contact-header {
     visibility: visible; }
   #landingSlide .wrapper {

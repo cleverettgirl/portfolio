@@ -18,7 +18,9 @@ $(function(){
   });
 
   // media queries stuffs
-
+  $(window).on('resize', function(){
+    location.reload()
+  })
 
 
 // MAKE WORK & ABOUT SECTION STICKY
@@ -88,8 +90,6 @@ $(function(){
     else{
       controller.enabled(true)
     }
-
-
   });
 
 
@@ -124,7 +124,6 @@ $(function(){
   .addTo(controller);
 
   // Blogger posts
-
   function findImg(str){
     let imgContent = str.slice(str.indexOf('<img'))
         imgContent = imgContent.slice(0, imgContent.indexOf('>'))
@@ -136,12 +135,10 @@ $(function(){
 
   function formatDate(x){
     let nums = x.slice(0, x.indexOf('T'))
-    console.log(nums)
     return `${nums.slice(5, 7)} / ${nums.slice(8)} / ${nums.slice(0, 4)}`
   }
 
   function handleResponse(response){
-    console.log("RESPONSE: ", response)
     let image, url, title, author, date;
     let content = response.items[0].content
     let imgContent = findImg(content)
@@ -159,6 +156,7 @@ $(function(){
     $('#blog-title').text(`${title}`)
     $('#blogpost-author').text(`${author}`)
     $('#blogpost-date').text(`${date}`)
+    $('#read-more').attr('href', `${url}`)
   }
 
   $.get("https://www.googleapis.com/blogger/v3/blogs/905598030170974301/posts?callback=handleResponse&key=AIzaSyDBW5kUdiR1AndhWteFJwmDEJnjkrXNepA")
@@ -167,4 +165,49 @@ $(function(){
     handleResponse(dataObj)
   })
 
+
+  if($(window).width() < 768){
+    $('#menuToggle').css('visibility', 'visible')
+  }
+  else{
+    $('#menuToggle').css('visibility', 'hidden')
+  }
+
+  // when a link the in the menu-nav is clicked, make sure to close after one second
+  $(".menu-nav-link").click(function(){
+    $("input[type=checkbox]").click()
+  })
+
+  function link_is_external(link_element){
+    return(link_element.host !== window.location.host);
+  }
+
+  function link_kne(a){
+    let $a = $(a)
+    if($a[0].id === 'kneCode'){
+      a.click()
+    }
+    if($a[0].id === 'kneDemo'){
+      a.click()
+    }
+  }
+
+  if($(window).width() >= 768) {
+    document.addEventListener('click',
+    ({clientX, clientY}) => Array.from($('a'))
+      .map(a => ({a, box: a.getBoundingClientRect()}))
+      .filter(({box}) =>
+              clientX >= box.left &&
+              clientX <= box.right &&
+              clientY >= box.top &&
+              clientY <= box.bottom)
+      .filter(({a}) =>  {
+        if(link_is_external(a)){
+          link_kne(a)
+        }
+        else{
+          a.click()
+        }
+      }))
+  }
 })
