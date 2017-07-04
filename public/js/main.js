@@ -81,9 +81,11 @@ $(function(){
 
     if($(window).width() < 768){
       controller.enabled(false)
+      $('#menuToggle').css('visibility', 'visible')
     }
     else{
       controller.enabled(true)
+      $('#menuToggle').css('visibility', 'hidden')
     }
   });
 
@@ -160,13 +162,6 @@ $(function(){
     handleResponse(dataObj)
   })
 
-
-  if($(window).width() < 768){
-    $('#menuToggle').css('visibility', 'visible')
-  }
-  else{
-    $('#menuToggle').css('visibility', 'hidden')
-  }
 
   // when a link the in the menu-nav is clicked, make sure to close after one second
   $(".menu-nav-link").click(function(){
