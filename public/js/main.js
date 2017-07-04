@@ -17,11 +17,6 @@ $(function(){
     }
   });
 
-  // media queries stuffs
-  $(window).on('resize', function(){
-    location.reload()
-  })
-
 
 // MAKE WORK & ABOUT SECTION STICKY
   $(window).on('scroll resize', function () {
