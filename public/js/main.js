@@ -1,10 +1,10 @@
 $(function(){
   // to test distance of about section from top
   // var distance = $('#slide01').offset().top;
-  let $window = window;
+  const $window = $(window)
   // link scrolling
   $('a[href^="#"]').on('click', function(event) {
-    var $target = $(this.getAttribute('href'));
+    const $target = $(this.getAttribute('href'))
     // console.log("***** ", target)
     if( $target.length ) {
       event.preventDefault();
@@ -13,42 +13,41 @@ $(function(){
           scrollTop: $target.offset().top
           // offset() -> the .offset() method allows us to retrieve the current position of an element (specifically its border box, which excludes margins)
           // top tells us to bring it all the way to the top. if we had a navbar or didn't want it all the wy at the top, could add `- 80` at the end (or whatever #).
-      }, 1000);
+      }, 1000)
     }
-  });
+  })
 
 
 // MAKE WORK & ABOUT SECTION STICKY
-  $(window).on('scroll resize', function () {
+  $window.on('scroll resize', function () {
 
-    const $window = $(window),
-          $about = $('#aboutSlide'),
-          $aboutContent = $('#about-content'),
-          $aboutHeader = $('#about-header'),
-          $contact = $('#contactSlide'),
-          $contactText = $('#contact-text')
-          $contactHeader = $('#contact-header')
+    const $about = $('#aboutSlide')
+        , $aboutContent = $('#about-content')
+        , $aboutHeader = $('#about-header')
+        , $contact = $('#contactSlide')
+        , $contactText = $('#contact-text')
+        , $contactHeader = $('#contact-header')
 
     //#about
-    let aboutTop = $about.offset().top;
-    let aboutBottom = $about.height() + aboutTop;
-    let aboutHeaderTop = $aboutContent.height() - $window.height();
+    let aboutTop = $about.offset().top
+      , aboutBottom = $about.height() + aboutTop
+      , aboutHeaderTop = $aboutContent.height() - $window.height()
 
     // $contact
-    let contactTop = $contact.offset().top;
-    let contactBottom = $contact.height() + contactTop;
-    let contactHeaderTop = $contactText.height() - $window.height();
+    let contactTop = $contact.offset().top
+      , contactBottom = $contact.height() + contactTop
+      , contactHeaderTop = $contactText.height() - $window.height()
 
     //window
-    let windowTop = $window.scrollTop();
-    let windowBottom = $window.height() + windowTop;
+    let windowTop = $window.scrollTop()
+      , windowBottom = $window.height() + windowTop
 
     // logic for about
     if($window.width() >= 768){
       if (windowBottom > aboutBottom) {
-        $aboutHeader.removeClass('fixed-header');
-        $aboutHeader.css('top', aboutHeaderTop);
-        $aboutContent.removeClass('float-right');
+        $aboutHeader.removeClass('fixed-header')
+        $aboutHeader.css('top', aboutHeaderTop)
+        $aboutContent.removeClass('float-right')
       }
       else if (windowTop > aboutTop) {
         $aboutHeader.addClass('fixed-header');
@@ -79,7 +78,7 @@ $(function(){
       }
     }
 
-    if($(window).width() < 768){
+    if($window.width() < 768){
       controller.enabled(false)
       $('#menuToggle').css('visibility', 'visible')
     }
@@ -123,10 +122,10 @@ $(function(){
   // Blogger posts
   function findImg(str){
     let imgContent = str.slice(str.indexOf('<img'))
-        imgContent = imgContent.slice(0, imgContent.indexOf('>'))
-        imgContent = imgContent.slice(imgContent.indexOf('src="'))
-        imgContent = imgContent.slice(5)
-        imgContent = imgContent.slice(0, imgContent.indexOf('"'))
+    imgContent = imgContent.slice(0, imgContent.indexOf('>'))
+    imgContent = imgContent.slice(imgContent.indexOf('src="'))
+    imgContent = imgContent.slice(5)
+    imgContent = imgContent.slice(0, imgContent.indexOf('"'))
     return imgContent
   }
 
@@ -136,9 +135,14 @@ $(function(){
   }
 
   function handleResponse(response){
-    let image, url, title, author, date;
-    let content = response.items[0].content
-    let imgContent = findImg(content)
+    let image
+      , url
+      , title
+      , author
+      , date
+      , content = response.items[0].content
+      , imgContent = findImg(content)
+
     title = response.items[0].title
     url = response.items[0].url
     author = response.items[0].author.displayName;
@@ -157,10 +161,10 @@ $(function(){
   }
 
   $.get("https://www.googleapis.com/blogger/v3/blogs/905598030170974301/posts?callback=handleResponse&key=AIzaSyDBW5kUdiR1AndhWteFJwmDEJnjkrXNepA")
-  .then(data => {
-    let dataObj = JSON.parse(data.slice(31, -2))
-    handleResponse(dataObj)
-  })
+    .then(data => {
+      let dataObj = JSON.parse(data.slice(31, -2))
+      handleResponse(dataObj)
+    })
 
 
   // when a link the in the menu-nav is clicked, make sure to close after one second
@@ -182,7 +186,7 @@ $(function(){
     }
   }
 
-  if($(window).width() >= 768) {
+  if($window.width() >= 768) {
     document.addEventListener('click',
     ({clientX, clientY}) => Array.from($('a'))
       .map(a => ({a, box: a.getBoundingClientRect()}))

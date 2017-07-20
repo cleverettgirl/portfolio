@@ -109,12 +109,12 @@ a{
   text-decoration: none;
   color: #232323;
   transition: color 0.3s ease;
+  &:hover{
+    color: black;
+    text-decoration: none;
+  }
 }
 
-a:hover{
-  color: black;
-  text-decoration: none;
-}
 
 #menuToggle{
   visibility:hidden;
@@ -125,20 +125,21 @@ a:hover{
   z-index: 999;
   -webkit-user-select: none;
   user-select: none;
+
+  input{
+    display: block;
+    width: 40px;
+    height: 32px;
+    position: absolute;
+    top: -7px;
+    left: -5px;
+    cursor: pointer;
+    opacity: 0; /* hide this */
+    z-index: 2; /* and place it over the hamburger */
+    -webkit-touch-callout: none;
+  }
 }
 
-#menuToggle input{
-  display: block;
-  width: 40px;
-  height: 32px;
-  position: absolute;
-  top: -7px;
-  left: -5px;
-  cursor: pointer;
-  opacity: 0; /* hide this */
-  z-index: 2; /* and place it over the hamburger */
-  -webkit-touch-callout: none;
-}
 
 .menu-nav-link{
   @extend .subtitle-font;
@@ -162,14 +163,14 @@ a:hover{
   transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
               background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
               opacity 0.55s ease;
-}
 
-#menuToggle span:first-child{
-  transform-origin: 0% 0%;
-}
+  &:first-child{
+    transform-origin: 0% 0%;
+  }
 
-#menuToggle span:nth-last-child(2){
-  transform-origin: 0% 100%;
+  &:nth-last-child(2){
+    transform-origin: 0% 100%;
+  }
 }
 
 /*
@@ -180,16 +181,16 @@ a:hover{
   opacity: 1;
   transform: rotate(45deg) translate(-2px, -1px);
   background:black;
-}
 
-#menuToggle input:checked ~ span:nth-last-child(3){
-  opacity: 0;
-  transform: rotate(0deg) scale(0.2, 0.2);
-}
+  &:nth-last-child(3){
+    opacity: 0;
+    transform: rotate(0deg) scale(0.2, 0.2);
+  }
 
-#menuToggle input:checked ~ span:nth-last-child(2){
-  opacity: 1;
-  transform: rotate(-45deg) translate(0, -1px);
+  &:nth-last-child(2){
+    opacity: 1;
+    transform: rotate(-45deg) translate(0, -1px);
+  }
 }
 
 #menu{
@@ -206,12 +207,12 @@ a:hover{
   transform-origin: 0% 0%;
   transform: translate(-100%, 0);
   transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
-}
 
-#menu li{
-  @extends .subtitle-font;
-  padding: 20px 0;
-  font-size: 22px;
+  li{
+    @extends .subtitle-font;
+    padding: 20px 0;
+    font-size: 22px;
+  }
 }
 
 #menuToggle input:checked ~ ul{
@@ -354,6 +355,7 @@ a:hover{
     }
   }
 }
+
 #work02-header{
   height: 0vh;
   background-color: #ededed;
@@ -365,6 +367,7 @@ a:hover{
     visibility: hidden;
   }
 }
+
 #work02-content{
   padding-top:100px;
   .img{
@@ -401,6 +404,7 @@ a:hover{
     }
   }
 }
+
 #work03-header{
   height: 0vh;
   background-color: #ededed;
@@ -412,6 +416,7 @@ a:hover{
     visibility: hidden;
   }
 }
+
 #work03-content{
   padding-top:100px;
   .img{
@@ -542,7 +547,6 @@ a:hover{
   .nav-container-icon{
     visibility: hidden;
   }
-
 
   #landingSlide{
     .nav-footer{
