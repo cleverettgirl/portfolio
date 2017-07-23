@@ -69,6 +69,7 @@ $gray: #EDEDED;
   @extend %nav-footer;
 }
 
+
 //*** IPHONE 5 OR SMALLER
 
 *{
@@ -231,6 +232,7 @@ a{
   }
   height:100vh;
   display:flex;
+  justify-content: center;
   align-items:center;
   #wrapper{
     text-align:center;

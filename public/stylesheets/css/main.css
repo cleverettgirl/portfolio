@@ -156,6 +156,7 @@ a {
 #landingSlide {
   height: 100vh;
   display: flex;
+  justify-content: center;
   align-items: center; }
   #landingSlide .nav-footer, #landingSlide #landingSlide, #landingSlide #aboutSlide #about-header, #aboutSlide #landingSlide #about-header, #landingSlide #contactSlide #contact-header, #contactSlide #landingSlide #contact-header {
     visibility: hidden;

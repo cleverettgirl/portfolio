@@ -19,6 +19,7 @@
 
 <!-- media="screen and (max-device-width: 768px)"  -->
     <link rel="stylesheet" href="stylesheets/css/main.css" />
+    <link rel="stylesheet" href="stylesheets/css/animation.css" />
 
 
 
@@ -47,11 +48,14 @@
     </nav>
 
       <div class="row" id="landingSlide" style="z-index: 20;">
-        <div class="col-xs-12 col-sm-6 wrapper">
+        <div class="col-xs-12 col-sm-12 wrapper">
           <h1 id="name" class="title-font">Christine Leverett</h1>
 
-          <svg id="landing-svg" height="10" width="650">
-            <line x1="0" y1="0" x2="700" y2="0" style="stroke:#E2D6DB;stroke-width:10" />
+          <svg id="landing-svg" height="10" width="40%">
+            <line x1="0" y1="0" x2="100%" y2="0" style="stroke:#E2D6DB;stroke-width:10">
+                <animate attributeType="XML" attributeName="x1" from="50%" to="0" dur="1s" repeatCount=1 />
+                <animate attributeType="XML" attributeName="x2" from="50%" to="100%" dur="1s" repeateCount=1 />
+              </line>
             Sorry, your browser does not support inline SVG.
           </svg>
           <h4 id="byline" class="subtitle-font"> Software Engineer </h4>

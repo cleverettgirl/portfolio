@@ -1,0 +1,35 @@
+@keyframes revealup{
+  0%{
+    opacity:0;
+    transform: translateY(100%);
+  }
+  100%{
+    opacity:1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes revealdown{
+ 0%{
+    opacity:0;
+    transform: translateY(-100%);
+  }
+  100%{
+    opacity:1;
+    transform: translateY(0);
+  }
+}
+
+#name{
+  animation-name: revealup;
+  animation-duration: .4s;
+  animation-delay: .7s;
+  animation-fill-mode: backwards;
+}
+
+#byline{
+  animation-name: revealdown;
+  animation-duration: .4s;
+  animation-delay: .7s;
+  animation-fill-mode: backwards;
+}
