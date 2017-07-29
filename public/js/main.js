@@ -166,8 +166,6 @@ $(function(){
       handleResponse(dataObj)
     })
 
-
-  // when a link the in the menu-nav is clicked, make sure to close after one second
   $(".menu-nav-link").click(function(){
     $("input[type=checkbox]").click()
   })
@@ -197,11 +195,13 @@ $(function(){
               clientY <= box.bottom)
       .filter(({a}) =>  {
         if(link_is_external(a)){
-          link_kne(a)
+          if($(a)[0].id.startsWith('kne')) link_kne(a)
+          else a.click()
         }
         else{
           a.click()
         }
       }))
   }
+
 })
