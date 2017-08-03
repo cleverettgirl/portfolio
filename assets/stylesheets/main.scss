@@ -69,9 +69,6 @@ $gray: #EDEDED;
   @extend %nav-footer;
 }
 
-
-//*** IPHONE 5 OR SMALLER
-
 *{
   box-sizing: border-box;
 }
@@ -292,6 +289,42 @@ a{
     height:auto;
     .content-padding{
       padding: 80px;
+    }
+    .glyphicon {
+      padding-left:2%;
+      color: $purple;
+      font-size:10px;
+    }
+    .subtitle-font {
+      margin-top:10px;
+      &.bullet-title{
+        background-color:$purple;
+        // display:inline;
+        padding: 2% 10%;
+        clip-path: polygon(10% 0, 100% 0, 90% 100%, 0 100%)
+      }
+    }
+    .bullet{
+      font-family: "Helvetica Neue";
+      display:inline;
+    }
+    #nyjs{
+      background-image:url(../../img/nyjs.jpg);
+      background-size:contain;
+      background-repeat:no-repeat;
+      height:200px;
+    }
+    #wwc{
+      background-image:url(../../img/womenwhocode.png);
+      background-size:contain;
+      background-repeat:no-repeat;
+      height:200px;
+    }
+    #node{
+      background-image:url(../../img/nycnode.jpeg);
+      background-size:contain;
+      background-repeat:no-repeat;
+      height:200px;
     }
   }
 }

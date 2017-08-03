@@ -18,13 +18,12 @@ $(function(){
   })
 
 
-// MAKE WORK & ABOUT SECTION STICKY
   $window.on('scroll resize', function () {
 
     const $about = $('#aboutSlide')
         , $aboutContent = $('#about-content')
         , $aboutHeader = $('#about-header')
-        , $contact = $('#contactSlide')
+        , $contact = $('#contactSlideOuter')
         , $contactText = $('#contact-text')
         , $contactHeader = $('#contact-header')
 
@@ -42,7 +41,6 @@ $(function(){
     let windowTop = $window.scrollTop()
       , windowBottom = $window.height() + windowTop
 
-    // logic for about
     if($window.width() >= 768){
       if (windowBottom > aboutBottom) {
         $aboutHeader.removeClass('fixed-header')
@@ -61,9 +59,9 @@ $(function(){
       }
 
       if(windowBottom > contactBottom){
-        $contactHeader.removeClass('fixed-header');
-        $contactHeader.css('top', contactHeaderTop)
-        $contactText.removeClass('float-right');
+        $contact.removeClass('fixed-header');
+        $contact.css('top', contactHeaderTop)
+        // $contact.removeClass('float-right');
       }
 
       else if (windowTop > contactTop) {

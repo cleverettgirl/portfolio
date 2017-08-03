@@ -207,6 +207,34 @@ a {
     height: auto; }
     #aboutSlide #about-content .content-padding {
       padding: 80px; }
+    #aboutSlide #about-content .glyphicon {
+      padding-left: 2%;
+      color: #E2D6DB;
+      font-size: 10px; }
+    #aboutSlide #about-content .subtitle-font, #aboutSlide #about-content .menu-nav-link, #aboutSlide #about-content #landingSlide #wrapper #byline, #landingSlide #wrapper #aboutSlide #about-content #byline {
+      margin-top: 10px; }
+      #aboutSlide #about-content .subtitle-font.bullet-title, #aboutSlide #about-content .bullet-title.menu-nav-link, #aboutSlide #about-content #landingSlide #wrapper .bullet-title#byline, #landingSlide #wrapper #aboutSlide #about-content .bullet-title#byline {
+        background-color: #E2D6DB;
+        padding: 2% 10%;
+        clip-path: polygon(10% 0, 100% 0, 90% 100%, 0 100%); }
+    #aboutSlide #about-content .bullet {
+      font-family: "Helvetica Neue";
+      display: inline; }
+    #aboutSlide #about-content #nyjs {
+      background-image: url(../../img/nyjs.jpg);
+      background-size: contain;
+      background-repeat: no-repeat;
+      height: 200px; }
+    #aboutSlide #about-content #wwc {
+      background-image: url(../../img/womenwhocode.png);
+      background-size: contain;
+      background-repeat: no-repeat;
+      height: 200px; }
+    #aboutSlide #about-content #node {
+      background-image: url(../../img/nycnode.jpeg);
+      background-size: contain;
+      background-repeat: no-repeat;
+      height: 200px; }
 
 @media screen and (max-width: 767px) {
   #slides01 {
