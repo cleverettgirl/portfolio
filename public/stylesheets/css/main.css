@@ -220,21 +220,17 @@ a {
     #aboutSlide #about-content .bullet {
       font-family: "Helvetica Neue";
       display: inline; }
-    #aboutSlide #about-content #nyjs {
+    #aboutSlide #about-content #nyjs, #aboutSlide #about-content #wwc, #aboutSlide #about-content #node {
       background-image: url(../../img/nyjs.jpg);
       background-size: contain;
       background-repeat: no-repeat;
       height: 200px; }
     #aboutSlide #about-content #wwc {
-      background-image: url(../../img/womenwhocode.png);
-      background-size: contain;
-      background-repeat: no-repeat;
-      height: 200px; }
+      background-image: url(../../img/womenwhocode.png); }
     #aboutSlide #about-content #node {
-      background-image: url(../../img/nycnode.jpeg);
-      background-size: contain;
-      background-repeat: no-repeat;
-      height: 200px; }
+      background-image: url(../../img/nycnode.jpeg); }
+    #aboutSlide #about-content blockquote {
+      margin-left: 5%; }
 
 @media screen and (max-width: 767px) {
   #slides01 {

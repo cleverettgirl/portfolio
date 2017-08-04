@@ -308,23 +308,20 @@ a{
       font-family: "Helvetica Neue";
       display:inline;
     }
-    #nyjs{
+    #nyjs, #wwc, #node{
       background-image:url(../../img/nyjs.jpg);
       background-size:contain;
       background-repeat:no-repeat;
       height:200px;
     }
     #wwc{
-      background-image:url(../../img/womenwhocode.png);
-      background-size:contain;
-      background-repeat:no-repeat;
-      height:200px;
+      background-image:url(../../img/womenwhocode.png)
     }
     #node{
-      background-image:url(../../img/nycnode.jpeg);
-      background-size:contain;
-      background-repeat:no-repeat;
-      height:200px;
+      background-image:url(../../img/nycnode.jpeg)
+    }
+    blockquote{
+      margin-left:5%;
     }
   }
 }
