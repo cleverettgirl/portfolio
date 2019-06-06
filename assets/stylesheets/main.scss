@@ -1,7 +1,7 @@
 /* color variables */
-$red: #f7484e;
-$purple: #E2D6DB;
-$gray: #EDEDED;
+$yellow1: #FEE23E;
+$yellow2: #FFD319;
+$gray2: #434e65;
 
 /* font variables */
 .title-font{
@@ -151,7 +151,7 @@ a{
   height: 4px;
   margin-bottom: 5px;
   position: relative;
-  background:$purple;
+  background:$yellow2;
   border-radius: 3px;
 
   z-index: 1;
@@ -198,7 +198,7 @@ a{
   margin: -80px 0 0 -50px;
   padding: 50px;
   padding-top: 125px;
-  background: $purple;
+  background: $yellow2;
   list-style-type: none;
   -webkit-font-smoothing: antialiased;
   /* to stop flickering of text in safari */
@@ -263,20 +263,11 @@ a{
       margin: 0;
     }
   }
+
   #about-header{
     padding:0;
-    background-color: $red;
-    .about-img {
-      background-image:url(../../img/profile-pic.png);
-      background-repeat:no-repeat;
-      background-size:cover;
-      background-position-y:-15px;
-      height:125px;
-      width:125px;
-      border-radius:50%;
-      position:absolute;
-      bottom: calc(0% - 62px);
-    }
+    background-color: $yellow2;
+
     @extend .nav-footer;
     .nav-footer{
       display:flex;
@@ -285,43 +276,46 @@ a{
       visibility: hidden;
     }
   }
+
   #about-content{
     height:auto;
+
     .content-padding{
       padding: 80px;
+
+      img {
+        width: 100% !important;
+      }
     }
+
     .glyphicon {
       padding-left:2%;
-      color: $purple;
+      color: $yellow2;
       font-size:10px;
     }
+
     .subtitle-font {
       margin-top:10px;
+
       &.bullet-title{
-        background-color:$purple;
+        background-color:$yellow2;
         // display:inline;
         padding: 2% 10%;
         clip-path: polygon(10% 0, 100% 0, 90% 100%, 0 100%)
       }
     }
+
     .bullet{
       font-family: "Helvetica Neue";
       display:inline;
     }
-    #nyjs, #wwc, #node{
-      background-image:url(../../img/nyjs.jpg);
-      background-size:contain;
-      background-repeat:no-repeat;
-      height:200px;
-    }
-    #wwc{
-      background-image:url(../../img/womenwhocode.png)
-    }
-    #node{
-      background-image:url(../../img/nycnode.jpeg)
-    }
+
     blockquote{
       margin-left:5%;
+    }
+
+    .pets {
+      width: 100%;
     }
   }
 }
@@ -353,6 +347,8 @@ a{
 }
 #work01-content{
   padding-top:100px;
+  background-color: #7686bd;
+
   .img{
     background-image:url(../../img/macbook-comp.png);
     background-repeat:no-repeat;
@@ -375,11 +371,11 @@ a{
       text-transform:uppercase;
       letter-spacing:2px;
       font-size:12px;
-      border: thin solid #E2D6DB;
+      border: thin solid $gray2;
       padding:8px;
-      background-color:#E2D6DB;
+      background-color:$gray2;
       border-radius:4px;
-      color:black;
+      color:white;
       margin-right:5px;
       &:hover{
         text-decoration: none;
@@ -424,11 +420,11 @@ a{
       text-transform:uppercase;
       letter-spacing:2px;
       font-size:12px;
-      border: thin solid #E2D6DB;
+      border: thin solid $gray2;
       padding:8px;
-      background-color:#E2D6DB;
+      background-color: $gray2;
       border-radius:4px;
-      color:black;
+      color:white;
       margin-right:5px;
       &:hover{
         text-decoration: none;
@@ -473,11 +469,11 @@ a{
       text-transform:uppercase;
       letter-spacing:2px;
       font-size:12px;
-      border: thin solid #E2D6DB;
+      border: thin solid $gray2;
       padding:8px;
-      background-color:#E2D6DB;
+      background-color:$gray2;
       border-radius:4px;
-      color:black;
+      color:white;
       margin-right:5px;
       &:hover{
         text-decoration: none;
@@ -494,7 +490,10 @@ a{
     justify-content: center;
   }
   #contact-header{
-    background-color:$red;
+    // background-color:$yellow1;
+    background-image:url(../../img/lemon.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
     @extend .nav-footer;
     .nav-footer{
       visibility:hidden;
@@ -596,15 +595,15 @@ a{
     }
   }
 
-  #aboutSlide{
-    .about-img{
-      top:10%;
-      right:calc(0% - 62px)
-    }
-    .nav-footer{
-      visibility: visible !important;
-    }
-  }
+  // #aboutSlide{
+  //   .about-img{
+  //     top:10%;
+  //     right:calc(0% - 62px)
+  //   }
+  //   .nav-footer{
+  //     visibility: visible !important;
+  //   }
+  // }
 
   .chapter-content{
     background-color: #EDEDED;
@@ -637,7 +636,7 @@ a{
         height:100vh !important;
         .title-block{
           visibility:visible;
-          background-color:$gray;
+          background-color: $gray2;
         }
       }
       .pin-wrappers{
@@ -656,6 +655,7 @@ a{
           visibility: visible;
           padding:0;
           background-color:white !important;
+          // background-color: #7686bd;
           @include nav-footer;
           .nav-footer{
             visibility: visible;
@@ -668,7 +668,7 @@ a{
         #work01-content, #work02-content, #work03-content {
           margin-top:0 !important;
           height:100vh;
-          background-color:$gray;
+          background-color: #e4e7f2;
 
           .img {
             position:absolute;
@@ -693,20 +693,20 @@ a{
             pointer-events: all;
             position:absolute;
             bottom:11%;
-            // margin-left:6%;
             z-index:999;
             left:35%;
+
             a{
               font-family: 'Roboto', sans-serif !important;
               text-transform:uppercase;
               letter-spacing:2px;
               font-size:12px;
-              border: thin solid #E2D6DB;
               padding:8px;
-              background-color:#E2D6DB;
+              background-color: #1b352a;
               border-radius:4px;
-              color:black;
+              color: white;
               margin-right:5px;
+
               &:hover{
                 text-decoration: none;
               }

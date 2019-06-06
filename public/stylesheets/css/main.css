@@ -104,7 +104,7 @@ a {
   height: 4px;
   margin-bottom: 5px;
   position: relative;
-  background: #E2D6DB;
+  background: #FFD319;
   border-radius: 3px;
   z-index: 1;
   transform-origin: 4px 0px;
@@ -136,7 +136,7 @@ a {
   margin: -80px 0 0 -50px;
   padding: 50px;
   padding-top: 125px;
-  background: #E2D6DB;
+  background: #FFD319;
   list-style-type: none;
   -webkit-font-smoothing: antialiased;
   /* to stop flickering of text in safari */
@@ -187,17 +187,7 @@ a {
       margin: 0; }
   #aboutSlide #about-header {
     padding: 0;
-    background-color: #f7484e; }
-    #aboutSlide #about-header .about-img {
-      background-image: url(../../img/profile-pic.png);
-      background-repeat: no-repeat;
-      background-size: cover;
-      background-position-y: -15px;
-      height: 125px;
-      width: 125px;
-      border-radius: 50%;
-      position: absolute;
-      bottom: calc(0% - 62px); }
+    background-color: #FFD319; }
     #aboutSlide #about-header .nav-footer, #aboutSlide #about-header #landingSlide, #aboutSlide #about-header #about-header, #aboutSlide #about-header #contactSlide #contact-header, #contactSlide #aboutSlide #about-header #contact-header {
       display: flex;
       justify-content: center;
@@ -207,30 +197,25 @@ a {
     height: auto; }
     #aboutSlide #about-content .content-padding {
       padding: 80px; }
+      #aboutSlide #about-content .content-padding img {
+        width: 100% !important; }
     #aboutSlide #about-content .glyphicon {
       padding-left: 2%;
-      color: #E2D6DB;
+      color: #FFD319;
       font-size: 10px; }
     #aboutSlide #about-content .subtitle-font, #aboutSlide #about-content .menu-nav-link, #aboutSlide #about-content #landingSlide #wrapper #byline, #landingSlide #wrapper #aboutSlide #about-content #byline {
       margin-top: 10px; }
       #aboutSlide #about-content .subtitle-font.bullet-title, #aboutSlide #about-content .bullet-title.menu-nav-link, #aboutSlide #about-content #landingSlide #wrapper .bullet-title#byline, #landingSlide #wrapper #aboutSlide #about-content .bullet-title#byline {
-        background-color: #E2D6DB;
+        background-color: #FFD319;
         padding: 2% 10%;
         clip-path: polygon(10% 0, 100% 0, 90% 100%, 0 100%); }
     #aboutSlide #about-content .bullet {
       font-family: "Helvetica Neue";
       display: inline; }
-    #aboutSlide #about-content #nyjs, #aboutSlide #about-content #wwc, #aboutSlide #about-content #node {
-      background-image: url(../../img/nyjs.jpg);
-      background-size: contain;
-      background-repeat: no-repeat;
-      height: 200px; }
-    #aboutSlide #about-content #wwc {
-      background-image: url(../../img/womenwhocode.png); }
-    #aboutSlide #about-content #node {
-      background-image: url(../../img/nycnode.jpeg); }
     #aboutSlide #about-content blockquote {
       margin-left: 5%; }
+    #aboutSlide #about-content .pets {
+      width: 100%; }
 
 @media screen and (max-width: 767px) {
   #slides01 {
@@ -254,7 +239,8 @@ a {
     visibility: hidden; }
 
 #work01-content {
-  padding-top: 100px; }
+  padding-top: 100px;
+  background-color: #7686bd; }
   #work01-content .img {
     background-image: url(../../img/macbook-comp.png);
     background-repeat: no-repeat;
@@ -275,11 +261,11 @@ a {
       text-transform: uppercase;
       letter-spacing: 2px;
       font-size: 12px;
-      border: thin solid #E2D6DB;
+      border: thin solid #434e65;
       padding: 8px;
-      background-color: #E2D6DB;
+      background-color: #434e65;
       border-radius: 4px;
-      color: black;
+      color: white;
       margin-right: 5px; }
       #work01-content .work-nav a:hover {
         text-decoration: none; }
@@ -316,11 +302,11 @@ a {
       text-transform: uppercase;
       letter-spacing: 2px;
       font-size: 12px;
-      border: thin solid #E2D6DB;
+      border: thin solid #434e65;
       padding: 8px;
-      background-color: #E2D6DB;
+      background-color: #434e65;
       border-radius: 4px;
-      color: black;
+      color: white;
       margin-right: 5px; }
       #work02-content .work-nav a:hover {
         text-decoration: none; }
@@ -357,11 +343,11 @@ a {
       text-transform: uppercase;
       letter-spacing: 2px;
       font-size: 12px;
-      border: thin solid #E2D6DB;
+      border: thin solid #434e65;
       padding: 8px;
-      background-color: #E2D6DB;
+      background-color: #434e65;
       border-radius: 4px;
-      color: black;
+      color: white;
       margin-right: 5px; }
       #work03-content .work-nav a:hover {
         text-decoration: none; }
@@ -373,7 +359,9 @@ a {
   justify-content: center; }
 
 #contactSlide #contact-header {
-  background-color: #f7484e; }
+  background-image: url(../../img/lemon.jpg);
+  background-size: cover;
+  background-repeat: no-repeat; }
   #contactSlide #contact-header .nav-footer, #contactSlide #contact-header #landingSlide, #contactSlide #contact-header #aboutSlide #about-header, #aboutSlide #contactSlide #contact-header #about-header, #contactSlide #contact-header #contact-header {
     visibility: hidden;
     display: flex;
@@ -447,11 +435,6 @@ a {
       font-weight: 400;
       text-transform: uppercase;
       letter-spacing: 4px; }
-  #aboutSlide .about-img {
-    top: 10%;
-    right: calc(0% - 62px); }
-  #aboutSlide .nav-footer, #aboutSlide #landingSlide, #aboutSlide #about-header, #aboutSlide #contactSlide #contact-header, #contactSlide #aboutSlide #contact-header {
-    visibility: visible !important; }
   .chapter-content {
     background-color: #EDEDED; }
   .chapter-title {
@@ -473,7 +456,7 @@ a {
       height: 100vh !important; }
       .slides #slides02 .title-block, .slides #slides03 .title-block {
         visibility: visible;
-        background-color: #EDEDED; }
+        background-color: #434e65; }
     .slides .pin-wrappers {
       height: 100%;
       width: 100%;
@@ -514,7 +497,7 @@ a {
       .slides .pin-wrappers #work01-content, .slides .pin-wrappers #work02-content, .slides .pin-wrappers #work03-content {
         margin-top: 0 !important;
         height: 100vh;
-        background-color: #EDEDED; }
+        background-color: #e4e7f2; }
         .slides .pin-wrappers #work01-content .img, .slides .pin-wrappers #work02-content .img, .slides .pin-wrappers #work03-content .img {
           position: absolute;
           z-index: 1;
@@ -541,11 +524,10 @@ a {
             text-transform: uppercase;
             letter-spacing: 2px;
             font-size: 12px;
-            border: thin solid #E2D6DB;
             padding: 8px;
-            background-color: #E2D6DB;
+            background-color: #1b352a;
             border-radius: 4px;
-            color: black;
+            color: white;
             margin-right: 5px; }
             .slides .pin-wrappers #work01-content .work-nav a:hover, .slides .pin-wrappers #work02-content .work-nav a:hover, .slides .pin-wrappers #work03-content .work-nav a:hover {
               text-decoration: none; }
