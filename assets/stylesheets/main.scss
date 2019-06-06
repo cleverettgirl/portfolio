@@ -299,7 +299,6 @@ a{
 
       &.bullet-title{
         background-color:$yellow2;
-        // display:inline;
         padding: 2% 10%;
         clip-path: polygon(10% 0, 100% 0, 90% 100%, 0 100%)
       }
@@ -490,7 +489,6 @@ a{
     justify-content: center;
   }
   #contact-header{
-    // background-color:$yellow1;
     background-image:url(../../img/lemon.jpg);
     background-size: cover;
     background-repeat: no-repeat;
@@ -595,16 +593,6 @@ a{
     }
   }
 
-  // #aboutSlide{
-  //   .about-img{
-  //     top:10%;
-  //     right:calc(0% - 62px)
-  //   }
-  //   .nav-footer{
-  //     visibility: visible !important;
-  //   }
-  // }
-
   .chapter-content{
     background-color: #EDEDED;
   }
@@ -655,7 +643,6 @@ a{
           visibility: visible;
           padding:0;
           background-color:white !important;
-          // background-color: #7686bd;
           @include nav-footer;
           .nav-footer{
             visibility: visible;
